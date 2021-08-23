@@ -12,3 +12,4 @@ exclude_paths:
   - '.github/**'
   - '*.md'
   - 'Tests/MockSwiftTests/XCTestManifests.swift'
+  
