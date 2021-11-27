@@ -195,7 +195,7 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2.4.0
-              width:
+              with:
                   fetch-depth: 2
 
             - name: Fetch all history for all tags and branches
