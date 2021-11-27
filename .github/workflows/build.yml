@@ -114,6 +114,7 @@ jobs:
         name: "Build macOS (5.3)"
         runs-on: macos-latest
         needs: tests
+        id: build
         env:
             DEVELOPER_DIR: /Applications/Xcode_11.3.1.app/Contents/Developer
         steps:
