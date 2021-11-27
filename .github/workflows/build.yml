@@ -194,7 +194,7 @@ jobs:
                     - { seift-version: "5.0", os: macos-latest }
 
         steps:
-            - uses: actions/checkout@vv2.4.0
+            - uses: actions/checkout@v2.4.0
               width:
                   fetch-depth: 2
 
