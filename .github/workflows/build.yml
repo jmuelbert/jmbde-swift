@@ -114,7 +114,6 @@ jobs:
         name: "Build macOS (5.3)"
         runs-on: macos-latest
         needs: tests
-        id: build
         env:
             DEVELOPER_DIR: /Applications/Xcode_11.3.1.app/Contents/Developer
         steps:
@@ -287,7 +286,7 @@ jobs:
         runs-on: ubuntu-20.04
         environment: PreRelease
         needs:
-            - build
+            - macOS_5_3
             - tests
             - deployGHPages
 
@@ -301,7 +300,7 @@ jobs:
         runs-on: ubuntu-20.04
         environment: Release
         needs:
-            - build
+            - macOS_5_3
             - tests
             - changeLog
             - releaseNotes
