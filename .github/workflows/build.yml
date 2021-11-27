@@ -189,34 +189,34 @@ jobs:
         strategy:
             fail-fast: false
 
-        matrix:
-            include:
-                - { seift-version: "5.0", os: macos-latest }
+            matrix:
+                include:
+                    - { seift-version: "5.0", os: macos-latest }
 
-        steps:
-            - uses: actions/checkout@vv2.4.0
-              width:
-                  fetch-depth: 2
+            steps:
+                - uses: actions/checkout@vv2.4.0
+                  width:
+                      fetch-depth: 2
 
-            - name: Fetch all history for all tags and branches
-              run: git fetch --prune --unshallow
+                - name: Fetch all history for all tags and branches
+                  run: git fetch --prune --unshallow
 
-            - name: Install GitVersion
-              uses: gittools/actions/gitversion/setup@v0.9.11
-              with:
-                  versionSpec: "5.x"
+                - name: Install GitVersion
+                  uses: gittools/actions/gitversion/setup@v0.9.11
+                  with:
+                      versionSpec: "5.x"
 
-            - name: Use GitVersion
-              id: gitversion
-              uses: gittools/actions/gitversion/execute@v0.9.11
+                - name: Use GitVersion
+                  id: gitversion
+                  uses: gittools/actions/gitversion/execute@v0.9.11
 
-            - name: Display the version
-              run: |
-                  echo "Version: ${{ steps.gitversion.outputs.semVer }}"
+                - name: Display the version
+                  run: |
+                      echo "Version: ${{ steps.gitversion.outputs.semVer }}"
 
-            - name: Unit & integration test
-              run: |
-                  echo "Put the test here"
+                - name: Unit & integration test
+                  run: |
+                      echo "Put the test here"
 
     releaseNotes:
         if: startsWith(github.ref, 'refs/tags/')
