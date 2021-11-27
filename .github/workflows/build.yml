@@ -105,10 +105,10 @@ jobs:
           brew update-reset
           brew bundle --no-upgrade
 
-        - name: macOS (5.2)
-          run: |
-            pod install || pod install --repo-update
-            set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
+      - name: macOS (5.2)
+        run: |
+          pod install || pod install --repo-update
+          set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
 
   macOS_5_3:
     name: "Build macOS (5.3)"
