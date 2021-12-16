@@ -148,7 +148,7 @@ jobs:
                   set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
 
             - name: Upload Artifact
-              uses: actions/upload-artifact@v2.3.0
+              uses: actions/upload-artifact@v2.3.1
               with:
                   name: "jmbde-macOS_swift_5_3_${{ matrix.config.os }}-${{ github.sha }}"
                   path: build/bin/${{ matrix.config.binary }}
@@ -178,7 +178,7 @@ jobs:
                   sphinx-build docs docs/_build
 
             - name: Upload documentation
-              uses: actions/upload-artifact@v2.3.0
+              uses: actions/upload-artifact@v2.3.1
               with:
                   name: docs
                   path: docs/_build
