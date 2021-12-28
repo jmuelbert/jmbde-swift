@@ -217,8 +217,8 @@ jobs:
                   tag_name: ${{ github.ref }}
                   release_name: ${{ github.ref }}
                   body: ${{ steps.check-version.outputs }}
-                  env:
-                      GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
+              env:
+                  GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
 
     deployGHPages:
         runs-on: ubuntu-latest
