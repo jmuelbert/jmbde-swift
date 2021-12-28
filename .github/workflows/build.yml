@@ -165,14 +165,14 @@ jobs:
               if: steps.bundler-cache.outputs.cache-hit != 'true'
               run: bundle install --jobs 4 --retry 3
 
-            - name: ""⚙️ pod install"
+            - name: "⚙️ pod install"
               run: |
                   pod install || pod install --repo-update
 
             - name: "🚧 Compile and build 📦 application"
               uses: mxcl/xcodebuild@v1
               with:
-                swift: ~5.4
+                  swift: ~5.4
 
             - name: Unit & integration test
               run: |
