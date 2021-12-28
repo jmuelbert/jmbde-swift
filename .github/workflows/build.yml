@@ -125,7 +125,7 @@ jobs:
 
         env:
             swift-version: "5.5"
-
+            DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
         steps:
             - name: "🧰 Checkout Source Code"
               if: github.event_name == 'push'
@@ -170,14 +170,14 @@ jobs:
                   pod install || pod install --repo-update
 
             - name: "🚧 Compile and build 📦 application"
-              uses: mxcl/xcodebuild@v1
-              with:
-                  swift: ~5.4
-                  workspace: ${{ env.PROJECT_WORKSPACE }}
-
-            - name: Unit & integration test
               run: |
-                  echo "Put the test here"
+                  set -o pipefail && xcodebuild clean test
+                    -workspace "jmbde.xcworkspace"
+                    -scheme "jmbde"
+                    -destination "platform=macOS"
+                    -configuration "Debug"
+                    -showBuildTimingSummary
+                     -enableThreadSanitizer YES | xcpretty
 
     releaseNotes:
         if: startsWith(github.ref, 'refs/tags/')
