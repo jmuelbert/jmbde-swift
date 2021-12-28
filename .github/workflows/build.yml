@@ -171,12 +171,12 @@ jobs:
 
             - name: "🚧 Compile and build 📦 application"
               run: |
-                  set -o pipefail && xcodebuild clean test
-                    -workspace "jmbde.xcworkspace"
-                    -scheme "Pods-jmbdeTests"
-                    -destination "platform=macOS"
-                    -configuration "Debug"
-                    -showBuildTimingSummary
+                  set -o pipefail && xcodebuild clean test \
+                    -workspace "jmbde.xcworkspace" \
+                    -scheme "jmbde" \
+                    -destination "platform=macOS" \
+                    -configuration "Debug" \
+                    -showBuildTimingSummary \
                      -enableThreadSanitizer YES | xcpretty
 
     releaseNotes:
