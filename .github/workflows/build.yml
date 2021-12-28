@@ -173,7 +173,7 @@ jobs:
               run: |
                   set -o pipefail && xcodebuild clean test
                     -workspace "jmbde.xcworkspace"
-                    -scheme "jmbde"
+                    -scheme "Pods-jmbdeTests"
                     -destination "platform=macOS"
                     -configuration "Debug"
                     -showBuildTimingSummary
