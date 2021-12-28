@@ -176,7 +176,7 @@ jobs:
                       -scheme "jmbde" \
                       -destination "platform=macOS" \
                       -configuration "Debug" \
-                      -enableCodeCoverage YES
+                      -enableCodeCoverage YES \
                       -showBuildTimingSummary \
                        -enableThreadSanitizer YES | xcpretty
                   bash <(curl -s https://codecov.io/bash)
