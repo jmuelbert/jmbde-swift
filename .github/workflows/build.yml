@@ -39,7 +39,7 @@ env:
     FRAMEWORK_NAME: jmbde
     SCHEME: jmbde
     CACHE_NAME: SWIFT5
-    PROJECT: jmbde.xcworkspace
+    PROJECT_WORKSPACE: jmbde.xcworkspace
     SDK: macosx10.15
     DESTINATION: "arch=x86_64"
     SWIFT_VERSION: 5.5
@@ -173,6 +173,7 @@ jobs:
               uses: mxcl/xcodebuild@v1
               with:
                   swift: ~5.4
+                  workspace: ${{ env.PROJECT_WORKSPACE }}
 
             - name: Unit & integration test
               run: |
