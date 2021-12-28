@@ -61,7 +61,7 @@ jobs:
         matrix:
           swift-version: [5.1, 5.5]
 
-        steps:
+      steps:
           - name: '🧰 Checkout Source Code'
             if: github.event_name == 'push'
             uses: actions/checkout@v2
