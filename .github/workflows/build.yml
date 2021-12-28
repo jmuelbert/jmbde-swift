@@ -178,10 +178,11 @@ jobs:
                       -configuration "Debug" \
                       -enableCodeCoverage YES \
                       -showBuildTimingSummary \
-                       -enableThreadSanitizer YES | xcpretty
+                      -derivedDataPath Build/ \
+                      -enableThreadSanitizer YES | xcpretty
                   bash <(curl -s https://codecov.io/bash)
                   ./scripts/xccov-to-sonarqube-generic.sh Build/Logs/Test/*.xcresult/ > sonarqube-generic-coverage.xml
-                  
+
     releaseNotes:
         if: startsWith(github.ref, 'refs/tags/')
         runs-on: ubuntu-latest
