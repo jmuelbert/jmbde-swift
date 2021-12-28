@@ -10,7 +10,7 @@ on:
             - jmbdeUITests/**
             - jmbde.xcodeproj/**
             - jmbde.xcworkspace/**
-            - *.swift
+            - Package.swift
             - Podfile
             - .github/workflows/build.yml
         tags:
@@ -25,7 +25,7 @@ on:
             - jmbdeUITests/**
             - jmbde.xcodeproj/**
             - jmbde.xcworkspace/**
-            - *.swift
+            - Package.swift
             - Podfile
             - .github/workflows/build.yml
 
