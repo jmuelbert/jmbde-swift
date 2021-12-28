@@ -96,7 +96,7 @@ jobs:
 
     build_GH_Pages:
         name: Build GH Pages
-        runs-on: macos-latest
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
               with:
@@ -165,10 +165,14 @@ jobs:
               if: steps.bundler-cache.outputs.cache-hit != 'true'
               run: bundle install --jobs 4 --retry 3
 
-            - name: "🚧 Compile and build 📦 application"
+            - name: ""⚙️ pod install"
               run: |
                   pod install || pod install --repo-update
-                  set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
+
+            - name: "🚧 Compile and build 📦 application"
+              uses: mxcl/xcodebuild@v1
+              with:
+                swift: ~5.4
 
             - name: Unit & integration test
               run: |
