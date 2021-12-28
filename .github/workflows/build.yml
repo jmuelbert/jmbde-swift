@@ -14,7 +14,7 @@ on:
             - Podfile
             - .github/workflows/build.yml
         tags:
-            -   '*'
+            - "*"
 
     pull_request:
         branches: [master]
@@ -34,7 +34,6 @@ on:
 
     workflow_dispatch:
 
-
 env:
     TARGET_NAME: jmbde
     FRAMEWORK_NAME: jmbde
@@ -53,47 +52,47 @@ env:
 
 jobs:
     build:
-      name: 'Build macos ' ${{ matrix.swift-version}}
-      runs-on: macos-latest
-      needs: tests
+        name: "Build macos for swift V${{ matrix.swift-version}}"
+        runs-on: macos-latest
+        needs: tests
 
-      strategy:
-        matrix:
-          swift-version: [5.1, 5.5]
+        strategy:
+            matrix:
+                swift-version: [5.1, 5.5]
 
-      steps:
-          - name: '🧰 Checkout Source Code'
-            if: github.event_name == 'push'
-            uses: actions/checkout@v2
-            with:
-                submodules: true
+        steps:
+            - name: "🧰 Checkout Source Code"
+              if: github.event_name == 'push'
+              uses: actions/checkout@v2
+              with:
+                  submodules: true
 
-          - name: '⚙️ Initailize the bundler cache'
-            uses: actions/cache@v2
-            id: bundler-cache
-            with:
-              path: vendor/bundle
-              key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-              restore-keys: |
+            - name: "⚙️ Initailize the bundler cache"
+              uses: actions/cache@v2
+              id: bundler-cache
+              with:
+                  path: vendor/bundle
+                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+                  restore-keys: |
                       ${{ runner.os }}-gems-
 
-          - name: '⚙️ Bundle setup'
-            run: bundle config path vendor/bundle
+            - name: "⚙️ Bundle setup"
+              run: bundle config path vendor/bundle
 
-          - name: '⚙️ Bundle install'
-            if: steps.bundler-cache.outputs.cache-hit != 'true'
-            run: bundle install --jobs 4 --retry 3
+            - name: "⚙️ Bundle install"
+              if: steps.bundler-cache.outputs.cache-hit != 'true'
+              run: bundle install --jobs 4 --retry 3
 
-          - name: '🚧 Compile and build 📦 application'
-            run: |
-              pod install || pod install --repo-update
-              set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
+            - name: "🚧 Compile and build 📦 application"
+              run: |
+                  pod install || pod install --repo-update
+                  set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
 
-          - name: Upload Artifact
-            uses: actions/upload-artifact@v2.3.1
-            with:
-              name: "jmbde-macOS_swift_5_3_${{ matrix.config.os }}-${{ github.sha }}"
-              path: build/bin/${{ matrix.config.binary }}
+            - name: Upload Artifact
+              uses: actions/upload-artifact@v2.3.1
+              with:
+                  name: "jmbde-macOS_swift_5_3_${{ matrix.config.os }}-${{ github.sha }}"
+                  path: build/bin/${{ matrix.config.binary }}
 
     build_GH_Pages:
         name: Build GH Pages
@@ -121,57 +120,55 @@ jobs:
                   path: docs/_build
 
     tests:
-        name: ${{ matrix.session }} ${{ matrix.dotnet-version }} / ${{ matrix.os }}
+        name: "Tests on macos-latest"
         runs-on: ${{ matrix.os }}
-        strategy:
-            fail-fast: false
 
         env:
-          swift-version: "5.5"
+            swift-version: "5.5"
 
         steps:
-          - name: '🧰 Checkout Source Code'
-            if: github.event_name == 'push'
-            uses: actions/checkout@v2
-            with:
-                submodules: true
+            - name: "🧰 Checkout Source Code"
+              if: github.event_name == 'push'
+              uses: actions/checkout@v2
+              with:
+                  submodules: true
 
-          - name: Fetch all history for all tags and branches
-            run: git fetch --prune --unshallow
+            - name: Fetch all history for all tags and branches
+              run: git fetch --prune --unshallow
 
-          - name: Install GitVersion
-            uses: gittools/actions/gitversion/setup@v0.9.11
-            with:
-                versionSpec: "5.x"
+            - name: Install GitVersion
+              uses: gittools/actions/gitversion/setup@v0.9.11
+              with:
+                  versionSpec: "5.x"
 
-          - name: Use GitVersion
-            id: gitversion
-            uses: gittools/actions/gitversion/execute@v0.9.11
+            - name: Use GitVersion
+              id: gitversion
+              uses: gittools/actions/gitversion/execute@v0.9.11
 
-          - name: Display the version
-            run: |
-               echo "Version: ${{ steps.gitversion.outputs.semVer }}"
+            - name: Display the version
+              run: |
+                  echo "Version: ${{ steps.gitversion.outputs.semVer }}"
 
-          - name: '⚙️ Initailize the bundler cache'
-            uses: actions/cache@v2
-            id: bundler-cache
-            with:
-              path: vendor/bundle
-              key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-              restore-keys: |
+            - name: "⚙️ Initailize the bundler cache"
+              uses: actions/cache@v2
+              id: bundler-cache
+              with:
+                  path: vendor/bundle
+                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+                  restore-keys: |
                       ${{ runner.os }}-gems-
 
-          - name: '⚙️ Bundle setup'
-            run: bundle config path vendor/bundle
+            - name: "⚙️ Bundle setup"
+              run: bundle config path vendor/bundle
 
-          - name: '⚙️ Bundle install'
-            if: steps.bundler-cache.outputs.cache-hit != 'true'
-            run: bundle install --jobs 4 --retry 3
+            - name: "⚙️ Bundle install"
+              if: steps.bundler-cache.outputs.cache-hit != 'true'
+              run: bundle install --jobs 4 --retry 3
 
-          - name: '🚧 Compile and build 📦 application'
-            run: |
-              pod install || pod install --repo-update
-              set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
+            - name: "🚧 Compile and build 📦 application"
+              run: |
+                  pod install || pod install --repo-update
+                  set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
 
             - name: Unit & integration test
               run: |
@@ -181,9 +178,10 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2.4.0
+            - uses: actions/checkout@v2
               with:
                   fetch-depth: 2
+
             - name: Fetch all history for all tags and branches
               run: git fetch --prune --unshallow
 
@@ -193,8 +191,8 @@ jobs:
               with:
                   publish: "${{ steps.check-version.outputs.tag != '' }}"
                   tag: "${{ steps.check-version.outputs.tag }}"
-              env:
-                  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+                  env:
+                      GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
     changeLog:
         if: startsWith(github.ref, 'refs/tags/')
@@ -203,6 +201,7 @@ jobs:
             - uses: actions/checkout@v2.4.0
               with:
                   fetch-depth: 2
+
             - name: Fetch all history for all tags and branches
               run: git fetch --prune --unshallow
 
@@ -218,8 +217,8 @@ jobs:
                   tag_name: ${{ github.ref }}
                   release_name: ${{ github.ref }}
                   body: ${{ steps.check-version.outputs }}
-              env:
-                  GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
+                  env:
+                      GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
 
     deployGHPages:
         runs-on: ubuntu-latest
