@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 #ruby '~> 2.5.1'
 
-gem 'cocoapods', '~> 1.8'
+gem 'cocoapods'
 gem 'cocoapods-check'
 gem 'cocoapods-generate'
 gem 'cocoapods-githooks'      # Sync .git-hooks across team members at `pod install` time
@@ -19,7 +19,7 @@ gem 'fastlane'
 gem 'xcode-install'
 
 group :documentation do
-    gem 'jazzy', '~> 0.11'
+    gem 'jazzy'
 end
 
 group :test do

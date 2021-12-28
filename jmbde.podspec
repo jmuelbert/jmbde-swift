@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.14'
+  s.osx.deployment_target = '10.15'
 
   coredata_dependencies = lambda do |spec|
     spec.frameworks = ['CoreData']
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   all_platforms = lambda do |spec|
     spec.ios.deployment_target = '8.0'
-    spec.osx.deployment_target = '10.14'
+    spec.osx.deployment_target = '10.15'
     spec.watchos.deployment_target = '2.0'
     spec.tvos.deployment_target = '9.0'
   end

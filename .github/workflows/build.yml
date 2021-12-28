@@ -4,30 +4,46 @@ name: Build
 on:
     push:
         branches: [master]
-        tags-ignore:
-            - "*"
         paths:
-            - src/**
-            - global.json
-            - jmbde.sln
+            - jmbde/**
+            - jmbdeTests/**
+            - jmbdeUITests/**
+            - jmbde.xcodeproj/**
+            - jmbde.xcworkspace/**
+            - *.swift
+            - Podfile
             - .github/workflows/build.yml
+        tags:
+            -   '*'
 
     pull_request:
         branches: [master]
-        paths-ignore:
-            - "**/*.md"
-            - "**/*.txt"
-            - ".editorconfig"
-            - "docs/**"
+        types: [opened, reopened]
+        paths:
+            - jmbde/**
+            - jmbdeTests/**
+            - jmbdeUITests/**
+            - jmbde.xcodeproj/**
+            - jmbde.xcworkspace/**
+            - *.swift
+            - Podfile
+            - .github/workflows/build.yml
+
+    release:
+        types: [published]
+
+    workflow_dispatch:
+
 
 env:
-    CACHE_NAME: SWIFT5_1
-    PROJECT: jmbde.xcworkspace
+    TARGET_NAME: jmbde
     FRAMEWORK_NAME: jmbde
     SCHEME: jmbde
+    CACHE_NAME: SWIFT5
+    PROJECT: jmbde.xcworkspace
     SDK: macosx10.15
     DESTINATION: "arch=x86_64"
-    SWIFT_VERSION: 5.1
+    SWIFT_VERSION: 5.5
     LC_CTYPE: en_US.UTF-8
     LANG: en_US.UTF-8
     UPDATE_DOCS: true
@@ -36,142 +52,63 @@ env:
     XCODEGEN_VERSION: 2.5.0
 
 jobs:
-    macOS_5_1:
-        name: "Build macOS (5.1)"
-        runs-on: macos-latest
-        needs: tests
-        env:
-            DEVELOPER_DIR: /Applications/Xcode_11.3.1.app/Contents/Developer
-        steps:
-            - uses: actions/checkout@v2.4.0
-              with:
-                  submodules: recursive
-                  fetch-depth: 0
+    build:
+      name: 'Build macos ' ${{ matrix.swift-version}}
+      runs-on: macos-latest
+      needs: tests
 
-            - uses: actions/cache@v2.1.7
-              id: bundler-cache
-              with:
-                  path: vendor/bundle
-                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-                  restore-keys: |
+      strategy:
+        matrix:
+          swift-version: [5.1, 5.5]
+
+        steps:
+          - name: '🧰 Checkout Source Code'
+            if: github.event_name == 'push'
+            uses: actions/checkout@v2
+            with:
+                submodules: true
+
+          - name: '⚙️ Initailize the bundler cache'
+            uses: actions/cache@v2
+            id: bundler-cache
+            with:
+              path: vendor/bundle
+              key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+              restore-keys: |
                       ${{ runner.os }}-gems-
 
-            - name: Bundle setup
-              run: bundle config path vendor/bundle
+          - name: '⚙️ Bundle setup'
+            run: bundle config path vendor/bundle
 
-            - name: Bundle install
-              if: steps.bundler-cache.outputs.cache-hit != 'true'
-              run: bundle install --jobs 4 --retry 3
+          - name: '⚙️ Bundle install'
+            if: steps.bundler-cache.outputs.cache-hit != 'true'
+            run: bundle install --jobs 4 --retry 3
 
-            - name: Brew Upgrade
-              run: |
-                  brew update-reset
-                  brew bundle --no-upgrade
+          - name: '🚧 Compile and build 📦 application'
+            run: |
+              pod install || pod install --repo-update
+              set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
 
-            - name: macOS (5.1)
-              run: |
-                  pod install || pod install --repo-update
-                  set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
-
-    macOS_5_2:
-        name: "Build macOS (5.2)"
-        runs-on: macos-latest
-        needs: tests
-        env:
-            DEVELOPER_DIR: /Applications/Xcode_11.7.app/Contents/Developer
-        steps:
-            - uses: actions/checkout@v2.4.0
-              with:
-                  submodules: recursive
-                  fetch-depth: 0
-
-            - uses: actions/cache@v2.1.7
-              id: bundler-cache
-              with:
-                  path: vendor/bundle
-                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-gems-
-
-            - name: Bundle setup
-              run: bundle config path vendor/bundle
-
-            - name: Bundle install
-              if: steps.bundler-cache.outputs.cache-hit != 'true'
-              run: bundle install --jobs 4 --retry 3
-
-            - name: Brew Upgrade
-              run: |
-                  brew update-reset
-                  brew bundle --no-upgrade
-
-            - name: macOS (5.2)
-              run: |
-                  pod install || pod install --repo-update
-                  set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
-
-    macOS_5_3:
-        name: "Build macOS (5.3)"
-        runs-on: macos-latest
-        needs: tests
-        env:
-            DEVELOPER_DIR: /Applications/Xcode_11.3.1.app/Contents/Developer
-        steps:
-            - uses: actions/checkout@v2.4.0
-              with:
-                  submodules: recursive
-                  fetch-depth: 0
-
-            - uses: actions/cache@v2.1.7
-              id: bundler-cache
-              with:
-                  path: vendor/bundle
-                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-gems-
-
-            - name: Bundle setup
-              run: bundle config path vendor/bundle
-
-            - name: Bundle install
-              if: steps.bundler-cache.outputs.cache-hit != 'true'
-              run: bundle install --jobs 4 --retry 3
-
-            - name: Brew Upgrade
-              run: |
-                  brew update-reset
-                  brew bundle --no-upgrade
-
-            - name: macOS (5.3)
-              run: |
-                  pod install || pod install --repo-update
-                  set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
-
-            - name: Upload Artifact
-              uses: actions/upload-artifact@v2.3.1
-              with:
-                  name: "jmbde-macOS_swift_5_3_${{ matrix.config.os }}-${{ github.sha }}"
-                  path: build/bin/${{ matrix.config.binary }}
+          - name: Upload Artifact
+            uses: actions/upload-artifact@v2.3.1
+            with:
+              name: "jmbde-macOS_swift_5_3_${{ matrix.config.os }}-${{ github.sha }}"
+              path: build/bin/${{ matrix.config.binary }}
 
     build_GH_Pages:
         name: Build GH Pages
-        runs-on: ubuntu-latest
+        runs-on: macos-latest
         steps:
-            - uses: actions/checkout@v2.4.0
+            - uses: actions/checkout@v2
               with:
                   fetch-depth: 2
 
             - name: Fetch all history for all tags and branches
               run: git fetch --prune --unshallow
 
-            - name: Set up Python
-              uses: actions/setup-python@v2.3.1
-              with:
-                  python-version: "3.10"
-
             - name: Install sphinx
               run: |
-                  pip install -r docs/requirements.txt
+                  pip3 install -r docs/requirements.txt
 
             - name: Running the Sphinx to gh-pages Action
               run: |
@@ -189,30 +126,52 @@ jobs:
         strategy:
             fail-fast: false
 
-            matrix:
-                include:
-                    - { seift-version: "5.0", os: macos-latest }
+        env:
+          swift-version: "5.5"
 
         steps:
-            - uses: actions/checkout@v2.4.0
-              with:
-                  fetch-depth: 2
+          - name: '🧰 Checkout Source Code'
+            if: github.event_name == 'push'
+            uses: actions/checkout@v2
+            with:
+                submodules: true
 
-            - name: Fetch all history for all tags and branches
-              run: git fetch --prune --unshallow
+          - name: Fetch all history for all tags and branches
+            run: git fetch --prune --unshallow
 
-            - name: Install GitVersion
-              uses: gittools/actions/gitversion/setup@v0.9.11
-              with:
-                  versionSpec: "5.x"
+          - name: Install GitVersion
+            uses: gittools/actions/gitversion/setup@v0.9.11
+            with:
+                versionSpec: "5.x"
 
-            - name: Use GitVersion
-              id: gitversion
-              uses: gittools/actions/gitversion/execute@v0.9.11
+          - name: Use GitVersion
+            id: gitversion
+            uses: gittools/actions/gitversion/execute@v0.9.11
 
-            - name: Display the version
-              run: |
-                  echo "Version: ${{ steps.gitversion.outputs.semVer }}"
+          - name: Display the version
+            run: |
+               echo "Version: ${{ steps.gitversion.outputs.semVer }}"
+
+          - name: '⚙️ Initailize the bundler cache'
+            uses: actions/cache@v2
+            id: bundler-cache
+            with:
+              path: vendor/bundle
+              key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+              restore-keys: |
+                      ${{ runner.os }}-gems-
+
+          - name: '⚙️ Bundle setup'
+            run: bundle config path vendor/bundle
+
+          - name: '⚙️ Bundle install'
+            if: steps.bundler-cache.outputs.cache-hit != 'true'
+            run: bundle install --jobs 4 --retry 3
+
+          - name: '🚧 Compile and build 📦 application'
+            run: |
+              pod install || pod install --repo-update
+              set -o pipefail && xcodebuild -workspace "jmbde.xcworkspace" -scheme "jmbde" -destination "platform=macOS" clean build | xcpretty
 
             - name: Unit & integration test
               run: |
@@ -286,7 +245,6 @@ jobs:
         runs-on: ubuntu-20.04
         environment: PreRelease
         needs:
-            - macOS_5_3
             - tests
             - deployGHPages
 
@@ -300,7 +258,6 @@ jobs:
         runs-on: ubuntu-20.04
         environment: Release
         needs:
-            - macOS_5_3
             - tests
             - changeLog
             - releaseNotes
