@@ -52,16 +52,16 @@ env:
 
 jobs:
     build:
-        name: "Build macos for swift V${{ matrix.swift-version}}"
+        name: "Build macos for ${{ matrix.destination}}"
         runs-on: macos-latest
         needs: tests
 
         strategy:
             matrix:
-                destination:
-                    [
-                        "'platform=macOs,variant=Mac Catalyst'", 
-                        "'platform=macOS'"]
+              destination: [
+                "'platform=macOS,variant=Mac Catalyst'",
+                "'platform=macOS'"
+              ]
             fail-fast: false
 
         steps:
