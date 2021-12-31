@@ -12,6 +12,7 @@ on:
             - Package.swift
             - Podfile
             - .github/workflows/sonarcloud-analysis.yml
+            - sonar-project.properties
         tags:
             - "*"
 
@@ -27,6 +28,7 @@ on:
             - Package.swift
             - Podfile
             - .github/workflows/sonarcloud-analysis.yml
+            - sonar-project.properties
 
     schedule: # This trigger is here only to make sure
         - cron: "17 0 * * SUN" # the example itself doesn't become stale
