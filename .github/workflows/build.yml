@@ -58,9 +58,8 @@ jobs:
 
         strategy:
             matrix:
-                destination:
-                    [
-                        "'platform=macOS,variant=Mac Catalyst'",
+                destination: [
+                        # "'platform=macOS,variant=Mac Catalyst'",
                         "'platform=macOS'",
                     ]
             fail-fast: false
@@ -101,12 +100,13 @@ jobs:
                     -derivedDataPath build/ \
                     clean build | xcpretty
                   ls -a build
+                  ls -a build/Build
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v2.3.1
               with:
                   name: jmbde-macOS
-                  path: build/
+                  path: build/Build
 
     build_GH_Pages:
         name: Build GH Pages
@@ -238,7 +238,7 @@ jobs:
         needs: build_GH_Pages
         steps:
             - name: Download Artifact with Pages
-              uses: actions/download-artifact@v2.1.0
+              uses: actions/download-artifact@v2
               with:
                   name: docs
                   path: docs/_build
