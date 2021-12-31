@@ -72,19 +72,6 @@ jobs:
               with:
                   submodules: true
 
-            - name: Install GitVersion
-              uses: gittools/actions/gitversion/setup@v0.9.11
-              with:
-                  versionSpec: "5.x"
-
-            - name: Use GitVersion
-              id: gitversion
-              uses: gittools/actions/gitversion/execute@v0.9.11
-
-            - name: Display the version
-              run: |
-                  echo "Version: ${{ steps.gitversion.outputs.semVer }}"
-
             - name: "⚙️ Set XCode Version"
               run: sudo xcode-select -s /Applications/Xcode_13.2.1.app
 
