@@ -59,7 +59,10 @@ jobs:
         strategy:
             matrix:
                 destination:
-                    ["'platform=macOs,variant=Mac Catalyst'", "'platform=macOS"]
+                    [
+                        "'platform=macOs,variant=Mac Catalyst'", 
+                        "'platform=macOS'"]
+            fail-fast: false
 
         steps:
             - name: "🧰 Checkout Source Code"
