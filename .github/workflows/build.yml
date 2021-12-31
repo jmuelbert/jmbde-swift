@@ -184,7 +184,7 @@ jobs:
                   set -o pipefail && xcodebuild  \
                       -workspace "jmbde.xcworkspace" \
                       -scheme "jmbde" \
-                      -destination ${{ matrix.destination }} \
+                      -destination "'platform=macOS'" \
                       -configuration "Debug" \
                       -enableCodeCoverage YES \
                       -showBuildTimingSummary \
