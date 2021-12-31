@@ -105,8 +105,8 @@ jobs:
                   pod install || pod install --repo-update
                   set -o pipefail && xcodebuild \
                     -workspace "jmbde.xcworkspace" \
-                    -scheme "jmbde" 
-                    -destination $$ {{ matrix.destination }} \
+                    -scheme "jmbde" \
+                    -destination ${{ matrix.destination }} \
                     -derivedDataPath build/ \
                     clean build | xcpretty
                   ls -a build
