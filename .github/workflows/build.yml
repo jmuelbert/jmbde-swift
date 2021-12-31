@@ -91,7 +91,7 @@ jobs:
             - name: Upload Artifact
               uses: actions/upload-artifact@v2.3.1
               with:
-                  name: "jmbde-macOS_swift_5_3_${{ matrix.config.os }}-${{ github.sha }}"
+                  name: "jmbde-macOS_${{ matrix.config.os }}-${{ github.sha }}"
                   path: build/bin/${{ matrix.config.binary }}
 
     build_GH_Pages:
