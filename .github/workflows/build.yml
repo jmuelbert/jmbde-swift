@@ -101,13 +101,13 @@ jobs:
                     clean build | xcpretty
                   ls -a build
                   ls -a build/Build
-                  ls -a build/Products
+                  ls -a build/Build/Products
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v2.3.1
               with:
                   name: jmbde-macOS
-                  path: build/Products
+                  path: build/Build/Products
 
     build_GH_Pages:
         name: Build GH Pages
