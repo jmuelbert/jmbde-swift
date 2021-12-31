@@ -101,12 +101,13 @@ jobs:
                     clean build | xcpretty
                   ls -a build
                   ls -a build/Build
+                  ls -a build/Products
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v2.3.1
               with:
                   name: jmbde-macOS
-                  path: build/Build
+                  path: build/Products
 
     build_GH_Pages:
         name: Build GH Pages
@@ -257,7 +258,7 @@ jobs:
         runs-on: ubuntu-20.04
         environment: PreRelease
         needs:
-            - tests
+            - build
             - deployGHPages
 
         steps:
@@ -276,7 +277,7 @@ jobs:
         runs-on: ubuntu-20.04
         environment: Release
         needs:
-            - tests
+            - build
             - changeLog
             - releaseNotes
             - deployGHPages
