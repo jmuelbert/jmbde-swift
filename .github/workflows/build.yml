@@ -107,6 +107,7 @@ jobs:
     build_GH_Pages:
         name: Build GH Pages
         runs-on: ubuntu-latest
+        needs: tests
         steps:
             - uses: actions/checkout@v2
               with:
@@ -184,7 +185,7 @@ jobs:
                   set -o pipefail && xcodebuild  \
                       -workspace "jmbde.xcworkspace" \
                       -scheme "jmbde" \
-                      -destination "'platform=macOS'" \
+                      -destination "platform=macOS" \
                       -configuration "Debug" \
                       -enableCodeCoverage YES \
                       -showBuildTimingSummary \
