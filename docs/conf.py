@@ -40,9 +40,9 @@ from datetime import datetime
 PROJECT = "jmbde-macos"
 AUTHOR = "Jürgen Mülbert"
 COPYRIGHT = f"{datetime.now().year}, {AUTHOR}"
-extensions = [
+EXTENSION = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
 ]
-autodoc_typehints = "description"
-html_theme = "furo"
+AUTODOC_TYPEHINTS = "description"
+HTML_THEME = "furo"
