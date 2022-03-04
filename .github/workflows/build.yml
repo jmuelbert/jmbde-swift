@@ -105,7 +105,7 @@ jobs:
                   ls -a build/Build/Products/Debug
 
             - name: Upload Artifact
-              uses: actions/upload-artifact@v2.3.1
+              uses: actions/upload-artifact@v3
               with:
                   name: jmbde-macOS
                   path: build/Build/Products/Debug
@@ -131,7 +131,7 @@ jobs:
                   sphinx-build docs docs/_build
 
             - name: Upload documentation
-              uses: actions/upload-artifact@v2.3.1
+              uses: actions/upload-artifact@v3
               with:
                   name: docs
                   path: docs/_build
