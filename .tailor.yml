@@ -1,6 +1,7 @@
 include:
     - jmbde
 except:
+    - function-whitespace
     - leading-whitespace
     - trailing-whitespace
     - comment-whitespace

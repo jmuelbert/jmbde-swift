@@ -97,18 +97,16 @@ jobs:
                     -workspace "jmbde.xcworkspace" \
                     -scheme "jmbde" \
                     -destination ${{ matrix.destination }} \
-                    -configuration "Debug" \
+                    -configuration "Release" \
                     -derivedDataPath build/ \
                     clean build | xcpretty
-                  ls -a build
-                  ls -a build/Build
-                  ls -a build/Build/Products/Debug
+                  ls -aL build/Build/Products/Release
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v2.3.1
               with:
                   name: jmbde-macOS
-                  path: build/Build/Products/Debug
+                  path: build/Build/Products/Release/jmbde*
 
     build_GH_Pages:
         name: Build GH Pages

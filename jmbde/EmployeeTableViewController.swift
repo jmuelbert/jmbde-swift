@@ -56,7 +56,7 @@ class EmployeeTableViewController: NSViewController {
         tableView.reloadData()
     }
 
-    @IBAction private func removeEmployee(_ sender: Any) {}
+    @IBAction private func removeEmployee(_: Any) {}
 
     func requestData() {
         let appdelegate = NSApplication.shared.delegate as? AppDelegate
@@ -87,7 +87,7 @@ class EmployeeTableViewController: NSViewController {
         requestData()
     }
 
-    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: NSStoryboardSegue, sender _: Any?) {
         _ = NSStoryboardSegue.Identifier("EmployeeAddSeque")
         switch segue.identifier {
         case _:
@@ -100,7 +100,7 @@ class EmployeeTableViewController: NSViewController {
 }
 
 extension EmployeeTableViewController: NSTableViewDataSource {
-    func numberOfRows(in tableView: NSTableView) -> Int {
+    func numberOfRows(in _: NSTableView) -> Int {
         employees.count
     }
 
@@ -108,14 +108,16 @@ extension EmployeeTableViewController: NSTableViewDataSource {
         if (tableColumn?.identifier)!.rawValue == "lastName" {
             if let cell =
                 tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "lastName"),
-                                   owner: nil) as? NSTableCellView {
+                                   owner: nil) as? NSTableCellView
+            {
                 cell.textField?.stringValue = employees[row].lastName!
                 return cell
             }
         } else if (tableColumn?.identifier)!.rawValue == "firstName" {
             if let cell = tableView.makeView(withIdentifier:
                 NSUserInterfaceItemIdentifier(rawValue: "firstName"),
-                owner: nil) as? NSTableCellView {
+                owner: nil) as? NSTableCellView
+            {
                 cell.textField?.stringValue = employees[row].firstName!
                 return cell
             }

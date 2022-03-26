@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -676,9 +677,18 @@
                                 <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="01u-Qg-TId"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="o7s-u4-paJ"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="iDw-pu-w5c"/>
-                                <toolbarItem implicitItemIdentifier="45869475-CE8E-4B78-8C59-5C44B1D3940A" label="Add" paletteLabel="Add" tag="-1" image="NSAddTemplate" id="tyE-LW-dOD"/>
-                                <toolbarItem implicitItemIdentifier="8F6150DC-EFB0-4DB3-99F1-46E90AF0F0DB" label="Delete" paletteLabel="Delete" tag="-1" image="NSRemoveTemplate" id="8f5-0F-hxU"/>
-                                <toolbarItem implicitItemIdentifier="7BA34C81-FBD9-4AD4-9820-E53C32834122" label="Edit" paletteLabel="Edit" tag="-1" image="NSAdvanced" id="DGQ-PE-Cum"/>
+                                <toolbarItem implicitItemIdentifier="45869475-CE8E-4B78-8C59-5C44B1D3940A" label="Add" paletteLabel="Add" tag="-1" image="NSAddTemplate" id="tyE-LW-dOD">
+                                    <size key="minSize" width="33.5" height="28"/>
+                                    <size key="maxSize" width="33.5" height="28"/>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="8F6150DC-EFB0-4DB3-99F1-46E90AF0F0DB" label="Delete" paletteLabel="Delete" tag="-1" image="NSRemoveTemplate" id="8f5-0F-hxU">
+                                    <size key="minSize" width="33.5" height="13"/>
+                                    <size key="maxSize" width="33.5" height="13"/>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="7BA34C81-FBD9-4AD4-9820-E53C32834122" label="Edit" paletteLabel="Edit" tag="-1" image="NSAdvanced" id="DGQ-PE-Cum">
+                                    <size key="minSize" width="22" height="22"/>
+                                    <size key="maxSize" width="22" height="22"/>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="tyE-LW-dOD"/>
@@ -729,29 +739,28 @@
         <scene sceneID="qpr-19-Hhd">
             <objects>
                 <viewController id="msh-GW-GVA" customClass="MasterViewController" customModule="jmbde" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="LuY-a8-94N">
-                        <rect key="frame" x="0.0" y="0.0" width="220" height="300"/>
+                    <view key="view" misplaced="YES" id="LuY-a8-94N">
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="299"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="lGg-NK-NQz">
-                                <rect key="frame" x="-12" y="-13" width="251" height="326"/>
+                                <rect key="frame" x="-12" y="-13" width="251" height="324"/>
                                 <subviews>
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHH-cs-YzH">
-                                        <rect key="frame" x="21" y="20" width="209" height="286"/>
+                                        <rect key="frame" x="21" y="20" width="209" height="284"/>
                                         <clipView key="contentView" drawsBackground="NO" id="Ydm-UE-6Wx">
-                                            <rect key="frame" x="1" y="1" width="207" height="284"/>
+                                            <rect key="frame" x="1" y="1" width="207" height="282"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="bZT-M0-m9p" id="u4C-hU-06X">
-                                                    <rect key="frame" x="0.0" y="0.0" width="207" height="284"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="207" height="282"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn identifier="OutlineColItem" width="204" minWidth="16" maxWidth="1000" id="bZT-M0-m9p">
+                                                        <tableColumn identifier="OutlineColItem" width="175" minWidth="16" maxWidth="1000" id="bZT-M0-m9p">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                                <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -763,11 +772,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="ItemCell" id="fIH-Pq-Wgl" userLabel="Outline Item View">
-                                                                    <rect key="frame" x="1" y="1" width="204" height="17"/>
+                                                                    <rect key="frame" x="11" y="1" width="184" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <imageView identifier="ImageCell" translatesAutoresizingMaskIntoConstraints="NO" id="D12-Ch-5WM">
-                                                                            <rect key="frame" x="3" y="0.0" width="17" height="17"/>
+                                                                            <rect key="frame" x="3" y="-2" width="17" height="22"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="17" id="vQN-Ci-LRb"/>
                                                                             </constraints>
@@ -775,7 +784,7 @@
                                                                             <accessibility identifier="ImageCell"/>
                                                                         </imageView>
                                                                         <textField identifier="ItemCell" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r9g-Oz-nRO">
-                                                                            <rect key="frame" x="25" y="0.0" width="96" height="17"/>
+                                                                            <rect key="frame" x="25" y="1" width="96" height="16"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" identifier="ItemCell" title="Table View Cell" id="GIv-Fk-EQD">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -912,9 +921,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSActionTemplate" width="15" height="15"/>
+        <image name="NSAddTemplate" width="14" height="13"/>
         <image name="NSAdvanced" width="32" height="32"/>
-        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="14" height="4"/>
     </resources>
 </document>

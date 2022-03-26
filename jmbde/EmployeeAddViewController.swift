@@ -52,7 +52,7 @@ class EmployeeAddViewController: NSViewController {
 
     @IBOutlet private var lastNameTextField: NSTextField!
 
-    @IBAction private func saveAction(_ sender: Any) {
+    @IBAction private func saveAction(_: Any) {
         let lastName = lastNameTextField.stringValue
         let firstName = firstNameTextField.stringValue
 
@@ -76,7 +76,7 @@ class EmployeeAddViewController: NSViewController {
         dismiss(self)
     }
 
-    @IBAction private func cancelAction(_ sender: Any) {
+    @IBAction private func cancelAction(_: Any) {
         dismiss(self)
     }
 

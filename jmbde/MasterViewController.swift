@@ -113,7 +113,7 @@ class MasterViewController: NSViewController {
         }
     }
 
-    func openView(_ notification: Notification) {
+    func openView(_: Notification) {
         outlineView.reloadData()
     }
 }
@@ -122,7 +122,7 @@ class MasterViewController: NSViewController {
 
 extension MasterViewController: NSOutlineViewDataSource {
     // Number of items in the sidebar
-    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
+    func outlineView(_: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         if let outline = item as? Outline {
             NSLog("Count of Children \(outline.children.count)")
             return outline.children.count
@@ -132,7 +132,7 @@ extension MasterViewController: NSOutlineViewDataSource {
     }
 
     // Items to be added to sidebar
-    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
+    func outlineView(_: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
         if let outline = item as? Outline {
             return outline.children[index]
         }
@@ -140,7 +140,7 @@ extension MasterViewController: NSOutlineViewDataSource {
     }
 
     // Whether rows are expandable by an arrow
-    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
+    func outlineView(_: NSOutlineView, isItemExpandable item: Any) -> Bool {
         if let outline = item as? Outline {
             return !outline.children.isEmpty
         }
@@ -183,7 +183,7 @@ extension MasterViewController: NSOutlineViewDelegate {
         return view
     }
 
-    func outlineView(_ outlineView: NSOutlineView, shouldEdit tableColumn: NSTableColumn?, item: Any) -> Bool {
+    func outlineView(_: NSOutlineView, shouldEdit _: NSTableColumn?, item _: Any) -> Bool {
         false
     }
 
@@ -205,7 +205,7 @@ extension MasterViewController: NSOutlineViewDelegate {
         }
     }
 
-    func outlineViewSelectionIsChanging(_ notification: Notification) {
+    func outlineViewSelectionIsChanging(_: Notification) {
         NSLog("Selection changed")
     }
 

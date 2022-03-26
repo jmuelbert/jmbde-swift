@@ -206,6 +206,7 @@
 				3880F4FE22AF05BA003EE69A /* Frameworks */,
 				3880F4FF22AF05BA003EE69A /* Resources */,
 				CDFD026A88860C44BA7B1A5A /* [CP] Embed Pods Frameworks */,
+				38EDDCBA27EF2CCB00C978E9 /* Tailor */,
 			);
 			buildRules = (
 			);
@@ -343,6 +344,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+		38EDDCBA27EF2CCB00C978E9 /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif hash tailor >2/dev/null; then\n    tailor\nelse\n    echo \"warning: Please install Tailor from https://tailor.sh\"\nfi\n\n";
 		};
 		93DAB32C91D38BFDA329F8C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

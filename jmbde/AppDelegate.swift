@@ -56,14 +56,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /// applicationDidFinishLaunching: Overwrite for the applicationDidFinishLaunching
     /// - Parameter _:
     /// - Parameter aNotification: The Notificaton by finish launching
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    func applicationDidFinishLaunching(_: Notification) {
         // Insert code here to initialize your application
     }
 
     /// applicationWillTerminate: Overwrite for the applicationWillTerminate
     /// - Parameter _:
     /// - Parameter aNotification: The Notificaton befor terminate
-    func applicationWillTerminate(_ aNotification: Notification) {
+    func applicationWillTerminate(_: Notification) {
         // Insert code here to tear down your application
     }
 
@@ -71,7 +71,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /// - Parameter _:
     /// - Parameter sender: The sender that will the application terminate
     /// - Returns: Bool
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_: NSApplication) -> Bool {
         true
     }
 
@@ -115,7 +115,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /// saveAction: Defines the SaveAction for CoreData
     /// - important: Saves only the coredata has changes.
     /// - params: sender - the sender of this Action
-    @IBAction func saveAction(_ sender: AnyObject?) {
+    @IBAction func saveAction(_: AnyObject?) {
         // Performs the save action for the application, which is to send the save:
         // message to the application's managed object context.
         // Any encountered errors are presented to the user.
@@ -135,7 +135,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func windowWillReturnUndoManager(window: NSWindow) -> UndoManager? {
+    func windowWillReturnUndoManager(window _: NSWindow) -> UndoManager? {
         // Returns the NSUndoManager for the application. In this case,
         // the manager returned is that of the managed object context for the application.
         persistentContainer.viewContext.undoManager
