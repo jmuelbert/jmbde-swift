@@ -75,7 +75,7 @@ jobs:
               run: sudo xcode-select -s /Applications/Xcode_13.2.1.app
 
             - name: "⚙️ Initailize the bundler cache"
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               id: bundler-cache
               with:
                   path: vendor/bundle
@@ -154,7 +154,7 @@ jobs:
               run: sudo xcode-select -s /Applications/Xcode_13.2.1.app
 
             - name: "⚙️ Initailize the bundler cache"
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               id: bundler-cache
               with:
                   path: vendor/bundle
