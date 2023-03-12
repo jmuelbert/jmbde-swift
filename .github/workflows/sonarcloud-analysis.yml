@@ -1,3 +1,36 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@jmuelbert 
+jmuelbert
+/
+homebrew-qtifw
+Public
+Cannot fork because you own this repository and are not a member of any organizations.
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+160
+Insights
+Settings
+homebrew-qtifw/.github/workflows/sonarcloud-analysis.yml
+@jmuelbert
+jmuelbert fix: Issue on sonarcloud-analysis
+Latest commit 9da32dd yesterday
+ History
+ 2 contributors
+@jmuelbert@dependabot
+49 lines (44 sloc)  2.08 KB
+
 ---
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -20,50 +53,32 @@
 #     * a. Copy/paste the Project Key and the Organization Key into the args parameter below
 #          (You'll find this information in SonarCloud. Click on "Information" at the bottom left)
 #
-#     * b. Generate a new token and add it to your Github repository's secrets using the name SONAR_TOKEN
+#     * b. Generate a new token and add it to your GitHub repository's secrets using the name SONAR_TOKEN
 #          (On SonarCloud, click on your avatar on top-right > My account > Security
 #           or go directly to https://sonarcloud.io/account/security/)
 
 # Feel free to take a look at our documentation (https://docs.sonarcloud.io/getting-started/github/)
 # or reach out to our community forum if you need some help (https://community.sonarsource.com/c/help/sc/9)
 
-name: SonarCloud analysis
-
+name: Sonar Cloud Analysis
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - main
+      - master
   pull_request:
-    branches: [ "master" ]
-  workflow_dispatch:
-
-permissions:
-  pull-requests: read # allows SonarCloud to decorate PRs with analysis results
-
+    types: [opened, synchronize, reopened]
 jobs:
-  Analysis:
+  sonarcloud:
+    name: SonarCloud
     runs-on: ubuntu-latest
-
     steps:
-      - name: Analyze with SonarCloud
-
-        # You can pin the exact commit or the version.
-        # uses: SonarSource/sonarcloud-github-action@db501078e936e4b4c8773d1bb949ba9ddb7b6b6a
-        uses: SonarSource/sonarcloud-github-action@db501078e936e4b4c8773d1bb949ba9ddb7b6b6a
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}   # Generate a token on Sonarcloud.io, add it to the secrets of this repo with the name SONAR_TOKEN (Settings > Secrets > Actions > add new repository secret)
+      - uses: actions/checkout@v3.3.0
         with:
-          # Additional arguments for the sonarcloud scanner
-          args:
-            # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
-            # mandatory
-            # -Dsonar.projectKey=
-            # -Dsonar.organization=
-            # Comma-separated paths to directories containing main source files.
-            #-Dsonar.sources= # optional, default is project base directory
-            # When you need the analysis to take place in a directory other than the one from which it was launched
-            #-Dsonar.projectBaseDir= # optional, default is .
-            # Comma-separated paths to directories containing test source files.
-            #-Dsonar.tests= # optional. For more info about Code Coverage, please refer to https://docs.sonarcloud.io/enriching/test-coverage/overview/
-            # Adds more detail to both client and server-side analysis logs, activating DEBUG mode for the scanner, and adding client-side environment variables and system properties to the server-side log of analysis report processing.
-            #-Dsonar.verbose= # optional, default is false
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+homebrew-qtifw/sonarcloud-analysis.yml at main · jmuelbert/homebrew-qtifw
