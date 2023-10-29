@@ -38,7 +38,7 @@ This Program run only on macos. Is fully swift with gui.
 
 ## Supported platform
 
-- macOS from 10.14
+-   macOS from 10.14
 
 ## Execute
 
@@ -46,23 +46,23 @@ Start the app with a click on the icon.
 
 ## Requirements and bug reports
 
-- [GitHub issues (preferred)](https://github.com/jmuelbert/jmbde-macos/issues)
+-   [GitHub issues (preferred)](https://github.com/jmuelbert/jmbde-macos/issues)
 
 ## Questions or Comments
 
 ## Wiki
 
-- [Main Page](https://github.com/jmuelbert/jmbde-macos/wiki)
+-   [Main Page](https://github.com/jmuelbert/jmbde-macos/wiki)
 
-- [User Manual](http://jmuelbert.github.io/jmbde-macos/)
+-   [User Manual](http://jmuelbert.github.io/jmbde-macos/)
 
 ## Code Sources
 
 The master branch represents the latest pre-release code.
 
-- [Releases](https://github.com/jmuelbert/jmbde-macos/releases)
+-   [Releases](https://github.com/jmuelbert/jmbde-macos/releases)
 
-- [Milestones](https://github.com/jmuelbert/jmbde-macos/milestones)
+-   [Milestones](https://github.com/jmuelbert/jmbde-macos/milestones)
 
 ## Create program
 
@@ -70,7 +70,7 @@ Compile the source code with [Xcode](https://itunes.apple.com/de/app/xcode/id497
 
 ## Resources
 
-- [Jazzy](https://github.com/realm/jazzy)
+-   [Jazzy](https://github.com/realm/jazzy)
 
 ## License
 
@@ -88,28 +88,20 @@ EUPL-1.2 © [Jürgen Mülbert](https:/github.com/jmuelbert/jmbde-macos)
 [license-shield]: https://img.shields.io/badge/license-EUPL-blue.svg
 [license-url]: https://github.com/jmuelbert/jmbde-macos/blob/master/LICENSE
 [product-screenshot]: images/doc/images/Logo_template.png
-[build-shield]:
-    https://img.shields.io/github/workflow/status/jmuelbert/jmbde-macos/Build/release
+[build-shield]: https://img.shields.io/github/workflow/status/jmuelbert/jmbde-macos/Build/release
 [build-url]: https://github.com/jmuelbert/jmbde-macos/workflows/Build
 [gitpod-shield]: https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod
 [gitpod-url]: https://gitpod.io/#https://github.com/jmuelbert/jmbde-macos
-[codacy-shield]:
-    https://api.codacy.com/project/badge/Grade/933a7b8c63ca443fbed403fab2abd2d0
-[codacy-url]:
-   https://app.codacy.com/gh/jmuelbert/jmbde-macos?utm_source=github.com&utm_medium=referral&utm_content=jmuelbert/jmbde-macos&utm_campaign=Badge_Grade
-[downloads_all-shield]:
-    https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
+[codacy-shield]: https://api.codacy.com/project/badge/Grade/933a7b8c63ca443fbed403fab2abd2d0
+[codacy-url]: https://app.codacy.com/gh/jmuelbert/jmbde-macos?utm_source=github.com&utm_medium=referral&utm_content=jmuelbert/jmbde-macos&utm_campaign=Badge_Grade
+[downloads_all-shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
 [downloads_all-url]: https://github.com/jmuelbert/jmbde-macos/releases
-[pre-commit-shield]:
-    https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+[pre-commit-shield]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
 [pre-commit-url]: https://github.com/pre-commit/pre-commit
-[misspell_fixer-shield]:
-    https://github.com/jmuelbert/jmbde-macos/workflows/Misspell%20fixer/badge.svg
+[misspell_fixer-shield]: https://github.com/jmuelbert/jmbde-macos/workflows/Misspell%20fixer/badge.svg
 [misspell_fixer-url]: https://github.com/marketplace/actions/misspell-fixer-action
-[help-issues-shield]:
-    https://img.shields.io/github/issues/jmuelbert/jmbde-macos/help%20wanted
-[help-issues-url]:
-    https://github.com/jmuelbert/jmbde-macos/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
+[help-issues-shield]: https://img.shields.io/github/issues/jmuelbert/jmbde-macos/help%20wanted
+[help-issues-url]: https://github.com/jmuelbert/jmbde-macos/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
 [documentation-shield]: https://img.shields.io/badge/Documentation-latest-blue.svg
 [documentation-url]: https://jmuelbert.github.io/jmbde-macos
 [cdash-shield]: https://img.shields.io/badge/CDash-Access-blue.svg

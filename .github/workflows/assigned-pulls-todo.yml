@@ -1,0 +1,36 @@
+---
+# SPDX-FileCopyrightText: Jürgen Mülbert
+#
+# SPDX-License-Identifier: MIT
+
+name: "Auto Assign to Project(s)"
+
+on: # yamllint disable-line rule:truthy
+  pull_request_target:
+    types: [opened, labeled]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  assign_one_project:
+    runs-on: ubuntu-latest
+    name: "Assign to One Project"
+
+    steps:
+      - name: "Assign NEW issues and NEW pull requests to project 13"
+        uses: srggrs/assign-one-project-github-action@1
+        if: github.event.action == 'opened'
+        with:
+          project:
+            "13"
+            # Specify the column name where the issues and
+            # pull_request will be assigned
+          column_name: "To do"
+
+      - name: "Assign issues and pull requests with `bug` label to project 13"
+        uses: srggrs/assign-one-project-github-action@1
+        if: contains(github.event.pull_request.labels.*.name, 'bug')
+        with:
+          project: "13"
+          column_name: "Labeled"

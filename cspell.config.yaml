@@ -1,0 +1,130 @@
+---
+version: '0.2'
+language: en
+ignorePaths:
+  - '**/node_modules/**'
+  - '**/vscode_extension/**'
+  - '**/.git/**'
+  - '**/.pnpm-lock.json'
+  - '**/pnpm-lock.yaml'
+  - .vscode
+  - 'package-lock.json'
+  - 'megalinter-reports'
+  - '.devcontainer/.dockerignore'
+  - .gitattributes
+  - .gitignore
+  - '.github/actions/spelling/**'
+  - '.github/labels.yml'
+  - '.github/pr-labeler.yml'
+  - .prettierignore
+  - .tfignore
+  - CHANGELOG.md
+  - LICENSE
+  - LICENSES/**
+  - cspell.config.yaml
+files:
+  - .github/**/*.{md,txt,yaml,yml}
+  - .git/COMMIT_EDITMSG
+  - docs/**/**
+  - scripts/**
+  - src/**
+  - tests/**
+words:
+  - Jürgen
+  - Mülbert
+  - jmuelbert
+  - jmbde
+  - adoc
+  - Akka
+  - Astro
+  - Autobuild
+  - autolabeler
+  - automerge
+  - Bazel
+  - Bitstream
+  - Codecov
+  - Codacy
+  - CODEOWNERS
+  - Colab
+  - commitlint
+  - COMMIT_EDITMSG
+  - Cuda
+  - codeql
+  - dessant
+  - devskim
+  - devcontainer
+  - devcontainers
+  - fsfe
+  - ghaction
+  - gittools
+  - goodcheck
+  - gsoc
+  - lengthframeencoder
+  - matthiashermsen
+  - MSDO
+  - mshick
+  - OSSAR
+  - ossf
+  - outreachy
+  - Preacts
+  - rarr
+  - recvbuffer
+  - returntocorp
+  - rubocop
+  - Sarif
+  - Semgrep
+  - Signup
+  - sobolevn
+  - srggrs
+  - stefanzweifel
+  - stylelintignore
+  - tomwhross
+  - tsconfigs
+  - Unported
+  - wagoid
+  - withastro
+
+flagWords:
+  - hte
+maxNumberOfProblems: 1000
+import: []
+useGitignore: true
+overrides:
+  - filename: '**/de_DE/**'
+    language: en,de
+  - filename: '**/nl_NL/**'
+    language: en,nl
+  - filename: '**/ru_RU/samples/**'
+    language: ru,en
+  - filename: '**/sv/**'
+    language: en,sv
+  - filename: 'package.json'
+    ignoreWords:
+      - colour
+      - canot
+cache:
+  useCache: true
+  cacheStrategy: content
+enableFiletypes:
+  - shellscript
+dictionaryDefinitions:
+  - name: ./project-words
+    addWords: true
+    scope:
+      - workspace
+    path: ./project-words.txt
+dictionaries:
+  - ./project-words
+  - bash
+  - companies
+  - csharp
+  - css
+  - filetypes
+  - fonts
+  - misc
+  - node
+  - npm
+  - powershell
+  - python
+  - software-terms
+  - typescript

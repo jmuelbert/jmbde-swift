@@ -1,60 +1,69 @@
-# EditorConfig is awesome: https://EditorConfig.org
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
 
-
-# top-most EditorConfig file
 root = true
 
-# Unix-style newlines with a newline ending every file
-# ------------------
-# Source code
-# ------------------
+# All files
 [*]
-end_of_line = lf
+# Change these settings to your own preference
 indent_style = space
 indent_size = 4
+
+# We recommend you to keep these unchanged
+end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[CmakeLists.txt,*.cmake{,.in}]
-end_of_line = lf
+# Xml project files
+[*.{csproj,vcxproj,vcxproj.filters,proj,nativeproj,locproj}]
+indent_size = 2
+
+# Microsoft Solution
+[*.sln]
+ident_size = 2
 insert_final_newline = true
-trim_trailing_whitespace = true
-indent_size = 2
-indent_style = space
 
-# Matches multiple files with brace expansion notation
-# Set default charset
-[*.py]
-indent_size = 4
-
-# Source code files
-[*.{c,cxx,cpp,h,hxx,hpp,java,m,mm,py,swift,xsl}]
-indent_style = space
+# Xml build files
+[*.builds]
 indent_size = 2
 
-[*.rst]
-indent_size = 3
+# Xml files
+[*.{xml,stylecop,resx,ruleset}]
+indent_size = 2
+
 # Indentation override for all JS under lib directory
+[*.{js,cjs,json,vue,scss,rb,haml,yml,yaml,toml}]
+indent_size = 2
 
-# Tab indentation (no size specified)
-[Makefile]
+# The indent size used in the `package.json` file cannot be changed
+# https://github.com/npm/npm/pull/3180#issuecomment-16336516
+[{*.yml,*.yaml,package.json}]
+indent_size = 2
+
+# Makefile
+[Makefile, *.mk]
 indent_style = tab
-
-[*.{bat,cmd}]
-end_of_line = crlf
-
-[*.js]
-indent_style = space
-indent_size = 2
-
-# Matches the exact files either package.json or .travis.yml
-[{package.json,.travis.yml}]
-indent_style = space
-indent_size = 2
-
-[*.{md,markdown}]
 trim_trailing_whitespace = false
 
-[*.{yaml|yml}]
+[{CMakeLists.txt,*.cmake}]
+tab_width = 4
+
+# Source code files
+[*.{c,cxx,cpp,h,hxx,hpp,java,m,mm,py,swift,xsl,astro}]
 indent_size = 2
+tab_width = 2
+
+[*.{adoc,md,markdown}]
+ident_size = 2
+trim_trailing_whitespace = false
+
+[*.{sh,msx}]
+indent_size = 2
+
+[*.{css}]
+indent_size = 2
+
+[LICENSE]
+insert_final_newline = false
