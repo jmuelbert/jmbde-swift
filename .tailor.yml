@@ -1,9 +1,9 @@
 include:
-    - jmbde
+  - jmbde
 except:
-    - function-whitespace
-    - leading-whitespace
-    - trailing-whitespace
-    - comment-whitespace
-    - lower-camel-case
-    - forced-type-cast
+  - function-whitespace
+  - leading-whitespace
+  - trailing-whitespace
+  - comment-whitespace
+  - lower-camel-case
+  - forced-type-cast

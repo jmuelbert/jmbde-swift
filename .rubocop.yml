@@ -1,24 +1,24 @@
 inherit_from:
-    - http://shopify.github.io/ruby-style-guide/rubocop.yml
+  - http://shopify.github.io/ruby-style-guide/rubocop.yml
 
 Style/ClassAndModuleChildren:
-    Enabled: false
+  Enabled: false
 Style/RedundantBegin:
-    Enabled: false
+  Enabled: false
 
 AllCops:
-    TargetRubyVersion: 2.7
-    DisplayCopNames: true
-    DisplayStyleGuide: true
+  TargetRubyVersion: 2.7
+  DisplayCopNames: true
+  DisplayStyleGuide: true
     Exclude:
-        - features/**/*
-        - fixtures/**/*
-        - .build/**/*
-        - .circleci/**/*
-        - .vscode/**/*
-        - assets/**/*
-        - build/**/*
-        - Carthage/**/*
-        - Sources/**/*
-        - Tests/**/*
-        - .github/**/*
+      - features/**/*
+      - fixtures/**/*
+      - .build/**/*
+      - .circleci/**/*
+      - .vscode/**/*
+      - assets/**/*
+      - build/**/*
+      - Carthage/**/*
+      - Sources/**/*
+      - Tests/**/*
+      - .github/**/*
