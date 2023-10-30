@@ -56,7 +56,7 @@ jobs:
             # "'platform=macOS,variant=Mac Catalyst'",
             "'platform=macOS'",
           ]
-        fail-fast: false
+      fail-fast: false
 
     steps:
       - name: "🧰 Checkout Source Code"
