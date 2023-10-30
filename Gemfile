@@ -13,7 +13,7 @@ gem 'cocoapods-repo-update'   # Fixes issues with CI not updating specs
 # Temporary workaround for bug in binary file diffing
 # https://github.com/danger/danger/issues/1055
 # https://github.com/ruby-git/ruby-git/pull/405
-gem 'git', git: 'https://github.com/jcouball/ruby-git.git'
+# gem 'git', git: 'https://github.com/jcouball/ruby-git.git'
 
 gem 'fastlane'
 gem 'xcode-install'
