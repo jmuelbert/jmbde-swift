@@ -149,13 +149,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      - name: Set up Ruby 2.6
+      - name: Set up Ruby 3.0
         uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
         with:
           ruby-version: "3.0"
-
-      - name: "⚙️ Bundle setup"
-        run: bundle config path vendor/bundle
 
       - name: "⚙️ Bundle install"
         if: steps.bundler-cache.outputs.cache-hit != 'true'
