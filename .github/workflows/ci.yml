@@ -18,8 +18,8 @@ on: # yamllint disable-line rule:truthy
       - Podfile
       - .github/workflows/ci.yml
 
-    pull_request:
-      types: [opened, synchronize, reopened]
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
@@ -149,6 +149,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
+      - name: Set up Ruby 2.6
+        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with:
+          ruby-version: "3.0"
+
       - name: "⚙️ Bundle setup"
         run: bundle config path vendor/bundle
 
@@ -180,7 +185,6 @@ jobs:
             -derivedDataPath Build/ \
             -enableThreadSanitizer YES \
             clean test | xcpretty
-
 
   releaseNotes:
     if: startsWith(github.ref, 'refs/tags/')
