@@ -166,7 +166,7 @@ jobs:
       - run: swift run danger-swift ci --verbose --failOnErrors
         if: ${{ github.event_name == 'pull_request' }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "🚧 build and test 📦 application"
         run: |
