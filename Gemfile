@@ -6,14 +6,8 @@ source 'https://rubygems.org'
 gem 'cocoapods'
 gem 'cocoapods-check'
 gem 'cocoapods-generate'
-gem 'cocoapods-githooks'      # Sync .git-hooks across team members at `pod install` time
 gem 'cocoapods-packager'      # Generate a framework or static library from a podspec. https://github.com/CocoaPods/cocoapods-packager
 gem 'cocoapods-repo-update'   # Fixes issues with CI not updating specs
-
-# Temporary workaround for bug in binary file diffing
-# https://github.com/danger/danger/issues/1055
-# https://github.com/ruby-git/ruby-git/pull/405
-# gem 'git', git: 'https://github.com/jcouball/ruby-git.git'
 
 gem 'fastlane'
 gem 'xcode-install'
