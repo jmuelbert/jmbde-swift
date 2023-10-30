@@ -46,84 +46,87 @@ import Cocoa
 import CoreData
 
 class EmployeeTableViewController: NSViewController {
-    @IBOutlet private var tableView: NSTableView!
+  @IBOutlet private var tableView: NSTableView!
 
-    var employees: [EmployeeMO] = []
+  var employees: [EmployeeMO] = []
 
-    @IBAction private func addEmployeeAction(_ sender: Any) {
-        let empS = NSStoryboardSegue.Identifier("EmployeeAddSeque")
-        performSegue(withIdentifier: empS, sender: sender)
-        tableView.reloadData()
-    }
+  @IBAction private func addEmployeeAction(_ sender: Any) {
+    let empS = NSStoryboardSegue.Identifier("EmployeeAddSeque")
+    performSegue(withIdentifier: empS, sender: sender)
+    tableView.reloadData()
+  }
 
-    @IBAction private func removeEmployee(_: Any) {}
+  @IBAction private func removeEmployee(_: Any) {}
 
-    func requestData() {
-        let appdelegate = NSApplication.shared.delegate as? AppDelegate
-        let context = appdelegate?.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Employee")
-        request.returnsObjectsAsFaults = false
-        do {
-            employees = (try context?.fetch(request) as? [EmployeeMO])!
-            if !employees.isEmpty {
-                for employee in employees {
-                    if let firstName = (employee as AnyObject).value(forKey: "firstName") as? String {
-                        print("Firstname: \(firstName)")
-                    }
-                    if let lastName = (employee as AnyObject).value(forKey: "lastName") as? String {
-                        print("Lastname: \(lastName)")
-                    }
-                }
-            }
-        } catch {}
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        tableView?.dataSource = self
-        tableView?.delegate = self
-
-        requestData()
-    }
-
-    override func prepare(for segue: NSStoryboardSegue, sender _: Any?) {
-        _ = NSStoryboardSegue.Identifier("EmployeeAddSeque")
-        switch segue.identifier {
-        case _:
-            let destinationAddEmployee = segue.destinationController as? EmployeeAddViewController
-            destinationAddEmployee?.employeesArray = employees
-        default:
-            break
+  func requestData() {
+    let appdelegate = NSApplication.shared.delegate as? AppDelegate
+    let context = appdelegate?.persistentContainer.viewContext
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Employee")
+    request.returnsObjectsAsFaults = false
+    do {
+      employees = (try context?.fetch(request) as? [EmployeeMO])!
+      if !employees.isEmpty {
+        for employee in employees {
+          if let firstName = (employee as AnyObject).value(forKey: "firstName") as? String {
+            print("Firstname: \(firstName)")
+          }
+          if let lastName = (employee as AnyObject).value(forKey: "lastName") as? String {
+            print("Lastname: \(lastName)")
+          }
         }
+      }
+    } catch {}
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    tableView?.dataSource = self
+    tableView?.delegate = self
+
+    requestData()
+  }
+
+  override func prepare(for segue: NSStoryboardSegue, sender _: Any?) {
+    _ = NSStoryboardSegue.Identifier("EmployeeAddSeque")
+    switch segue.identifier {
+    case _:
+      let destinationAddEmployee = segue.destinationController as? EmployeeAddViewController
+      destinationAddEmployee?.employeesArray = employees
+    default:
+      break
     }
+  }
 }
 
 extension EmployeeTableViewController: NSTableViewDataSource {
-    func numberOfRows(in _: NSTableView) -> Int {
-        employees.count
-    }
+  func numberOfRows(in _: NSTableView) -> Int {
+    employees.count
+  }
 
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        if (tableColumn?.identifier)!.rawValue == "lastName" {
-            if let cell =
-                tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "lastName"),
-                                   owner: nil) as? NSTableCellView
-            {
-                cell.textField?.stringValue = employees[row].lastName!
-                return cell
-            }
-        } else if (tableColumn?.identifier)!.rawValue == "firstName" {
-            if let cell = tableView.makeView(withIdentifier:
-                NSUserInterfaceItemIdentifier(rawValue: "firstName"),
-                owner: nil) as? NSTableCellView
-            {
-                cell.textField?.stringValue = employees[row].firstName!
-                return cell
-            }
-        }
-        return nil
+  func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
+  {
+    if (tableColumn?.identifier)!.rawValue == "lastName" {
+      if let cell =
+        tableView.makeView(
+          withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "lastName"),
+          owner: nil) as? NSTableCellView
+      {
+        cell.textField?.stringValue = employees[row].lastName!
+        return cell
+      }
+    } else if (tableColumn?.identifier)!.rawValue == "firstName" {
+      if let cell = tableView.makeView(
+        withIdentifier:
+          NSUserInterfaceItemIdentifier(rawValue: "firstName"),
+        owner: nil) as? NSTableCellView
+      {
+        cell.textField?.stringValue = employees[row].firstName!
+        return cell
+      }
     }
+    return nil
+  }
 }
 
 extension EmployeeTableViewController: NSTableViewDelegate {}

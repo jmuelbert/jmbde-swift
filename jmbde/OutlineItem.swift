@@ -47,18 +47,18 @@ import Foundation
 
 /// The Dataclass for the Sidebar-Menu
 class OutlineItem: NSObject {
-    let title: String
-    let image: String
-    let desc: String
-    let viewControllerIdentifier: String
+  let title: String
+  let image: String
+  let desc: String
+  let viewControllerIdentifier: String
 
-    /// Constructor for the Menudata
-    /// param dictionary
-    ///
-    init(dictionary: NSDictionary) {
-        title = (dictionary.object(forKey: "title") as? String)!
-        image = (dictionary.object(forKey: "image") as? String)!
-        desc = (dictionary.object(forKey: "description") as? String)!
-        viewControllerIdentifier = (dictionary.object(forKey: "viewControllerIdentifier") as? String)!
-    }
+  /// Constructor for the Menudata
+  /// param dictionary
+  ///
+  init(dictionary: NSDictionary) {
+    title = (dictionary.object(forKey: "title") as? String)!
+    image = (dictionary.object(forKey: "image") as? String)!
+    desc = (dictionary.object(forKey: "description") as? String)!
+    viewControllerIdentifier = (dictionary.object(forKey: "viewControllerIdentifier") as? String)!
+  }
 }

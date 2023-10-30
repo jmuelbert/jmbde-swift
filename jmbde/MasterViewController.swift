@@ -44,32 +44,31 @@
 
 import Cocoa
 
-/**
- * The MasterViewController
- *
- * :extends: NSViewController
- */
+/// The MasterViewController
+///
+/// :extends: NSViewController
 class MasterViewController: NSViewController {
-    // MARK: - Properties
+  // MARK: - Properties
 
-    var outlineItem: OutlineItem!
-    var recentItensObserver: NSObjectProtocol!
+  var outlineItem: OutlineItem!
+  var recentItensObserver: NSObjectProtocol!
 
-    // The OutlineView
-    @IBOutlet private var outlineView: NSOutlineView!
+  // The OutlineView
+  @IBOutlet private var outlineView: NSOutlineView!
 
-    // Dummy data used for row titles
-    // var outlines = ["First item", "Second item", "Third item", "Next Item"]
+  // Dummy data used for row titles
+  // var outlines = ["First item", "Second item", "Third item", "Next Item"]
 
-    // The data source for the outline array
-    fileprivate var outlines = Outline.outlineList(Bundle.main.path(forResource: "OutlineList", ofType: "plist")!)
+  // The data source for the outline array
+  fileprivate var outlines = Outline.outlineList(
+    Bundle.main.path(forResource: "OutlineList", ofType: "plist")!)
 
-    /**
+  /**
      The Notification-Identifier-String
      */
-    static let OutlineNotification = "outlineNotification"
+  static let OutlineNotification = "outlineNotification"
 
-    /**
+  /**
      * The SourceListHeader is doubleCliked
      *
      *  - parameters:
@@ -78,143 +77,154 @@ class MasterViewController: NSViewController {
      * - returns:
      *       - Nothing
      */
-    @IBAction private func doubleClickItem(_ sender: NSOutlineView) {
-        let item = sender.item(atRow: sender.clickedRow)
+  @IBAction private func doubleClickItem(_ sender: NSOutlineView) {
+    let item = sender.item(atRow: sender.clickedRow)
 
-        if item is Outline {
-            if sender.isExpandable(item) {
-                sender.collapseItem(item)
-            } else {
-                sender.expandItem(item)
-            }
-        }
+    if item is Outline {
+      if sender.isExpandable(item) {
+        sender.collapseItem(item)
+      } else {
+        sender.expandItem(item)
+      }
     }
+  }
 
-    override func keyDown(with event: NSEvent) {
-        interpretKeyEvents([event])
+  override func keyDown(with event: NSEvent) {
+    interpretKeyEvents([event])
+  }
+
+  // So we can inform the delegate ot table selection changes (from the user or from the array controller)
+  weak var delegate: MasterViewControllerDelegate?
+
+  // MARK: - View Controller Lifecycle
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // Setup notification for window losing and gaining focus
+    recentItensObserver = NotificationCenter.default.addObserver(
+      forName: Notification.Name(rawValue: "de.juergen-muelbert.jmbde.openView"),
+      object: nil, queue: nil, using: openView)
+  }
+
+  override var representedObject: Any? {
+    didSet {
+      // Update the view, if already loaded.
     }
+  }
 
-    // So we can inform the delegate ot table selection changes (from the user or from the array controller)
-    weak var delegate: MasterViewControllerDelegate?
-
-    // MARK: - View Controller Lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Setup notification for window losing and gaining focus
-        recentItensObserver = NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "de.juergen-muelbert.jmbde.openView"),
-                                                                     object: nil, queue: nil, using: openView)
-    }
-
-    override var representedObject: Any? {
-        didSet {
-            // Update the view, if already loaded.
-        }
-    }
-
-    func openView(_: Notification) {
-        outlineView.reloadData()
-    }
+  func openView(_: Notification) {
+    outlineView.reloadData()
+  }
 }
 
 // MARK: Datasource
 
 extension MasterViewController: NSOutlineViewDataSource {
-    // Number of items in the sidebar
-    func outlineView(_: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
-        if let outline = item as? Outline {
-            NSLog("Count of Children \(outline.children.count)")
-            return outline.children.count
-        }
-        print("Count ouf Entries \(outlines.count)")
-        return outlines.count
+  // Number of items in the sidebar
+  func outlineView(_: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
+    if let outline = item as? Outline {
+      NSLog("Count of Children \(outline.children.count)")
+      return outline.children.count
     }
+    print("Count ouf Entries \(outlines.count)")
+    return outlines.count
+  }
 
-    // Items to be added to sidebar
-    func outlineView(_: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-        if let outline = item as? Outline {
-            return outline.children[index]
-        }
-        return outlines[index]
+  // Items to be added to sidebar
+  func outlineView(_: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
+    if let outline = item as? Outline {
+      return outline.children[index]
     }
+    return outlines[index]
+  }
 
-    // Whether rows are expandable by an arrow
-    func outlineView(_: NSOutlineView, isItemExpandable item: Any) -> Bool {
-        if let outline = item as? Outline {
-            return !outline.children.isEmpty
-        }
-        return false
+  // Whether rows are expandable by an arrow
+  func outlineView(_: NSOutlineView, isItemExpandable item: Any) -> Bool {
+    if let outline = item as? Outline {
+      return !outline.children.isEmpty
     }
+    return false
+  }
 }
 
 // MARK: - Delegate
 
 extension MasterViewController: NSOutlineViewDelegate {
-    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
-        var view: NSTableCellView?
+  func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any)
+    -> NSView?
+  {
+    var view: NSTableCellView?
 
-        if let outline = item as? Outline {
-            if (tableColumn?.identifier)!.rawValue == "OutlineColItem" {
-                view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(
-                    rawValue: "ItemCell"), owner: self) as? NSTableCellView
-                if let textField = view?.textField {
-                    textField.stringValue = outline.name
-                    textField.sizeToFit()
-                }
-            }
-        } else if let outlineItem = item as? OutlineItem {
-            if (tableColumn?.identifier)!.rawValue == "OutlineColItem" {
-                view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ItemCell"),
-                                            owner: self) as? NSTableCellView
-                if let textField = view?.textField {
-                    textField.stringValue = outlineItem.title
-                    textField.sizeToFit()
-                }
-            } else if (tableColumn?.identifier)!.rawValue == "OutlineColItem" {
-                view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(
-                    rawValue: "ImageCell"), owner: self) as? NSTableCellView
-                if let image = view?.imageView {
-                    image.image = NSImage(named: NSImage.Name(outlineItem.image))
-                    image.sizeToFit()
-                }
-            }
+    if let outline = item as? Outline {
+      if (tableColumn?.identifier)!.rawValue == "OutlineColItem" {
+        view =
+          outlineView.makeView(
+            withIdentifier: NSUserInterfaceItemIdentifier(
+              rawValue: "ItemCell"), owner: self) as? NSTableCellView
+        if let textField = view?.textField {
+          textField.stringValue = outline.name
+          textField.sizeToFit()
         }
-        return view
-    }
-
-    func outlineView(_: NSOutlineView, shouldEdit _: NSTableColumn?, item _: Any) -> Bool {
-        false
-    }
-
-    func outlineViewSelectionDidChange(_ notification: Notification) {
-        guard let outlineView = notification.object as? NSOutlineView else {
-            return
+      }
+    } else if let outlineItem = item as? OutlineItem {
+      if (tableColumn?.identifier)!.rawValue == "OutlineColItem" {
+        view =
+          outlineView.makeView(
+            withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ItemCell"),
+            owner: self) as? NSTableCellView
+        if let textField = view?.textField {
+          textField.stringValue = outlineItem.title
+          textField.sizeToFit()
         }
-
-        let selectedIndex = outlineView.selectedRow
-
-        NSLog("ViewSelectionDidChange Index: \(selectedIndex)")
-
-        if let outlineItem = outlineView.item(atRow: selectedIndex) as? OutlineItem {
-            self.outlineItem = outlineItem
-
-            NSLog("ViewSelectionDidChange (outlineitem) \(outlineItem)")
-            NotificationCenter.default.post(Notification(name: Notification.Name(
-                rawValue: "de.juergen-muelbert.jmbde.changeView"), object: self))
+      } else if (tableColumn?.identifier)!.rawValue == "OutlineColItem" {
+        view =
+          outlineView.makeView(
+            withIdentifier: NSUserInterfaceItemIdentifier(
+              rawValue: "ImageCell"), owner: self) as? NSTableCellView
+        if let image = view?.imageView {
+          image.image = NSImage(named: NSImage.Name(outlineItem.image))
+          image.sizeToFit()
         }
+      }
+    }
+    return view
+  }
+
+  func outlineView(_: NSOutlineView, shouldEdit _: NSTableColumn?, item _: Any) -> Bool {
+    false
+  }
+
+  func outlineViewSelectionDidChange(_ notification: Notification) {
+    guard let outlineView = notification.object as? NSOutlineView else {
+      return
     }
 
-    func outlineViewSelectionIsChanging(_: Notification) {
-        NSLog("Selection changed")
+    let selectedIndex = outlineView.selectedRow
+
+    NSLog("ViewSelectionDidChange Index: \(selectedIndex)")
+
+    if let outlineItem = outlineView.item(atRow: selectedIndex) as? OutlineItem {
+      self.outlineItem = outlineItem
+
+      NSLog("ViewSelectionDidChange (outlineitem) \(outlineItem)")
+      NotificationCenter.default.post(
+        Notification(
+          name: Notification.Name(
+            rawValue: "de.juergen-muelbert.jmbde.changeView"), object: self))
     }
+  }
 
-    // MARK: KVO
+  func outlineViewSelectionIsChanging(_: Notification) {
+    NSLog("Selection changed")
+  }
 
-    // override func observeValue(forKeyPath keyPath: String?, of object: Any?,
-    //  change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-    //  super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
-    // }
+  // MARK: KVO
+
+  // override func observeValue(forKeyPath keyPath: String?, of object: Any?,
+  //  change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+  //  super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+  // }
 }
 
 // MARK: - Protocol
@@ -222,5 +232,6 @@ extension MasterViewController: NSOutlineViewDelegate {
 ///
 /// The Protocol - Interface for the Message to the Controller
 protocol MasterViewControllerDelegate: AnyObject {
-    func didChangeOutlineSelection(masterViewController: MasterViewController, selection: OutlineItem?)
+  func didChangeOutlineSelection(
+    masterViewController: MasterViewController, selection: OutlineItem?)
 }

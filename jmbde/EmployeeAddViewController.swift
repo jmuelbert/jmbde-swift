@@ -46,42 +46,43 @@ import Cocoa
 import CoreData
 
 class EmployeeAddViewController: NSViewController {
-    var employeesArray = [EmployeeMO]()
+  var employeesArray = [EmployeeMO]()
 
-    @IBOutlet private var firstNameTextField: NSTextField!
+  @IBOutlet private var firstNameTextField: NSTextField!
 
-    @IBOutlet private var lastNameTextField: NSTextField!
+  @IBOutlet private var lastNameTextField: NSTextField!
 
-    @IBAction private func saveAction(_: Any) {
-        let lastName = lastNameTextField.stringValue
-        let firstName = firstNameTextField.stringValue
+  @IBAction private func saveAction(_: Any) {
+    let lastName = lastNameTextField.stringValue
+    let firstName = firstNameTextField.stringValue
 
-        if lastName.isEmpty {
-            let alert = NSAlert()
-            alert.messageText = "The Lastname can not be empty"
-            alert.alertStyle = NSAlert.Style.critical
-            alert.addButton(withTitle: "Cancel")
-            alert.runModal()
-            dismiss(self)
-        } else {
-            let appdelegate = NSApplication.shared.delegate as? AppDelegate
-            let context = appdelegate?.persistentContainer.viewContext
-            let newEmployee = NSEntityDescription.insertNewObject(forEntityName: "Employee", into: context!)
-            newEmployee.setValue(lastName, forKey: "lastName")
-            newEmployee.setValue(firstName, forKey: "firstName")
-            do {
-                try context?.save()
-            } catch {}
-        }
-        dismiss(self)
+    if lastName.isEmpty {
+      let alert = NSAlert()
+      alert.messageText = "The Lastname can not be empty"
+      alert.alertStyle = NSAlert.Style.critical
+      alert.addButton(withTitle: "Cancel")
+      alert.runModal()
+      dismiss(self)
+    } else {
+      let appdelegate = NSApplication.shared.delegate as? AppDelegate
+      let context = appdelegate?.persistentContainer.viewContext
+      let newEmployee = NSEntityDescription.insertNewObject(
+        forEntityName: "Employee", into: context!)
+      newEmployee.setValue(lastName, forKey: "lastName")
+      newEmployee.setValue(firstName, forKey: "firstName")
+      do {
+        try context?.save()
+      } catch {}
     }
+    dismiss(self)
+  }
 
-    @IBAction private func cancelAction(_: Any) {
-        dismiss(self)
-    }
+  @IBAction private func cancelAction(_: Any) {
+    dismiss(self)
+  }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do view setup here.
+  }
 }

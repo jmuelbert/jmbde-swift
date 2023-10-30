@@ -47,43 +47,43 @@ import Foundation
 
 /// The Data Class for the Outline View Labels
 class Outline: NSObject {
-    let name: String
-    var children = [OutlineItem]()
+  let name: String
+  var children = [OutlineItem]()
 
-    //
-    // Init the Outline Class
-    //
-    // @param name
-    //
-    init(name: String) {
-        self.name = name
-    }
+  //
+  // Init the Outline Class
+  //
+  // @param name
+  //
+  init(name: String) {
+    self.name = name
+  }
 
-    func isLeaf() -> Bool {
-        true
-    }
+  func isLeaf() -> Bool {
+    true
+  }
 
-    //
-    // Init the outline list
-    //
-    // @param filename The filename with the plist contains the menustruct
-    //
-    // @returns Outline The array of the menustruct
-    class func outlineList(_ filename: String) -> [Outline] {
-        var outlines = [Outline]()
+  //
+  // Init the outline list
+  //
+  // @param filename The filename with the plist contains the menustruct
+  //
+  // @returns Outline The array of the menustruct
+  class func outlineList(_ filename: String) -> [Outline] {
+    var outlines = [Outline]()
 
-        if let outlineList = NSArray(contentsOfFile: filename) as? [NSDictionary] {
-            for outlineItems in outlineList {
-                let outline = Outline(name: (outlineItems.object(forKey: "name") as? String)!)
-                let items = outlineItems.object(forKey: "items") as? [NSDictionary]
+    if let outlineList = NSArray(contentsOfFile: filename) as? [NSDictionary] {
+      for outlineItems in outlineList {
+        let outline = Outline(name: (outlineItems.object(forKey: "name") as? String)!)
+        let items = outlineItems.object(forKey: "items") as? [NSDictionary]
 
-                for dict in items! {
-                    let item = OutlineItem(dictionary: dict)
-                    outline.children.append(item)
-                }
-                outlines.append(outline)
-            }
+        for dict in items! {
+          let item = OutlineItem(dictionary: dict)
+          outline.children.append(item)
         }
-        return outlines
+        outlines.append(outline)
+      }
     }
+    return outlines
+  }
 }

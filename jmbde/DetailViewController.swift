@@ -45,93 +45,101 @@
 import Cocoa
 
 class DetailViewController: NSViewController {
-    /**
+  /**
        The Description in Top of the actual view
      */
-    @IBOutlet private var descriptionField: NSTextField!
-    /**
+  @IBOutlet private var descriptionField: NSTextField!
+  /**
        The view Area for the Data Views
      */
-    @IBOutlet private var viewArea: NSView!
+  @IBOutlet private var viewArea: NSView!
 
-    /**
+  /**
        The detailItemRecord
          - hold the data from the outline.plist
          - is use for the description header
          - change the seque
      */
-    var detailItemRecord: OutlineItem! {
-        didSet {
-            // Remove the old child view controller
-            if !children.isEmpty {
-                let viewcChild = children[0]
-                viewcChild.view.isHidden = true
-                viewcChild.removeFromParent()
-            }
+  var detailItemRecord: OutlineItem! {
+    didSet {
+      // Remove the old child view controller
+      if !children.isEmpty {
+        let viewcChild = children[0]
+        viewcChild.view.isHidden = true
+        viewcChild.removeFromParent()
+      }
 
-            descriptionField.stringValue = ""
+      descriptionField.stringValue = ""
 
-            guard detailItemRecord != nil else { return }
+      guard detailItemRecord != nil else { return }
 
-            // Update the description of the area
+      // Update the description of the area
 
-            descriptionField.stringValue = detailItemRecord.desc
+      descriptionField.stringValue = detailItemRecord.desc
 
-            // Check ist this area actually has an valid controller to display
-            guard !detailItemRecord.viewControllerIdentifier.isEmpty else {
-                return
-            }
+      // Check ist this area actually has an valid controller to display
+      guard !detailItemRecord.viewControllerIdentifier.isEmpty else {
+        return
+      }
 
-            // Load the area storyboard and embed.
-            let storyboard =
-                NSStoryboard(name: NSStoryboard.Name(detailItemRecord.viewControllerIdentifier), bundle: nil)
-            _ = NSStoryboard.SceneIdentifier(detailItemRecord.viewControllerIdentifier)
-            guard let buttonViewController =
-                storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(
-                    detailItemRecord.viewControllerIdentifier)) as? NSViewController else { return }
+      // Load the area storyboard and embed.
+      let storyboard =
+        NSStoryboard(
+          name: NSStoryboard.Name(detailItemRecord.viewControllerIdentifier), bundle: nil)
+      _ = NSStoryboard.SceneIdentifier(detailItemRecord.viewControllerIdentifier)
+      guard
+        let buttonViewController =
+          storyboard.instantiateController(
+            withIdentifier: NSStoryboard.SceneIdentifier(
+              detailItemRecord.viewControllerIdentifier)) as? NSViewController
+      else { return }
 
-            insertChild(buttonViewController, at: 0)
+      insertChild(buttonViewController, at: 0)
 
-            buttonViewController.view.translatesAutoresizingMaskIntoConstraints = false
+      buttonViewController.view.translatesAutoresizingMaskIntoConstraints = false
 
-            view.addSubview(buttonViewController.view)
+      view.addSubview(buttonViewController.view)
 
-            // Add the propper constraints to the detail view controller
-            // so it embeds properly with it's parent view controller.
-            let top = NSLayoutConstraint(item: buttonViewController.view,
-                                         attribute: .top,
-                                         relatedBy: .equal,
-                                         toItem: viewArea,
-                                         attribute: .top,
-                                         multiplier: 1,
-                                         constant: 0)
-            let left = NSLayoutConstraint(item: buttonViewController.view,
-                                          attribute: .left,
-                                          relatedBy: .equal,
-                                          toItem: viewArea,
-                                          attribute: .left,
-                                          multiplier: 1,
-                                          constant: 0)
-            let height = NSLayoutConstraint(item: buttonViewController.view,
-                                            attribute: .height,
-                                            relatedBy: .equal,
-                                            toItem: viewArea,
-                                            attribute: .height,
-                                            multiplier: 1,
-                                            constant: 0)
-            let width = NSLayoutConstraint(item: buttonViewController.view,
-                                           attribute: .width,
-                                           relatedBy: .equal,
-                                           toItem: viewArea,
-                                           attribute: .width,
-                                           multiplier: 1,
-                                           constant: 0)
-            view.addConstraints([top, left, height, width])
-        }
+      // Add the propper constraints to the detail view controller
+      // so it embeds properly with it's parent view controller.
+      let top = NSLayoutConstraint(
+        item: buttonViewController.view,
+        attribute: .top,
+        relatedBy: .equal,
+        toItem: viewArea,
+        attribute: .top,
+        multiplier: 1,
+        constant: 0)
+      let left = NSLayoutConstraint(
+        item: buttonViewController.view,
+        attribute: .left,
+        relatedBy: .equal,
+        toItem: viewArea,
+        attribute: .left,
+        multiplier: 1,
+        constant: 0)
+      let height = NSLayoutConstraint(
+        item: buttonViewController.view,
+        attribute: .height,
+        relatedBy: .equal,
+        toItem: viewArea,
+        attribute: .height,
+        multiplier: 1,
+        constant: 0)
+      let width = NSLayoutConstraint(
+        item: buttonViewController.view,
+        attribute: .width,
+        relatedBy: .equal,
+        toItem: viewArea,
+        attribute: .width,
+        multiplier: 1,
+        constant: 0)
+      view.addConstraints([top, left, height, width])
     }
+  }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do view setup here.
+  }
 }
