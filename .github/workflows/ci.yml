@@ -69,28 +69,11 @@ jobs:
       - name: "⚙️ Set XCode Version"
         run: sudo xcode-select -s /Applications/Xcode_13.2.1.app
 
-      - name: "⚙️ Initailize the bundler cache"
-        uses: actions/cache@v3
-        id: bundler-cache
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
-      - name: "⚙️ Bundle setup"
-        run: bundle config path vendor/bundle
-
-      - name: "⚙️ Bundle install"
-        if: steps.bundler-cache.outputs.cache-hit != 'true'
-        run: bundle install --jobs 4 --retry 3
-
       - name: "🚧 Compile and build 📦 application"
         run: |
-          pod install || pod install --repo-update
-          set -o pipefail && xcodebuild \
-            -workspace "jmbde.xcworkspace" \
-            -scheme "jmbde" \
+          set -o pipefail && xcodebuild  \
+            -project "jmbde.xcodeproj" \
+            -destination "platform=macOS" \
             -destination ${{ matrix.destination }} \
             -configuration "Release" \
             -derivedDataPath build/ \
@@ -122,18 +105,6 @@ jobs:
       - name: Fetch all history for all tags and branches
         run: git fetch --prune --unshallow
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            .build/artifacts
-            .build/checkouts
-            .build/repositories
-          key: ${{ runner.os }}-dependencies-${{ matrix.xcode }}-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-dependencies-${{ matrix.xcode }}-${{ hashFiles('**/Package.resolved') }}
-            ${{ runner.os }}-dependencies-${{ matrix.xcode }}-
-
       - name: "⚙️ Select Xcode"
         run: |
           xcodebuild -version
@@ -141,44 +112,11 @@ jobs:
           sudo xcode-select -switch /Applications/Xcode_${{ matrix.xcode }}.app
           xcodebuild -version
 
-      - name: "⚙️ Initailize the bundler cache"
-        uses: actions/cache@v3
-        id: bundler-cache
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
-      - name: Set up Ruby 3.2.0
-        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
-        with:
-          ruby-version: "3.2.0"
-
-      - name: "⚙️ Bundle setup"
-        run: bundle config path vendor/bundle
-
-      - name: "⚙️ Bundle install"
-        if: steps.bundler-cache.outputs.cache-hit != 'true'
-        run: bundle install --jobs 4 --retry 3
-
-      - name: "⚙️ pod install"
-        run: |
-          pod install || pod install --repo-update
-
-      - name: Install danger-js
-        run: brew install danger/tap/danger-js
-
-      - run: swift run danger-swift ci --verbose --failOnErrors
-        if: ${{ github.event_name == 'pull_request' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "🚧 build and test 📦 application"
         run: |
           set -o pipefail && xcodebuild  \
-            -workspace "jmbde.xcworkspace" \
-            -scheme "jmbde" \
+            -project "jmbde.xcodeproj" \
             -destination "platform=macOS" \
             -configuration "Debug" \
             -enableCodeCoverage YES \

@@ -9,6 +9,7 @@ root = true
 # Change these settings to your own preference
 indent_style = space
 indent_size = 4
+tab_width = 4
 
 # We recommend you to keep these unchanged
 end_of_line = lf
@@ -51,7 +52,7 @@ trim_trailing_whitespace = false
 tab_width = 4
 
 # Source code files
-[*.{c,cxx,cpp,h,hxx,hpp,java,m,mm,py,swift,xsl,astro}]
+[*.{c,cxx,cpp,h,hxx,hpp,java,m,mm,py,xsl,astro}]
 indent_size = 2
 tab_width = 2
 

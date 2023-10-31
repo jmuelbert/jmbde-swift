@@ -42,9 +42,6 @@
  **
  **************************************************************************/
 
-import AppCenter
-import AppCenterAnalytics
-import AppCenterCrashes
 import Cocoa
 
 /// The AppDelegate
