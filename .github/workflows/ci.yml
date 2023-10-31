@@ -73,6 +73,7 @@ jobs:
         run: |
           set -o pipefail && xcodebuild  \
             -project "jmbde.xcodeproj" \
+            -scheme "jmbde" \ 
             -destination "platform=macOS" \
             -destination ${{ matrix.destination }} \
             -configuration "Release" \
@@ -117,6 +118,7 @@ jobs:
         run: |
           set -o pipefail && xcodebuild  \
             -project "jmbde.xcodeproj" \
+            -schema "jmbde" \
             -destination "platform=macOS" \
             -configuration "Debug" \
             -enableCodeCoverage YES \
