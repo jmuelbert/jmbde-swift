@@ -15,6 +15,7 @@ on: # yamllint disable-line rule:truthy
       - jmbde.xcodeproj/**
       - jmbde.xcworkspace/**
       - Package.swift
+      - Gemfile
       - Podfile
       - .github/workflows/ci.yml
 
