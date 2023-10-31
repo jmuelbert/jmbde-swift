@@ -11,6 +11,7 @@ gem 'cocoapods-repo-update'   # Fixes issues with CI not updating specs
 
 gem 'fastlane'
 gem 'xcode-install'
+gem 'xcpretty'
 
 group :documentation do
     gem 'jazzy'
@@ -18,7 +19,7 @@ end
 
 group :test do
     gem 'git_diff_parser'
-    gem 'xcpretty'
+
 
     gem 'danger'
     gem 'danger-auto_label'
