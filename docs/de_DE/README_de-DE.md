@@ -54,7 +54,7 @@ Starten Sie die Anwendung mit einem Klick auf das Symbol.
 
 -   [Main Page](https://github.com/jmuelbert/jmbde-macos/wiki)
 
--   [User Manual](http://jmuelbert.github.io/jmbde-macos/)
+-   [User Manual](https://jmuelbert.github.io/jmbde-macos/)
 
 ## Code-Quellen
 

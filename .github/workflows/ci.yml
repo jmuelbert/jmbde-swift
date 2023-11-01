@@ -102,6 +102,7 @@ jobs:
           set -o pipefail && xcodebuild  \
             -project ${{ env.PROJECT_NAME }} \
             -destination ${{ matrix.destination }} \
+            -scheme ${{ env.TARGET_NAME }} \
             -configuration "Debug" \
             -enableCodeCoverage YES \
             -showBuildTimingSummary \
