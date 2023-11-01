@@ -23,15 +23,16 @@ on:
   push:
     branches: ["main"]
     paths: # Nur ausführen, wenn diese Dateien geändert wurden
-    - "src/**"
-    - "test/**"
-    - ".github/workflows/msdo.yml"
+      - "jmbde/**"
+      - "jmbdeTests/**"
+      - "jmbdeUITests/**"
+      - ".github/workflows/msdo.yml"
 
   pull_request:
-      types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened]
 
   schedule:
-    - cron: "32 8 * * 5"
+    - cron: "43 8 * * 5"
 
 permissions:
   contents: read
@@ -54,7 +55,7 @@ jobs:
 
     steps:
       - name: "🧰 Check out code"
-        uses: actions/checkout@v3
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
 
       - name: "⚙️ Setup dotnet"
         uses: actions/setup-dotnet@v3
@@ -75,7 +76,8 @@ jobs:
         uses: microsoft/security-devops-action@v1.6.0
         id: msdo
 
-      - name: Upload results to Security tab
-        uses: github/codeql-action/upload-sarif@v2
+      # Upload the results to GitHub's code scanning dashboard.
+      - name: "Upload to code-scanning"
+        uses: github/codeql-action/upload-sarif@17573ee1cc1b9d061760f3a006fc4aac
         with:
           sarif_file: ${{ steps.msdo.outputs.sarifFile }}

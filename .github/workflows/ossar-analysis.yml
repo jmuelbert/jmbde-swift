@@ -16,7 +16,7 @@ on:
     # The branches below must be a subset of the branches above
     types: [opened, synchronize, reopened]
   schedule:
-    - cron: "30 12 * * 3"
+    - cron: "34 12 * * 3"
 
 permissions:
   contents: read
@@ -33,8 +33,7 @@ jobs:
 
     steps:
       - name: "🧰 Check out code"
-        uses: actions/checkout@v3
-
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
 
       # Ensure a compatible version of dotnet is installed.
       # The [Microsoft Security Code Analysis CLI](https://aka.ms/mscadocs) is built with dotnet v3.1.201.
@@ -50,8 +49,8 @@ jobs:
         uses: github/ossar-action@v1
         id: ossar
 
-        # Upload results to the Security tab
-      - name: Upload OSSAR results
-        uses: github/codeql-action/upload-sarif@v2
+      # Upload the results to GitHub's code scanning dashboard.
+      - name: "Upload to code-scanning"
+        uses: github/codeql-action/upload-sarif@17573ee1cc1b9d061760f3a006fc4aac
         with:
           sarif_file: ${{ steps.ossar.outputs.sarifFile }}

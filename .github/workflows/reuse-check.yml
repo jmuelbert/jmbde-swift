@@ -5,22 +5,25 @@
 
 name: REUSE Compliance Check
 
-# yamllint disable
-on:
-  # yamllint enable
+on: # yamllint disable-line rule:truthy
   push:
   pull_request:
+
+permissions:
+  contents: read
 
 jobs:
   ReuseCheck:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     # Skip any PR created by dependabot to avoid permission issues:
     if: (github.actor != 'dependabot[bot]')
 
     steps:
       - name: "🧰 Check out code"
-        uses: actions/checkout@v3
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0

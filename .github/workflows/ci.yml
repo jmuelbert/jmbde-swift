@@ -68,8 +68,8 @@ jobs:
             clean build | xcpretty
             ls -aL build/Build/Products/Release
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+      - name: "Upload artifact"
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
         with:
           name: jmbde-macOS
           path: build/Build/Products/Release/jmbde*
@@ -109,40 +109,6 @@ jobs:
             -enableThreadSanitizer YES \
             clean test | xcpretty
 
-  releaseNotes:
-    if: startsWith(github.ref, 'refs/tags/')
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: "🧰 Checkout Source Code"
-       uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
-        with:
-          fetch-depth: 0
-
-      - name: Build Releasenotes
-        id: github_releasenotes
-        uses: release-drafter/release-drafter@v5.24.0
-        with:
-          publish: "${{ steps.check-version.outputs.tag != '' }}"
-          tag: "${{ steps.check-version.outputs.tag }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  changeLog:
-    if: startsWith(github.ref, 'refs/tags/')
-    runs-on: ubuntu-latest
-    steps:
-      - name: Build Changelog
-        id: github_release
-        uses: mikepenz/release-changelog-builder-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create Release
-        uses: mikepenz/action-gh-release@v0.2.0-a03 #softprops/action-gh-release
-        with:
-          body: ${{steps.github_release.outputs.changelog}}
-
   deployPrereleases:
     name: Deploy Pre-Release
     if: github.ref == 'refs/heads/main'
@@ -168,8 +134,6 @@ jobs:
     environment: Release
     needs:
       - build
-      - changeLog
-      - releaseNotes
 
     steps:
       - name: Release
