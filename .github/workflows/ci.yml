@@ -30,6 +30,7 @@ env:
   TARGET_NAME: jmbde
   FRAMEWORK_NAME: jmbde
   SCHEME: jmbde
+  ARCH: x86_64
   PROJECT_NAME: jmbde.xcodeproj
   LC_CTYPE: en_US.UTF-8
   LANG: en_US.UTF-8
@@ -62,6 +63,7 @@ jobs:
           set -o pipefail && xcodebuild  \
             -project ${{ env.PROJECT_NAME }} \
             -scheme ${{ env.TARGET_NAME }} \
+            - architecture ${{ env.ARCH }} \
             -destination ${{ matrix.destination }} \
             -configuration "Release" \
             -derivedDataPath build/ \
@@ -103,6 +105,7 @@ jobs:
             -project ${{ env.PROJECT_NAME }} \
             -destination ${{ matrix.destination }} \
             -scheme ${{ env.TARGET_NAME }} \
+            - architecture ${{ env.ARCH }} \
             -configuration "Debug" \
             -enableCodeCoverage YES \
             -showBuildTimingSummary \
