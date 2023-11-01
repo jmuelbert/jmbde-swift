@@ -13,10 +13,7 @@ on: # yamllint disable-line rule:truthy
       - jmbdeTests/**
       - jmbdeUITests/**
       - jmbde.xcodeproj/**
-      - jmbde.xcworkspace/**
       - Package.swift
-      - Gemfile
-      - Podfile
       - .github/workflows/ci.yml
 
   pull_request:
@@ -33,17 +30,12 @@ env:
   TARGET_NAME: jmbde
   FRAMEWORK_NAME: jmbde
   SCHEME: jmbde
-  CACHE_NAME: SWIFT5
-  PROJECT_WORKSPACE: jmbde.xcworkspace
-  SDK: macosx10.15
-  DESTINATION: "arch=x86_64"
-  SWIFT_VERSION: 5.5
+  PROJECT_NAME: jmbde.xcodeproj
   LC_CTYPE: en_US.UTF-8
   LANG: en_US.UTF-8
   UPDATE_DOCS: true
   EXPANDED_CODE_SIGN_IDENTITY: "-"
   EXPANDED_CODE_SIGN_IDENTITY_NAME: "-"
-  XCODEGEN_VERSION: 2.5.0
 
 jobs:
   build:
@@ -53,28 +45,23 @@ jobs:
 
     strategy:
       matrix:
-        destination: [
-            # "'platform=macOS,variant=Mac Catalyst'",
-            "'platform=macOS'",
-          ]
+        destination: ["'platform=macOS'"]
       fail-fast: false
 
     steps:
       - name: "🧰 Checkout Source Code"
-        if: github.event_name == 'push'
-        uses: actions/checkout@v4
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
         with:
-          submodules: true
+          fetch-depth: 0
 
       - name: "⚙️ Set XCode Version"
-        run: sudo xcode-select -s /Applications/Xcode_13.2.1.app
+        run: sudo xcode-select -s /Applications/Xcode_13.4.1.app
 
       - name: "🚧 Compile and build 📦 application"
         run: |
           set -o pipefail && xcodebuild  \
-            -project "jmbde.xcodeproj" \
-            -scheme "jmbde" \ 
-            -destination "platform=macOS" \
+            -project ${{ env.PROJECT_NAME }} \
+            -scheme ${{ env.TARGET_NAME }} \
             -destination ${{ matrix.destination }} \
             -configuration "Release" \
             -derivedDataPath build/ \
@@ -94,17 +81,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        xcode: ["13.2.1", "13.4.1", "14.1"]
+        xcode: ["13.2.1", "13.4.1", "14.2"]
+        destination: ["'platform=macOS'"]
 
     steps:
       - name: "🧰 Checkout Source Code"
-        if: github.event_name == 'push'
-        uses: actions/checkout@v4
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
         with:
-          submodules: true
-
-      - name: Fetch all history for all tags and branches
-        run: git fetch --prune --unshallow
+          fetch-depth: 0
 
       - name: "⚙️ Select Xcode"
         run: |
@@ -113,13 +97,11 @@ jobs:
           sudo xcode-select -switch /Applications/Xcode_${{ matrix.xcode }}.app
           xcodebuild -version
 
-
       - name: "🚧 build and test 📦 application"
         run: |
           set -o pipefail && xcodebuild  \
-            -project "jmbde.xcodeproj" \
-            -scheme "jmbde" \
-            -destination "platform=macOS" \
+            -project ${{ env.PROJECT_NAME }} \
+            -destinationi ${ matrix.destination } \
             -configuration "Debug" \
             -enableCodeCoverage YES \
             -showBuildTimingSummary \
@@ -132,12 +114,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: "🧰 Checkout Source Code"
+       uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
         with:
-          fetch-depth: 2
-
-      - name: Fetch all history for all tags and branches
-        run: git fetch --prune --unshallow
+          fetch-depth: 0
 
       - name: Build Releasenotes
         id: github_releasenotes
@@ -165,8 +145,8 @@ jobs:
 
   deployPrereleases:
     name: Deploy Pre-Release
-    if: github.ref == 'refs/heads/master'
-    runs-on: ubuntu-20.04
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
     environment: PreRelease
     needs:
       - build
@@ -184,7 +164,7 @@ jobs:
   deploy:
     name: deploy the Release
     if: startsWith(github.ref, 'refs/tags/')
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     environment: Release
     needs:
       - build
