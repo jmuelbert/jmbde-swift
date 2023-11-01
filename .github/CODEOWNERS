@@ -22,10 +22,9 @@
 
 # Normally, *.ui, *.cpp and *.h files are reviewed by the core-cpp team only
 # All files containing UI text are reviewed by the ui-review team
-*.swift                          @jmuelbert
+*.swift                        @jmuelbert
 *.json                         @jmuelbert
 *.sln                          @jmuelbert
 
-# The lua-interface team is also reviewing everything below the mudlet-lua
 # folder and some pre-installed packages
 /src                            @jmuelbert

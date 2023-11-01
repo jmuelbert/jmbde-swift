@@ -27,8 +27,9 @@ files:
   - .git/COMMIT_EDITMSG
   - docs/**/**
   - scripts/**
-  - src/**
-  - tests/**
+  - jmbde/**
+  - jmbdeTests/**
+  - jmbdeUITests/**
 words:
   - Jürgen
   - Mülbert

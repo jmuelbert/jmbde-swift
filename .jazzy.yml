@@ -2,16 +2,13 @@
 author: Jürgen Mülbert
 module: jmbde
 readme: README.md
-copyright: "See [license](https://github.com/jmuelbert/jmbde-macos/blob/develop/LICENSE) for more details."
+copyright: 'See [license](https://github.com/jmuelbert/jmbde-macos/blob/develop/LICENSE) for more details.'
 
 # ---- URLs ----
 author_url: https://jmuelbert.github.io/jmbde-macos/
 github_url: https://github.com/jmuelbert/jmbde-macos
 github_file_prefix: https://github.com/jmuelbert/jmbde-macos/0.2.0
 root_url: https://jmuelbert.github.io/jmbde-macos/
-
-# ---- Sources ----
-podspec: jmbde.podspec
 
 # ---- Generation ----
 clean: true

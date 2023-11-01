@@ -1,2 +1,11 @@
+colour
+haml
+locproj
+nativeproj
+esx
 rubocop
+stylecop
 swiftlint
+xcodebuild
+xcodeproj
+xcpretty
