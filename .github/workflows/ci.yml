@@ -56,7 +56,7 @@ jobs:
           fetch-depth: 0
 
       - name: "⚙️ Set XCode Version"
-        run: sudo xcode-select -s /Applications/Xcode_13.4.1.app
+        run: sudo xcode-select -s /Applications/Xcode_14.2.app
 
       - name: "🚧 Compile and build 📦 application"
         run: |
@@ -82,7 +82,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        xcode: ["13.2.1", "13.4.1", "14.2"]
+        xcode: ["14.2"]
         destination: ["'platform=macOS'"]
 
     steps:
