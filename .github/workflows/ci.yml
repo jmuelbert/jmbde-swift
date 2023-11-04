@@ -63,7 +63,7 @@ jobs:
           set -o pipefail && xcodebuild  \
             -project ${{ env.PROJECT_NAME }} \
             -scheme ${{ env.TARGET_NAME }} \
-            - architecture ${{ env.ARCH }} \
+            -arch ${{ env.ARCH }} \
             -destination ${{ matrix.destination }} \
             -configuration "Release" \
             -derivedDataPath build/ \
@@ -105,7 +105,7 @@ jobs:
             -project ${{ env.PROJECT_NAME }} \
             -destination ${{ matrix.destination }} \
             -scheme ${{ env.TARGET_NAME }} \
-            - architecture ${{ env.ARCH }} \
+            -arch ${{ env.ARCH }} \
             -configuration "Debug" \
             -enableCodeCoverage YES \
             -showBuildTimingSummary \
