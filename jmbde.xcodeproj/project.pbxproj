@@ -7,64 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381BB2622AF63CD30055FC21 /* jmbdeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381BB2612AF63CD30055FC21 /* jmbdeApp.swift */; };
-		381BB2642AF63CD30055FC21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381BB2632AF63CD30055FC21 /* ContentView.swift */; };
-		381BB2662AF63CD30055FC21 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381BB2652AF63CD30055FC21 /* Item.swift */; };
-		381BB2682AF63CEC0055FC21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381BB2672AF63CEC0055FC21 /* Assets.xcassets */; };
-		381BB26C2AF63CEC0055FC21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381BB26B2AF63CEC0055FC21 /* Preview Assets.xcassets */; };
-		381BB2762AF63CEF0055FC21 /* jmbdeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381BB2752AF63CEF0055FC21 /* jmbdeTests.swift */; };
-		381BB2802AF63CEF0055FC21 /* jmbdeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381BB27F2AF63CEF0055FC21 /* jmbdeUITests.swift */; };
-		381BB2822AF63CEF0055FC21 /* jmbdeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381BB2812AF63CEF0055FC21 /* jmbdeUITestsLaunchTests.swift */; };
+		38B13A062AF7849F00173F53 /* jmbdeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A052AF7849F00173F53 /* jmbdeApp.swift */; };
+		38B13A082AF7849F00173F53 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A072AF7849F00173F53 /* Persistence.swift */; };
+		38B13A0B2AF7849F00173F53 /* jmbde.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A092AF7849F00173F53 /* jmbde.xcdatamodeld */; };
+		38B13A0D2AF7849F00173F53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A0C2AF7849F00173F53 /* ContentView.swift */; };
+		38B13A0F2AF784A100173F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B13A0E2AF784A100173F53 /* Assets.xcassets */; };
+		38B13A132AF784A100173F53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B13A122AF784A100173F53 /* Preview Assets.xcassets */; };
+		38B13A1D2AF784A200173F53 /* jmbdeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A1C2AF784A200173F53 /* jmbdeTests.swift */; };
+		38B13A272AF784A200173F53 /* jmbdeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A262AF784A200173F53 /* jmbdeUITests.swift */; };
+		38B13A292AF784A200173F53 /* jmbdeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A282AF784A200173F53 /* jmbdeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		381BB2722AF63CEF0055FC21 /* PBXContainerItemProxy */ = {
+		38B13A192AF784A200173F53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 381BB2562AF63CD20055FC21 /* Project object */;
+			containerPortal = 38B139FA2AF7849F00173F53 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 381BB25D2AF63CD20055FC21;
+			remoteGlobalIDString = 38B13A012AF7849F00173F53;
 			remoteInfo = jmbde;
 		};
-		381BB27C2AF63CEF0055FC21 /* PBXContainerItemProxy */ = {
+		38B13A232AF784A200173F53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 381BB2562AF63CD20055FC21 /* Project object */;
+			containerPortal = 38B139FA2AF7849F00173F53 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 381BB25D2AF63CD20055FC21;
+			remoteGlobalIDString = 38B13A012AF7849F00173F53;
 			remoteInfo = jmbde;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		381BB25E2AF63CD30055FC21 /* jmbde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jmbde.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		381BB2612AF63CD30055FC21 /* jmbdeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeApp.swift; sourceTree = "<group>"; };
-		381BB2632AF63CD30055FC21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		381BB2652AF63CD30055FC21 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		381BB2672AF63CEC0055FC21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		381BB2692AF63CEC0055FC21 /* jmbde.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = jmbde.entitlements; sourceTree = "<group>"; };
-		381BB26B2AF63CEC0055FC21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		381BB2712AF63CEF0055FC21 /* jmbdeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jmbdeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		381BB2752AF63CEF0055FC21 /* jmbdeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeTests.swift; sourceTree = "<group>"; };
-		381BB27B2AF63CEF0055FC21 /* jmbdeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jmbdeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		381BB27F2AF63CEF0055FC21 /* jmbdeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeUITests.swift; sourceTree = "<group>"; };
-		381BB2812AF63CEF0055FC21 /* jmbdeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38B13A022AF7849F00173F53 /* jmbde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jmbde.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B13A052AF7849F00173F53 /* jmbdeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeApp.swift; sourceTree = "<group>"; };
+		38B13A072AF7849F00173F53 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		38B13A0A2AF7849F00173F53 /* jmbde.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = jmbde.xcdatamodel; sourceTree = "<group>"; };
+		38B13A0C2AF7849F00173F53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38B13A0E2AF784A100173F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38B13A102AF784A100173F53 /* jmbde.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = jmbde.entitlements; sourceTree = "<group>"; };
+		38B13A122AF784A100173F53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38B13A182AF784A200173F53 /* jmbdeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jmbdeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B13A1C2AF784A200173F53 /* jmbdeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeTests.swift; sourceTree = "<group>"; };
+		38B13A222AF784A200173F53 /* jmbdeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jmbdeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B13A262AF784A200173F53 /* jmbdeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeUITests.swift; sourceTree = "<group>"; };
+		38B13A282AF784A200173F53 /* jmbdeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		381BB25B2AF63CD20055FC21 /* Frameworks */ = {
+		38B139FF2AF7849F00173F53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		381BB26E2AF63CEF0055FC21 /* Frameworks */ = {
+		38B13A152AF784A200173F53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		381BB2782AF63CEF0055FC21 /* Frameworks */ = {
+		38B13A1F2AF784A200173F53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,60 +76,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		381BB2552AF63CD20055FC21 = {
+		38B139F92AF7849F00173F53 = {
 			isa = PBXGroup;
 			children = (
-				381BB2602AF63CD30055FC21 /* jmbde */,
-				381BB2742AF63CEF0055FC21 /* jmbdeTests */,
-				381BB27E2AF63CEF0055FC21 /* jmbdeUITests */,
-				381BB25F2AF63CD30055FC21 /* Products */,
+				38B13A042AF7849F00173F53 /* jmbde */,
+				38B13A1B2AF784A200173F53 /* jmbdeTests */,
+				38B13A252AF784A200173F53 /* jmbdeUITests */,
+				38B13A032AF7849F00173F53 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		381BB25F2AF63CD30055FC21 /* Products */ = {
+		38B13A032AF7849F00173F53 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				381BB25E2AF63CD30055FC21 /* jmbde.app */,
-				381BB2712AF63CEF0055FC21 /* jmbdeTests.xctest */,
-				381BB27B2AF63CEF0055FC21 /* jmbdeUITests.xctest */,
+				38B13A022AF7849F00173F53 /* jmbde.app */,
+				38B13A182AF784A200173F53 /* jmbdeTests.xctest */,
+				38B13A222AF784A200173F53 /* jmbdeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		381BB2602AF63CD30055FC21 /* jmbde */ = {
+		38B13A042AF7849F00173F53 /* jmbde */ = {
 			isa = PBXGroup;
 			children = (
-				381BB2612AF63CD30055FC21 /* jmbdeApp.swift */,
-				381BB2632AF63CD30055FC21 /* ContentView.swift */,
-				381BB2652AF63CD30055FC21 /* Item.swift */,
-				381BB2672AF63CEC0055FC21 /* Assets.xcassets */,
-				381BB2692AF63CEC0055FC21 /* jmbde.entitlements */,
-				381BB26A2AF63CEC0055FC21 /* Preview Content */,
+				38B13A052AF7849F00173F53 /* jmbdeApp.swift */,
+				38B13A072AF7849F00173F53 /* Persistence.swift */,
+				38B13A0C2AF7849F00173F53 /* ContentView.swift */,
+				38B13A0E2AF784A100173F53 /* Assets.xcassets */,
+				38B13A102AF784A100173F53 /* jmbde.entitlements */,
+				38B13A092AF7849F00173F53 /* jmbde.xcdatamodeld */,
+				38B13A112AF784A100173F53 /* Preview Content */,
 			);
 			path = jmbde;
 			sourceTree = "<group>";
 		};
-		381BB26A2AF63CEC0055FC21 /* Preview Content */ = {
+		38B13A112AF784A100173F53 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				381BB26B2AF63CEC0055FC21 /* Preview Assets.xcassets */,
+				38B13A122AF784A100173F53 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		381BB2742AF63CEF0055FC21 /* jmbdeTests */ = {
+		38B13A1B2AF784A200173F53 /* jmbdeTests */ = {
 			isa = PBXGroup;
 			children = (
-				381BB2752AF63CEF0055FC21 /* jmbdeTests.swift */,
+				38B13A1C2AF784A200173F53 /* jmbdeTests.swift */,
 			);
 			path = jmbdeTests;
 			sourceTree = "<group>";
 		};
-		381BB27E2AF63CEF0055FC21 /* jmbdeUITests */ = {
+		38B13A252AF784A200173F53 /* jmbdeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				381BB27F2AF63CEF0055FC21 /* jmbdeUITests.swift */,
-				381BB2812AF63CEF0055FC21 /* jmbdeUITestsLaunchTests.swift */,
+				38B13A262AF784A200173F53 /* jmbdeUITests.swift */,
+				38B13A282AF784A200173F53 /* jmbdeUITestsLaunchTests.swift */,
 			);
 			path = jmbdeUITests;
 			sourceTree = "<group>";
@@ -135,13 +138,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		381BB25D2AF63CD20055FC21 /* jmbde */ = {
+		38B13A012AF7849F00173F53 /* jmbde */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 381BB2852AF63CEF0055FC21 /* Build configuration list for PBXNativeTarget "jmbde" */;
+			buildConfigurationList = 38B13A2C2AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbde" */;
 			buildPhases = (
-				381BB25A2AF63CD20055FC21 /* Sources */,
-				381BB25B2AF63CD20055FC21 /* Frameworks */,
-				381BB25C2AF63CD20055FC21 /* Resources */,
+				38B139FE2AF7849F00173F53 /* Sources */,
+				38B139FF2AF7849F00173F53 /* Frameworks */,
+				38B13A002AF7849F00173F53 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -149,69 +152,69 @@
 			);
 			name = jmbde;
 			productName = jmbde;
-			productReference = 381BB25E2AF63CD30055FC21 /* jmbde.app */;
+			productReference = 38B13A022AF7849F00173F53 /* jmbde.app */;
 			productType = "com.apple.product-type.application";
 		};
-		381BB2702AF63CEF0055FC21 /* jmbdeTests */ = {
+		38B13A172AF784A200173F53 /* jmbdeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 381BB2882AF63CEF0055FC21 /* Build configuration list for PBXNativeTarget "jmbdeTests" */;
+			buildConfigurationList = 38B13A2F2AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbdeTests" */;
 			buildPhases = (
-				381BB26D2AF63CEF0055FC21 /* Sources */,
-				381BB26E2AF63CEF0055FC21 /* Frameworks */,
-				381BB26F2AF63CEF0055FC21 /* Resources */,
+				38B13A142AF784A200173F53 /* Sources */,
+				38B13A152AF784A200173F53 /* Frameworks */,
+				38B13A162AF784A200173F53 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				381BB2732AF63CEF0055FC21 /* PBXTargetDependency */,
+				38B13A1A2AF784A200173F53 /* PBXTargetDependency */,
 			);
 			name = jmbdeTests;
 			productName = jmbdeTests;
-			productReference = 381BB2712AF63CEF0055FC21 /* jmbdeTests.xctest */;
+			productReference = 38B13A182AF784A200173F53 /* jmbdeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		381BB27A2AF63CEF0055FC21 /* jmbdeUITests */ = {
+		38B13A212AF784A200173F53 /* jmbdeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 381BB28B2AF63CEF0055FC21 /* Build configuration list for PBXNativeTarget "jmbdeUITests" */;
+			buildConfigurationList = 38B13A322AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbdeUITests" */;
 			buildPhases = (
-				381BB2772AF63CEF0055FC21 /* Sources */,
-				381BB2782AF63CEF0055FC21 /* Frameworks */,
-				381BB2792AF63CEF0055FC21 /* Resources */,
+				38B13A1E2AF784A200173F53 /* Sources */,
+				38B13A1F2AF784A200173F53 /* Frameworks */,
+				38B13A202AF784A200173F53 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				381BB27D2AF63CEF0055FC21 /* PBXTargetDependency */,
+				38B13A242AF784A200173F53 /* PBXTargetDependency */,
 			);
 			name = jmbdeUITests;
 			productName = jmbdeUITests;
-			productReference = 381BB27B2AF63CEF0055FC21 /* jmbdeUITests.xctest */;
+			productReference = 38B13A222AF784A200173F53 /* jmbdeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		381BB2562AF63CD20055FC21 /* Project object */ = {
+		38B139FA2AF7849F00173F53 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					381BB25D2AF63CD20055FC21 = {
+					38B13A012AF7849F00173F53 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
-					381BB2702AF63CEF0055FC21 = {
+					38B13A172AF784A200173F53 = {
 						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 381BB25D2AF63CD20055FC21;
+						TestTargetID = 38B13A012AF7849F00173F53;
 					};
-					381BB27A2AF63CEF0055FC21 = {
+					38B13A212AF784A200173F53 = {
 						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 381BB25D2AF63CD20055FC21;
+						TestTargetID = 38B13A012AF7849F00173F53;
 					};
 				};
 			};
-			buildConfigurationList = 381BB2592AF63CD20055FC21 /* Build configuration list for PBXProject "jmbde" */;
+			buildConfigurationList = 38B139FD2AF7849F00173F53 /* Build configuration list for PBXProject "jmbde" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,36 +222,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 381BB2552AF63CD20055FC21;
-			productRefGroup = 381BB25F2AF63CD30055FC21 /* Products */;
+			mainGroup = 38B139F92AF7849F00173F53;
+			productRefGroup = 38B13A032AF7849F00173F53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				381BB25D2AF63CD20055FC21 /* jmbde */,
-				381BB2702AF63CEF0055FC21 /* jmbdeTests */,
-				381BB27A2AF63CEF0055FC21 /* jmbdeUITests */,
+				38B13A012AF7849F00173F53 /* jmbde */,
+				38B13A172AF784A200173F53 /* jmbdeTests */,
+				38B13A212AF784A200173F53 /* jmbdeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		381BB25C2AF63CD20055FC21 /* Resources */ = {
+		38B13A002AF7849F00173F53 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381BB26C2AF63CEC0055FC21 /* Preview Assets.xcassets in Resources */,
-				381BB2682AF63CEC0055FC21 /* Assets.xcassets in Resources */,
+				38B13A132AF784A100173F53 /* Preview Assets.xcassets in Resources */,
+				38B13A0F2AF784A100173F53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		381BB26F2AF63CEF0055FC21 /* Resources */ = {
+		38B13A162AF784A200173F53 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		381BB2792AF63CEF0055FC21 /* Resources */ = {
+		38B13A202AF784A200173F53 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,50 +261,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		381BB25A2AF63CD20055FC21 /* Sources */ = {
+		38B139FE2AF7849F00173F53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381BB2642AF63CD30055FC21 /* ContentView.swift in Sources */,
-				381BB2662AF63CD30055FC21 /* Item.swift in Sources */,
-				381BB2622AF63CD30055FC21 /* jmbdeApp.swift in Sources */,
+				38B13A0B2AF7849F00173F53 /* jmbde.xcdatamodeld in Sources */,
+				38B13A062AF7849F00173F53 /* jmbdeApp.swift in Sources */,
+				38B13A0D2AF7849F00173F53 /* ContentView.swift in Sources */,
+				38B13A082AF7849F00173F53 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		381BB26D2AF63CEF0055FC21 /* Sources */ = {
+		38B13A142AF784A200173F53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381BB2762AF63CEF0055FC21 /* jmbdeTests.swift in Sources */,
+				38B13A1D2AF784A200173F53 /* jmbdeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		381BB2772AF63CEF0055FC21 /* Sources */ = {
+		38B13A1E2AF784A200173F53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381BB2802AF63CEF0055FC21 /* jmbdeUITests.swift in Sources */,
-				381BB2822AF63CEF0055FC21 /* jmbdeUITestsLaunchTests.swift in Sources */,
+				38B13A272AF784A200173F53 /* jmbdeUITests.swift in Sources */,
+				38B13A292AF784A200173F53 /* jmbdeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		381BB2732AF63CEF0055FC21 /* PBXTargetDependency */ = {
+		38B13A1A2AF784A200173F53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 381BB25D2AF63CD20055FC21 /* jmbde */;
-			targetProxy = 381BB2722AF63CEF0055FC21 /* PBXContainerItemProxy */;
+			target = 38B13A012AF7849F00173F53 /* jmbde */;
+			targetProxy = 38B13A192AF784A200173F53 /* PBXContainerItemProxy */;
 		};
-		381BB27D2AF63CEF0055FC21 /* PBXTargetDependency */ = {
+		38B13A242AF784A200173F53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 381BB25D2AF63CD20055FC21 /* jmbde */;
-			targetProxy = 381BB27C2AF63CEF0055FC21 /* PBXContainerItemProxy */;
+			target = 38B13A012AF7849F00173F53 /* jmbde */;
+			targetProxy = 38B13A232AF784A200173F53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		381BB2832AF63CEF0055FC21 /* Debug */ = {
+		38B13A2A2AF784A200173F53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -362,7 +366,7 @@
 			};
 			name = Debug;
 		};
-		381BB2842AF63CEF0055FC21 /* Release */ = {
+		38B13A2B2AF784A200173F53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -415,7 +419,7 @@
 			};
 			name = Release;
 		};
-		381BB2862AF63CEF0055FC21 /* Debug */ = {
+		38B13A2D2AF784A200173F53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -439,7 +443,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,7 +455,7 @@
 			};
 			name = Debug;
 		};
-		381BB2872AF63CEF0055FC21 /* Release */ = {
+		38B13A2E2AF784A200173F53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -475,7 +479,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,7 +491,7 @@
 			};
 			name = Release;
 		};
-		381BB2892AF63CEF0055FC21 /* Debug */ = {
+		38B13A302AF784A200173F53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -496,7 +500,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbdeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,7 +513,7 @@
 			};
 			name = Debug;
 		};
-		381BB28A2AF63CEF0055FC21 /* Release */ = {
+		38B13A312AF784A200173F53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -518,7 +522,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbdeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,7 +535,7 @@
 			};
 			name = Release;
 		};
-		381BB28C2AF63CEF0055FC21 /* Debug */ = {
+		38B13A332AF784A200173F53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -539,7 +543,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbdeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,7 +556,7 @@
 			};
 			name = Debug;
 		};
-		381BB28D2AF63CEF0055FC21 /* Release */ = {
+		38B13A342AF784A200173F53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -560,7 +564,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbdeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -576,43 +580,56 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		381BB2592AF63CD20055FC21 /* Build configuration list for PBXProject "jmbde" */ = {
+		38B139FD2AF7849F00173F53 /* Build configuration list for PBXProject "jmbde" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				381BB2832AF63CEF0055FC21 /* Debug */,
-				381BB2842AF63CEF0055FC21 /* Release */,
+				38B13A2A2AF784A200173F53 /* Debug */,
+				38B13A2B2AF784A200173F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		381BB2852AF63CEF0055FC21 /* Build configuration list for PBXNativeTarget "jmbde" */ = {
+		38B13A2C2AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbde" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				381BB2862AF63CEF0055FC21 /* Debug */,
-				381BB2872AF63CEF0055FC21 /* Release */,
+				38B13A2D2AF784A200173F53 /* Debug */,
+				38B13A2E2AF784A200173F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		381BB2882AF63CEF0055FC21 /* Build configuration list for PBXNativeTarget "jmbdeTests" */ = {
+		38B13A2F2AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbdeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				381BB2892AF63CEF0055FC21 /* Debug */,
-				381BB28A2AF63CEF0055FC21 /* Release */,
+				38B13A302AF784A200173F53 /* Debug */,
+				38B13A312AF784A200173F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		381BB28B2AF63CEF0055FC21 /* Build configuration list for PBXNativeTarget "jmbdeUITests" */ = {
+		38B13A322AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbdeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				381BB28C2AF63CEF0055FC21 /* Debug */,
-				381BB28D2AF63CEF0055FC21 /* Release */,
+				38B13A332AF784A200173F53 /* Debug */,
+				38B13A342AF784A200173F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		38B13A092AF7849F00173F53 /* jmbde.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38B13A0A2AF7849F00173F53 /* jmbde.xcdatamodel */,
+			);
+			currentVersion = 38B13A0A2AF7849F00173F53 /* jmbde.xcdatamodel */;
+			path = jmbde.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 381BB2562AF63CD20055FC21 /* Project object */;
+	rootObject = 38B139FA2AF7849F00173F53 /* Project object */;
 }

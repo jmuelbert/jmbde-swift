@@ -1,6 +1,7 @@
+---
 # MegaLinter GitHub Action configuration file
 # More info at https://megalinter.io
----
+
 name: MegaLinter
 
 # Trigger mega-linter at every push. Action will also be visible from
@@ -11,9 +12,7 @@ on: # yamllint disable-line rule:truthy
   push:
 
   pull_request:
-    branches:
-      - main
-      - patch-pages_cs-issues
+    types: [opened, labeled]
 
 # Comment env block if you do not want to apply fixes
 env:

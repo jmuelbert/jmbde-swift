@@ -1,13 +1,17 @@
+---
 # This workflow uses actions that are not certified by GitHub. They are provided
 # by a third-party and are governed by separate terms of service, privacy
 # policy, and support documentation.
 
 name: Scorecard supply-chain security
+
 on:
   branch_protection_rule:
   # Schedule the workflow to run every Tuesday at 4:24 AM
+
   schedule:
     - cron: "12 4 * * 2"
+
   push:
     branches:
       - main

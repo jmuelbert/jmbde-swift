@@ -1,6 +1,7 @@
+---
 name: All Source Files
 
-on:
+on: # yamllint disable-line rule:truthy
   push:
   release:
     types: [published, edited]
@@ -12,11 +13,13 @@ jobs:
     name: Check if the workflow has been disabled.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: "🧰 Checkout Source Code"
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+
       - name: Get commit message
         id: get_message
         run: |
-          echo "::set-output name=message::$(git log --format=%B -n 1 ${{ github.event.after }})"
+          echo "message=$(git log --format=%B -n 1 ${{ github.event.after }})" >> $GITHUB_OUTPUT
   linux:
     needs: check_commit_msg
     name: All Source Files
@@ -31,12 +34,12 @@ jobs:
       - name: Get the version
         id: get_version
         shell: bash
-        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+        run:
+          echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+          echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3)"
 
-      - name: Checking out sources
-        uses: actions/checkout@v4
-        with:
-          submodules: "recursive"
+      - name: "🧰 Check out code"
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
 
       - name: Create 7z Release
         uses: DuckSoft/create-7z-action@v1.0
