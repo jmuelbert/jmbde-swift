@@ -13,8 +13,7 @@ permissions:
 
 on: # yamllint disable-line rule:truthy
   push:
-    branches:
-      - main
+
   pull_request:
     branches:
       - main
