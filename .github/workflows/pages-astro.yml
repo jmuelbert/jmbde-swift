@@ -13,6 +13,8 @@ permissions:
 
 on: # yamllint disable-line rule:truthy
   push:
+    branches:
+      - main
 
   pull_request:
     branches:
@@ -27,7 +29,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-  
+
+    # Skip any PR created by dependabot to avoid permission issues:
+    if: (github.actor != 'dependabot[bot]')
+
     steps:
       - name: "🧰 Check out code"
         uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
