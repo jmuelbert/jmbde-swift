@@ -7,6 +7,7 @@ ignorePaths:
   - '**/.git/**'
   - '**/.pnpm-lock.json'
   - '**/pnpm-lock.yaml'
+  - '**/yarn.lock'
   - .vscode
   - 'package-lock.json'
   - 'megalinter-reports'
