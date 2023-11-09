@@ -17,6 +17,7 @@ jmbde is a program to collect data for the IT. The database contains employees, 
 [![Codacy Security Analysis][codacy-shield]][codacy-url]
 
 ### Analysis
+
 [![CodeQL][codeql-shield]][codeql-url]
 [![DevSkim][devskim-shield]][devskim-url]
 [![Hound][hound-shield]][hound-url]
@@ -26,6 +27,7 @@ jmbde is a program to collect data for the IT. The database contains employees, 
 [![REUSE Compliance Check][reuse-check-shield]][reuse-check-url]
 
 ### Github
+
 [![Issues][issues-shield]][issues-url]
 [![Help wanted issues][help-issues-shield]][help-issues-url]
 [![Pull Requests][pr-shield]][pr-url]
@@ -33,13 +35,13 @@ jmbde is a program to collect data for the IT. The database contains employees, 
 [![Forks][forks-shield]][forks-url]
 
 ### Text
+
 [![Spell checking][spell-check-badge]][spell-check-url]
 [![Misspell fixer][misspell_fixer-shield]][misspell_fixer-url]
 
 ### License
+
 [![License][license-shield]][license-url]
-
-
 
 jmbde is free software; you can redistribute ot and/or modify ir under the terms
 of the [European Public License Version 1.2][license-eupl12].
@@ -63,6 +65,10 @@ Start the app with a click on the icon.
 
 ## Questions or Comments
 
+## Project
+
+-   [Project][project-url]
+
 ## Wiki
 
 -   [Main Page][project-wiki]
@@ -83,30 +89,24 @@ Compile the source code with [Xcode][Xcode-url]
 
 ## Resources
 
--   [Jazzy](https://github.com/realm/jazzy)
+-   [Jazzy][jazzy-url]
 
 ## License
 
-EUPL-1.2 © [Jürgen Mülbert](https:/github.com/jmuelbert/jmbde-macos)
+EUPL-1.2 © [Jürgen Mülbert][license-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-<!-- Build -->
-[ci-badge]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/ci.yml/badge.svg
-[ci-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/ci.yml
-
-<!-- Platform and Languages -->
-[swift5_9-shield]: https://img.shields.io/badge/swift-5.9-orange.svg
-[swift-url]: https://swift.org
-[platform]: https://img.shields.io/badge/platforms-macOS%2013.0-F28D00.svg
-
 <!-- GitHub -->
+[milestones]: https://github.com/jmuelbert/jmbde-macos/milestones
+[repo-url]: https://github.com/jmuelbert/jmbde-macos
+[project-wiki]: https://github.com/jmuelbert/jmbde-macos/wiki
+[project-url]: https://github.com/users/jmuelbert/projects/13
 [contributors-shield]: https://img.shields.io/github/contributors/jmuelbert/jmbde-macos
 [contributors-url]: https://github.com/jmuelbert/jmbde-macos/graphs/contributors
 [pr-shield]: https://img.shields.io/github/issues-pr-raw/jmuelbert/jmbde-macos.svg
 [pr-url]: https://github.com/jmuelbert/jmbde-macos/pulls
-
 [forks-shield]: https://img.shields.io/github/forks/jmuelbert/jmbde-macos
 [forks-url]: https://github.com/jmuelbert/jmbde-macos/network/members
 [issues-shield]: https://img.shields.io/github/issues-raw/jmuelbert/jmbde-macos
@@ -119,6 +119,17 @@ EUPL-1.2 © [Jürgen Mülbert](https:/github.com/jmuelbert/jmbde-macos)
 [documentation-url]: https://jmuelbert.github.io/jmbde-macos
 [downloads_all-shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
 [downloads_all-url]: https://github.com/jmuelbert/jmbde-macos/releases
+
+<!-- Build -->
+[ci-badge]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/ci.yml
+
+<!-- Platform and Languages -->
+[swift5_9-shield]: https://img.shields.io/badge/swift-5.9-orange.svg
+[swift-url]: https://swift.org
+[platform]: https://img.shields.io/badge/platforms-macOS%2013.0-F28D00.svg
+[Xcode-url]: https://itunes.apple.com/de/app/xcode/id497799835?mt=12
+[jazzy-url]: 
 
 <!-- Analysis -->
 [codacy-shield]: https://app.codacy.com/project/badge/Grade/a5c6114861fd41028dff6cb0494cfa5f
@@ -149,7 +160,4 @@ EUPL-1.2 © [Jürgen Mülbert](https:/github.com/jmuelbert/jmbde-macos)
 [license-url]: https://github.com/jmuelbert/jmbde-macos/blob/master/LICENSE
 [license-eupl12]: https://joinup.ec.europa.eu/page/eupl-text-11-12
 [license-project]: https://github.com/jmuelbert/jmbde-macos/blob/main/LICENSE
-[project-wiki]: https://github.com/jmuelbert/jmbde-macos/wiki
-[milestones]: https://github.com/jmuelbert/jmbde-macos/milestones
-[Xcode-url]: https://itunes.apple.com/de/app/xcode/id497799835?mt=12
 
