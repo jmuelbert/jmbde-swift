@@ -108,8 +108,14 @@ jobs:
             -enableCodeCoverage YES \
             -showBuildTimingSummary \
             -derivedDataPath Build/ \
+            -enableCodeCoverage YES \
+            -showBuildTimingSummary \
+            -derivedDataPath Build/ \
             -enableThreadSanitizer YES \
             clean test | xcpretty
+
+            bash <(curl -s https://codecov.io/bash)
+
 
   deployPrereleases:
     name: Deploy Pre-Release
