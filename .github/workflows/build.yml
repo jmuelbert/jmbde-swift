@@ -3,7 +3,7 @@ name: Build
 
 on:
     push:
-        branches: [master]
+        branches: [main]
         paths:
             - jmbde/**
             - jmbdeTests/**
@@ -17,7 +17,7 @@ on:
             - "*"
 
     pull_request:
-        branches: [master]
+        branches: [main]
         types: [opened, reopened]
         paths:
             - jmbde/**
