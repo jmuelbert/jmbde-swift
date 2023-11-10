@@ -39,6 +39,7 @@ words:
   - adoc
   - Akka
   - Astro
+  - astrojs
   - Autobuild
   - autolabeler
   - automerge
@@ -68,11 +69,15 @@ words:
   - OSSAR
   - ossf
   - outreachy
+  - preact
   - Preacts
   - rarr
   - recvbuffer
+  - refact
+  - resx
   - returntocorp
   - rubocop
+  - ruleset
   - Sarif
   - Semgrep
   - Signup

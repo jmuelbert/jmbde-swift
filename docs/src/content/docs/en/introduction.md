@@ -6,7 +6,7 @@ description: 'Docs intro'
 **Welcome to homebrew-qtifw!**
 
 The QT Installer Framework V4.5.2 for Homebrew.
-***Update from 4.5.1 to 4.5.2***
+**_Update from 4.5.1 to 4.5.2_**
 
 **_Installation Instructions_**
 

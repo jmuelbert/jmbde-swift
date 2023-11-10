@@ -7,9 +7,11 @@ export const SITE = {
 export const OPEN_GRAPH = {
     image: {
         src: 'https://github.com/withastro/astro/blob/main/.github/assets/banner.png?raw=true',
-        alt: 'astro logo on a starry expanse of space,' + ' with a purple saturn-like planet floating in the right foreground'
+        alt:
+            'astro logo on a starry expanse of space,' +
+            ' with a purple saturn-like planet floating in the right foreground'
     },
-    twitter: 'astrodotbuild'
+    twitter: 'jmuelbert'
 }
 
 export const KNOWN_LANGUAGES = {
@@ -28,7 +30,10 @@ export const ALGOLIA = {
     apiKey: 'XXXXXXXXXX'
 }
 
-export type Sidebar = Record<(typeof KNOWN_LANGUAGE_CODES)[number], Record<string, { text: string; link: string }[]>>
+export type Sidebar = Record<
+    (typeof KNOWN_LANGUAGE_CODES)[number],
+    Record<string, { text: string; link: string }[]>
+>
 export const SIDEBAR: Sidebar = {
     en: {
         'Section Header': [
