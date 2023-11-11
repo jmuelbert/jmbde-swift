@@ -26,9 +26,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  TARGET_NAME: jmbde
-  FRAMEWORK_NAME: jmbde
-  SCHEME: jmbde
+  TARGET_NAME: JMBeData
+  SCHEME: JMBeData
   ARCH: x86_64
   PROJECT_NAME: JMBeData.xcodeproj
   LC_CTYPE: en_US.UTF-8
