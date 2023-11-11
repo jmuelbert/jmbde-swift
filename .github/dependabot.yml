@@ -20,7 +20,7 @@ updates:
     commit-message:
       prefix: ":rocket: docker"
 
- - package-ecosystem: "bundler"
+  - package-ecosystem: "bundler"
     directory: "/"
     schedule:
       interval: "daily"

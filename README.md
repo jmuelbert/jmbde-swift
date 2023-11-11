@@ -99,6 +99,7 @@ EUPL-1.2 © [Jürgen Mülbert][license-url]
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 <!-- GitHub -->
+
 [milestones]: https://github.com/jmuelbert/jmbde-macos/milestones
 [repo-url]: https://github.com/jmuelbert/jmbde-macos
 [project-wiki]: https://github.com/jmuelbert/jmbde-macos/wiki
@@ -121,17 +122,17 @@ EUPL-1.2 © [Jürgen Mülbert][license-url]
 [downloads_all-url]: https://github.com/jmuelbert/jmbde-macos/releases
 
 <!-- Build -->
+
 [ci-badge]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/ci.yml/badge.svg
 [ci-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/ci.yml
 
 <!-- Platform and Languages -->
+
 [swift5_9-shield]: https://img.shields.io/badge/swift-5.9-orange.svg
 [swift-url]: https://swift.org
 [platform]: https://img.shields.io/badge/platforms-macOS%2013.0-F28D00.svg
 [Xcode-url]: https://itunes.apple.com/de/app/xcode/id497799835?mt=12
-[jazzy-url]: 
-
-<!-- Analysis -->
+[jazzy-url]: <!-- Analysis -->
 [codacy-shield]: https://app.codacy.com/project/badge/Grade/a5c6114861fd41028dff6cb0494cfa5f
 [codacy-url]: https://app.codacy.com/gh/jmuelbert/jmbde-macos/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 [codeql-shield]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/codeql-analysis.yml/badge.svg
@@ -150,14 +151,15 @@ EUPL-1.2 © [Jürgen Mülbert][license-url]
 [reuse-check-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/reuse-check.yml
 
 <!-- Text/Spell checkers -->
+
 [spell-check-badge]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/spelling2.yml/badge.svg
 [spell-check-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/spelling2.yml
 [misspell_fixer-shield]: https://github.com/jmuelbert/jmbde-macos/workflows/Misspell%20fixer/badge.svg
 [misspell_fixer-url]: https://github.com/marketplace/actions/misspell-fixer-action
 
 <!-- Licenses -->
+
 [license-shield]: https://img.shields.io/badge/license-EUPL-blue.svg
 [license-url]: https://github.com/jmuelbert/jmbde-macos/blob/master/LICENSE
 [license-eupl12]: https://joinup.ec.europa.eu/page/eupl-text-11-12
 [license-project]: https://github.com/jmuelbert/jmbde-macos/blob/main/LICENSE
-

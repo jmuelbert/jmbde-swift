@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38B13A062AF7849F00173F53 /* jmbdeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A052AF7849F00173F53 /* jmbdeApp.swift */; };
-		38B13A082AF7849F00173F53 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A072AF7849F00173F53 /* Persistence.swift */; };
-		38B13A0B2AF7849F00173F53 /* jmbde.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A092AF7849F00173F53 /* jmbde.xcdatamodeld */; };
-		38B13A0D2AF7849F00173F53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A0C2AF7849F00173F53 /* ContentView.swift */; };
-		38B13A0F2AF784A100173F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B13A0E2AF784A100173F53 /* Assets.xcassets */; };
-		38B13A132AF784A100173F53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B13A122AF784A100173F53 /* Preview Assets.xcassets */; };
-		38B13A1D2AF784A200173F53 /* jmbdeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A1C2AF784A200173F53 /* jmbdeTests.swift */; };
-		38B13A272AF784A200173F53 /* jmbdeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A262AF784A200173F53 /* jmbdeUITests.swift */; };
-		38B13A292AF784A200173F53 /* jmbdeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B13A282AF784A200173F53 /* jmbdeUITestsLaunchTests.swift */; };
+		3875ABAA2AFF815200C03D62 /* JMBeDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875ABA92AFF815200C03D62 /* JMBeDataApp.swift */; };
+		3875ABAC2AFF815200C03D62 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875ABAB2AFF815200C03D62 /* Persistence.swift */; };
+		3875ABAF2AFF815200C03D62 /* JMBeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3875ABAD2AFF815200C03D62 /* JMBeData.xcdatamodeld */; };
+		3875ABB12AFF815200C03D62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875ABB02AFF815200C03D62 /* ContentView.swift */; };
+		3875ABB32AFF815D00C03D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3875ABB22AFF815D00C03D62 /* Assets.xcassets */; };
+		3875ABB72AFF815D00C03D62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3875ABB62AFF815D00C03D62 /* Preview Assets.xcassets */; };
+		3875ABC12AFF815E00C03D62 /* JMBeDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875ABC02AFF815E00C03D62 /* JMBeDataTests.swift */; };
+		3875ABCB2AFF815E00C03D62 /* JMBeDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875ABCA2AFF815E00C03D62 /* JMBeDataUITests.swift */; };
+		3875ABCD2AFF815E00C03D62 /* JMBeDataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875ABCC2AFF815E00C03D62 /* JMBeDataUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		38B13A192AF784A200173F53 /* PBXContainerItemProxy */ = {
+		3875ABBD2AFF815E00C03D62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 38B139FA2AF7849F00173F53 /* Project object */;
+			containerPortal = 3875AB9E2AFF815200C03D62 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 38B13A012AF7849F00173F53;
-			remoteInfo = jmbde;
+			remoteGlobalIDString = 3875ABA52AFF815200C03D62;
+			remoteInfo = JMBeData;
 		};
-		38B13A232AF784A200173F53 /* PBXContainerItemProxy */ = {
+		3875ABC72AFF815E00C03D62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 38B139FA2AF7849F00173F53 /* Project object */;
+			containerPortal = 3875AB9E2AFF815200C03D62 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 38B13A012AF7849F00173F53;
-			remoteInfo = jmbde;
+			remoteGlobalIDString = 3875ABA52AFF815200C03D62;
+			remoteInfo = JMBeData;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38B13A022AF7849F00173F53 /* jmbde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jmbde.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		38B13A052AF7849F00173F53 /* jmbdeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeApp.swift; sourceTree = "<group>"; };
-		38B13A072AF7849F00173F53 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		38B13A0A2AF7849F00173F53 /* jmbde.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = jmbde.xcdatamodel; sourceTree = "<group>"; };
-		38B13A0C2AF7849F00173F53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		38B13A0E2AF784A100173F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		38B13A102AF784A100173F53 /* jmbde.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = jmbde.entitlements; sourceTree = "<group>"; };
-		38B13A122AF784A100173F53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		38B13A182AF784A200173F53 /* jmbdeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jmbdeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38B13A1C2AF784A200173F53 /* jmbdeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeTests.swift; sourceTree = "<group>"; };
-		38B13A222AF784A200173F53 /* jmbdeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jmbdeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38B13A262AF784A200173F53 /* jmbdeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeUITests.swift; sourceTree = "<group>"; };
-		38B13A282AF784A200173F53 /* jmbdeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmbdeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3875ABA62AFF815200C03D62 /* JMBeData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMBeData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3875ABA92AFF815200C03D62 /* JMBeDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMBeDataApp.swift; sourceTree = "<group>"; };
+		3875ABAB2AFF815200C03D62 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3875ABAE2AFF815200C03D62 /* JMBeData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JMBeData.xcdatamodel; sourceTree = "<group>"; };
+		3875ABB02AFF815200C03D62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3875ABB22AFF815D00C03D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3875ABB42AFF815D00C03D62 /* JMBeData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JMBeData.entitlements; sourceTree = "<group>"; };
+		3875ABB62AFF815D00C03D62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3875ABBC2AFF815E00C03D62 /* JMBeDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMBeDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3875ABC02AFF815E00C03D62 /* JMBeDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMBeDataTests.swift; sourceTree = "<group>"; };
+		3875ABC62AFF815E00C03D62 /* JMBeDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMBeDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3875ABCA2AFF815E00C03D62 /* JMBeDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMBeDataUITests.swift; sourceTree = "<group>"; };
+		3875ABCC2AFF815E00C03D62 /* JMBeDataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMBeDataUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		38B139FF2AF7849F00173F53 /* Frameworks */ = {
+		3875ABA32AFF815200C03D62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38B13A152AF784A200173F53 /* Frameworks */ = {
+		3875ABB92AFF815E00C03D62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38B13A1F2AF784A200173F53 /* Frameworks */ = {
+		3875ABC32AFF815E00C03D62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,145 +76,145 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38B139F92AF7849F00173F53 = {
+		3875AB9D2AFF815200C03D62 = {
 			isa = PBXGroup;
 			children = (
-				38B13A042AF7849F00173F53 /* jmbde */,
-				38B13A1B2AF784A200173F53 /* jmbdeTests */,
-				38B13A252AF784A200173F53 /* jmbdeUITests */,
-				38B13A032AF7849F00173F53 /* Products */,
+				3875ABA82AFF815200C03D62 /* JMBeData */,
+				3875ABBF2AFF815E00C03D62 /* JMBeDataTests */,
+				3875ABC92AFF815E00C03D62 /* JMBeDataUITests */,
+				3875ABA72AFF815200C03D62 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		38B13A032AF7849F00173F53 /* Products */ = {
+		3875ABA72AFF815200C03D62 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38B13A022AF7849F00173F53 /* jmbde.app */,
-				38B13A182AF784A200173F53 /* jmbdeTests.xctest */,
-				38B13A222AF784A200173F53 /* jmbdeUITests.xctest */,
+				3875ABA62AFF815200C03D62 /* JMBeData.app */,
+				3875ABBC2AFF815E00C03D62 /* JMBeDataTests.xctest */,
+				3875ABC62AFF815E00C03D62 /* JMBeDataUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		38B13A042AF7849F00173F53 /* jmbde */ = {
+		3875ABA82AFF815200C03D62 /* JMBeData */ = {
 			isa = PBXGroup;
 			children = (
-				38B13A052AF7849F00173F53 /* jmbdeApp.swift */,
-				38B13A072AF7849F00173F53 /* Persistence.swift */,
-				38B13A0C2AF7849F00173F53 /* ContentView.swift */,
-				38B13A0E2AF784A100173F53 /* Assets.xcassets */,
-				38B13A102AF784A100173F53 /* jmbde.entitlements */,
-				38B13A092AF7849F00173F53 /* jmbde.xcdatamodeld */,
-				38B13A112AF784A100173F53 /* Preview Content */,
+				3875ABA92AFF815200C03D62 /* JMBeDataApp.swift */,
+				3875ABAB2AFF815200C03D62 /* Persistence.swift */,
+				3875ABB02AFF815200C03D62 /* ContentView.swift */,
+				3875ABB22AFF815D00C03D62 /* Assets.xcassets */,
+				3875ABB42AFF815D00C03D62 /* JMBeData.entitlements */,
+				3875ABAD2AFF815200C03D62 /* JMBeData.xcdatamodeld */,
+				3875ABB52AFF815D00C03D62 /* Preview Content */,
 			);
-			path = jmbde;
+			path = JMBeData;
 			sourceTree = "<group>";
 		};
-		38B13A112AF784A100173F53 /* Preview Content */ = {
+		3875ABB52AFF815D00C03D62 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				38B13A122AF784A100173F53 /* Preview Assets.xcassets */,
+				3875ABB62AFF815D00C03D62 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		38B13A1B2AF784A200173F53 /* jmbdeTests */ = {
+		3875ABBF2AFF815E00C03D62 /* JMBeDataTests */ = {
 			isa = PBXGroup;
 			children = (
-				38B13A1C2AF784A200173F53 /* jmbdeTests.swift */,
+				3875ABC02AFF815E00C03D62 /* JMBeDataTests.swift */,
 			);
-			path = jmbdeTests;
+			path = JMBeDataTests;
 			sourceTree = "<group>";
 		};
-		38B13A252AF784A200173F53 /* jmbdeUITests */ = {
+		3875ABC92AFF815E00C03D62 /* JMBeDataUITests */ = {
 			isa = PBXGroup;
 			children = (
-				38B13A262AF784A200173F53 /* jmbdeUITests.swift */,
-				38B13A282AF784A200173F53 /* jmbdeUITestsLaunchTests.swift */,
+				3875ABCA2AFF815E00C03D62 /* JMBeDataUITests.swift */,
+				3875ABCC2AFF815E00C03D62 /* JMBeDataUITestsLaunchTests.swift */,
 			);
-			path = jmbdeUITests;
+			path = JMBeDataUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38B13A012AF7849F00173F53 /* jmbde */ = {
+		3875ABA52AFF815200C03D62 /* JMBeData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38B13A2C2AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbde" */;
+			buildConfigurationList = 3875ABD02AFF815E00C03D62 /* Build configuration list for PBXNativeTarget "JMBeData" */;
 			buildPhases = (
-				38B139FE2AF7849F00173F53 /* Sources */,
-				38B139FF2AF7849F00173F53 /* Frameworks */,
-				38B13A002AF7849F00173F53 /* Resources */,
+				3875ABA22AFF815200C03D62 /* Sources */,
+				3875ABA32AFF815200C03D62 /* Frameworks */,
+				3875ABA42AFF815200C03D62 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = jmbde;
-			productName = jmbde;
-			productReference = 38B13A022AF7849F00173F53 /* jmbde.app */;
+			name = JMBeData;
+			productName = JMBeData;
+			productReference = 3875ABA62AFF815200C03D62 /* JMBeData.app */;
 			productType = "com.apple.product-type.application";
 		};
-		38B13A172AF784A200173F53 /* jmbdeTests */ = {
+		3875ABBB2AFF815E00C03D62 /* JMBeDataTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38B13A2F2AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbdeTests" */;
+			buildConfigurationList = 3875ABD32AFF815E00C03D62 /* Build configuration list for PBXNativeTarget "JMBeDataTests" */;
 			buildPhases = (
-				38B13A142AF784A200173F53 /* Sources */,
-				38B13A152AF784A200173F53 /* Frameworks */,
-				38B13A162AF784A200173F53 /* Resources */,
+				3875ABB82AFF815E00C03D62 /* Sources */,
+				3875ABB92AFF815E00C03D62 /* Frameworks */,
+				3875ABBA2AFF815E00C03D62 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				38B13A1A2AF784A200173F53 /* PBXTargetDependency */,
+				3875ABBE2AFF815E00C03D62 /* PBXTargetDependency */,
 			);
-			name = jmbdeTests;
-			productName = jmbdeTests;
-			productReference = 38B13A182AF784A200173F53 /* jmbdeTests.xctest */;
+			name = JMBeDataTests;
+			productName = JMBeDataTests;
+			productReference = 3875ABBC2AFF815E00C03D62 /* JMBeDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		38B13A212AF784A200173F53 /* jmbdeUITests */ = {
+		3875ABC52AFF815E00C03D62 /* JMBeDataUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38B13A322AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbdeUITests" */;
+			buildConfigurationList = 3875ABD62AFF815E00C03D62 /* Build configuration list for PBXNativeTarget "JMBeDataUITests" */;
 			buildPhases = (
-				38B13A1E2AF784A200173F53 /* Sources */,
-				38B13A1F2AF784A200173F53 /* Frameworks */,
-				38B13A202AF784A200173F53 /* Resources */,
+				3875ABC22AFF815E00C03D62 /* Sources */,
+				3875ABC32AFF815E00C03D62 /* Frameworks */,
+				3875ABC42AFF815E00C03D62 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				38B13A242AF784A200173F53 /* PBXTargetDependency */,
+				3875ABC82AFF815E00C03D62 /* PBXTargetDependency */,
 			);
-			name = jmbdeUITests;
-			productName = jmbdeUITests;
-			productReference = 38B13A222AF784A200173F53 /* jmbdeUITests.xctest */;
+			name = JMBeDataUITests;
+			productName = JMBeDataUITests;
+			productReference = 3875ABC62AFF815E00C03D62 /* JMBeDataUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		38B139FA2AF7849F00173F53 /* Project object */ = {
+		3875AB9E2AFF815200C03D62 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					38B13A012AF7849F00173F53 = {
+					3875ABA52AFF815200C03D62 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
-					38B13A172AF784A200173F53 = {
+					3875ABBB2AFF815E00C03D62 = {
 						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 38B13A012AF7849F00173F53;
+						TestTargetID = 3875ABA52AFF815200C03D62;
 					};
-					38B13A212AF784A200173F53 = {
+					3875ABC52AFF815E00C03D62 = {
 						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 38B13A012AF7849F00173F53;
+						TestTargetID = 3875ABA52AFF815200C03D62;
 					};
 				};
 			};
-			buildConfigurationList = 38B139FD2AF7849F00173F53 /* Build configuration list for PBXProject "jmbde" */;
+			buildConfigurationList = 3875ABA12AFF815200C03D62 /* Build configuration list for PBXProject "JMBeData" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -222,36 +222,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 38B139F92AF7849F00173F53;
-			productRefGroup = 38B13A032AF7849F00173F53 /* Products */;
+			mainGroup = 3875AB9D2AFF815200C03D62;
+			productRefGroup = 3875ABA72AFF815200C03D62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38B13A012AF7849F00173F53 /* jmbde */,
-				38B13A172AF784A200173F53 /* jmbdeTests */,
-				38B13A212AF784A200173F53 /* jmbdeUITests */,
+				3875ABA52AFF815200C03D62 /* JMBeData */,
+				3875ABBB2AFF815E00C03D62 /* JMBeDataTests */,
+				3875ABC52AFF815E00C03D62 /* JMBeDataUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		38B13A002AF7849F00173F53 /* Resources */ = {
+		3875ABA42AFF815200C03D62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B13A132AF784A100173F53 /* Preview Assets.xcassets in Resources */,
-				38B13A0F2AF784A100173F53 /* Assets.xcassets in Resources */,
+				3875ABB72AFF815D00C03D62 /* Preview Assets.xcassets in Resources */,
+				3875ABB32AFF815D00C03D62 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38B13A162AF784A200173F53 /* Resources */ = {
+		3875ABBA2AFF815E00C03D62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38B13A202AF784A200173F53 /* Resources */ = {
+		3875ABC42AFF815E00C03D62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,51 +261,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		38B139FE2AF7849F00173F53 /* Sources */ = {
+		3875ABA22AFF815200C03D62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B13A0B2AF7849F00173F53 /* jmbde.xcdatamodeld in Sources */,
-				38B13A062AF7849F00173F53 /* jmbdeApp.swift in Sources */,
-				38B13A0D2AF7849F00173F53 /* ContentView.swift in Sources */,
-				38B13A082AF7849F00173F53 /* Persistence.swift in Sources */,
+				3875ABAA2AFF815200C03D62 /* JMBeDataApp.swift in Sources */,
+				3875ABAC2AFF815200C03D62 /* Persistence.swift in Sources */,
+				3875ABB12AFF815200C03D62 /* ContentView.swift in Sources */,
+				3875ABAF2AFF815200C03D62 /* JMBeData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38B13A142AF784A200173F53 /* Sources */ = {
+		3875ABB82AFF815E00C03D62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B13A1D2AF784A200173F53 /* jmbdeTests.swift in Sources */,
+				3875ABC12AFF815E00C03D62 /* JMBeDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38B13A1E2AF784A200173F53 /* Sources */ = {
+		3875ABC22AFF815E00C03D62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B13A272AF784A200173F53 /* jmbdeUITests.swift in Sources */,
-				38B13A292AF784A200173F53 /* jmbdeUITestsLaunchTests.swift in Sources */,
+				3875ABCD2AFF815E00C03D62 /* JMBeDataUITestsLaunchTests.swift in Sources */,
+				3875ABCB2AFF815E00C03D62 /* JMBeDataUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		38B13A1A2AF784A200173F53 /* PBXTargetDependency */ = {
+		3875ABBE2AFF815E00C03D62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 38B13A012AF7849F00173F53 /* jmbde */;
-			targetProxy = 38B13A192AF784A200173F53 /* PBXContainerItemProxy */;
+			target = 3875ABA52AFF815200C03D62 /* JMBeData */;
+			targetProxy = 3875ABBD2AFF815E00C03D62 /* PBXContainerItemProxy */;
 		};
-		38B13A242AF784A200173F53 /* PBXTargetDependency */ = {
+		3875ABC82AFF815E00C03D62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 38B13A012AF7849F00173F53 /* jmbde */;
-			targetProxy = 38B13A232AF784A200173F53 /* PBXContainerItemProxy */;
+			target = 3875ABA52AFF815200C03D62 /* JMBeData */;
+			targetProxy = 3875ABC72AFF815E00C03D62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		38B13A2A2AF784A200173F53 /* Debug */ = {
+		3875ABCE2AFF815E00C03D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,7 +366,7 @@
 			};
 			name = Debug;
 		};
-		38B13A2B2AF784A200173F53 /* Release */ = {
+		3875ABCF2AFF815E00C03D62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -419,15 +419,15 @@
 			};
 			name = Release;
 		};
-		38B13A2D2AF784A200173F53 /* Debug */ = {
+		3875ABD12AFF815E00C03D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = jmbde/jmbde.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JMBeData/JMBeData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"jmbde/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"JMBeData/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -445,7 +445,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbde;
+				PRODUCT_BUNDLE_IDENTIFIER = JM.JMBeData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -455,15 +455,15 @@
 			};
 			name = Debug;
 		};
-		38B13A2E2AF784A200173F53 /* Release */ = {
+		3875ABD22AFF815E00C03D62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = jmbde/jmbde.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JMBeData/JMBeData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"jmbde/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"JMBeData/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -481,7 +481,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbde;
+				PRODUCT_BUNDLE_IDENTIFIER = JM.JMBeData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -491,7 +491,7 @@
 			};
 			name = Release;
 		};
-		38B13A302AF784A200173F53 /* Debug */ = {
+		3875ABD42AFF815E00C03D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -502,18 +502,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbdeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = JM.JMBeDataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jmbde.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/jmbde";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JMBeData.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JMBeData";
 			};
 			name = Debug;
 		};
-		38B13A312AF784A200173F53 /* Release */ = {
+		3875ABD52AFF815E00C03D62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -524,18 +524,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbdeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = JM.JMBeDataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jmbde.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/jmbde";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JMBeData.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JMBeData";
 			};
 			name = Release;
 		};
-		38B13A332AF784A200173F53 /* Debug */ = {
+		3875ABD72AFF815E00C03D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -545,18 +545,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbdeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = JM.JMBeDataUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = jmbde;
+				TEST_TARGET_NAME = JMBeData;
 			};
 			name = Debug;
 		};
-		38B13A342AF784A200173F53 /* Release */ = {
+		3875ABD82AFF815E00C03D62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -566,52 +566,52 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JM.jmbdeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = JM.JMBeDataUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = jmbde;
+				TEST_TARGET_NAME = JMBeData;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38B139FD2AF7849F00173F53 /* Build configuration list for PBXProject "jmbde" */ = {
+		3875ABA12AFF815200C03D62 /* Build configuration list for PBXProject "JMBeData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38B13A2A2AF784A200173F53 /* Debug */,
-				38B13A2B2AF784A200173F53 /* Release */,
+				3875ABCE2AFF815E00C03D62 /* Debug */,
+				3875ABCF2AFF815E00C03D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38B13A2C2AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbde" */ = {
+		3875ABD02AFF815E00C03D62 /* Build configuration list for PBXNativeTarget "JMBeData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38B13A2D2AF784A200173F53 /* Debug */,
-				38B13A2E2AF784A200173F53 /* Release */,
+				3875ABD12AFF815E00C03D62 /* Debug */,
+				3875ABD22AFF815E00C03D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38B13A2F2AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbdeTests" */ = {
+		3875ABD32AFF815E00C03D62 /* Build configuration list for PBXNativeTarget "JMBeDataTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38B13A302AF784A200173F53 /* Debug */,
-				38B13A312AF784A200173F53 /* Release */,
+				3875ABD42AFF815E00C03D62 /* Debug */,
+				3875ABD52AFF815E00C03D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38B13A322AF784A200173F53 /* Build configuration list for PBXNativeTarget "jmbdeUITests" */ = {
+		3875ABD62AFF815E00C03D62 /* Build configuration list for PBXNativeTarget "JMBeDataUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38B13A332AF784A200173F53 /* Debug */,
-				38B13A342AF784A200173F53 /* Release */,
+				3875ABD72AFF815E00C03D62 /* Debug */,
+				3875ABD82AFF815E00C03D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -619,17 +619,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		38B13A092AF7849F00173F53 /* jmbde.xcdatamodeld */ = {
+		3875ABAD2AFF815200C03D62 /* JMBeData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				38B13A0A2AF7849F00173F53 /* jmbde.xcdatamodel */,
+				3875ABAE2AFF815200C03D62 /* JMBeData.xcdatamodel */,
 			);
-			currentVersion = 38B13A0A2AF7849F00173F53 /* jmbde.xcdatamodel */;
-			path = jmbde.xcdatamodeld;
+			currentVersion = 3875ABAE2AFF815200C03D62 /* JMBeData.xcdatamodel */;
+			path = JMBeData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 38B139FA2AF7849F00173F53 /* Project object */;
+	rootObject = 3875AB9E2AFF815200C03D62 /* Project object */;
 }

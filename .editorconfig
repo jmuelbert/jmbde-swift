@@ -10,6 +10,7 @@ root = true
 indent_style = space
 indent_size = 4
 tab_width = 4
+max_line_width = 100
 
 # We recommend you to keep these unchanged
 end_of_line = lf
@@ -54,6 +55,10 @@ tab_width = 4
 # Source code files
 [*.{c,cxx,cpp,h,hxx,hpp,java,m,mm,py,xsl,astro}]
 indent_size = 2
+tab_width = 2
+
+[*.{swift}]
+ident_size = 2
 tab_width = 2
 
 [*.{adoc,md,markdown}]

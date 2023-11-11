@@ -35,10 +35,11 @@ words:
   - Jürgen
   - Mülbert
   - jmuelbert
-  - jmbde
   - adoc
+  - Aglolia
   - Akka
   - Astro
+  - astrodotbuild
   - astrojs
   - Autobuild
   - autolabeler
@@ -53,15 +54,24 @@ words:
   - COMMIT_EDITMSG
   - Cuda
   - codeql
+  - consts
   - dessant
   - devskim
   - devcontainer
   - devcontainers
+  - docsearch
+  - DUPS
+  - Encabezado
+  - FOUC
+  - frontmatter
   - fsfe
+  - focusable
   - ghaction
   - gittools
   - goodcheck
   - gsoc
+  - Introducción
+  - labelledby
   - lengthframeencoder
   - matthiashermsen
   - MSDO
@@ -79,16 +89,23 @@ words:
   - rubocop
   - ruleset
   - Sarif
+  - Screenreader
+  - searchbox
+  - sección
   - Semgrep
   - Signup
+  - skiplink
   - sobolevn
   - srggrs
   - stefanzweifel
+  - stylelint
   - stylelintignore
   - tomwhross
   - tsconfigs
   - Unported
   - wagoid
+  - WCAG
+  - webfont
   - withastro
 
 flagWords:

@@ -2,8 +2,8 @@
 
 set -o pipefail
 echo "Set the env"
-export FRAMEWORK_NAME="jmbde"
-export SCHEME="jmbde"
+export FRAMEWORK_NAME="JMBeData"
+export SCHEME="JMBeData"
 export SDK="macosx14.0"
 export DESTINATION="arch=x86_64"
 export SWIFT_VERSION="5.1"
@@ -19,10 +19,14 @@ xcodebuild -showsdks
 echo "build the app"
 xcodebuild -project "$FRAMEWORK_NAME.xcodeproj" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug clean build test -verbose | xcpretty -c
 echo "steps after the build"
-# danger
+prettier -w "**"
+cspell
+swiftlint lint
+swift-format lint --color-diagnostics  --recursive JMBeData
+swift-format lint --color-diagnostics  --recursive JMBeDataTest
+swift-format lint --color-diagnostics  --recursive JMBeDataUITests
 jazzy
 rubocop
-Pods/SwiftLint/swiftlint lint
 slather
-pod lib lint
+
 scripts/validate-markdown.sh
