@@ -13,9 +13,6 @@
     "**/*.txt",
     "docs/de_DE/**"
   ],
-  "reporters": [
-    "html",
-    "markdown"
-  ],
+  "reporters": ["html", "markdown"],
   "threshold": 0
 }

@@ -4,7 +4,6 @@ about: Report that something doesn't work as expected
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 **Describe the bug**

@@ -3,6 +3,9 @@
 #
 # SPDX-License-Identifier: MIT
 
+# This script assigns pull requests to projects
+# based on their status and labels
+
 name: "Auto Assign to Project(s)"
 
 on: # yamllint disable-line rule:truthy
@@ -19,7 +22,7 @@ jobs:
 
     steps:
       - name: "Assign NEW issues and NEW pull requests to project 13"
-        uses: srggrs/assign-one-project-github-action@1
+        uses: srggrs/assign-one-project-github-action@v1.3.1 # v1.3.1
         if: github.event.action == 'opened'
         with:
           project:
@@ -29,7 +32,7 @@ jobs:
           column_name: "To do"
 
       - name: "Assign issues and pull requests with `bug` label to project 13"
-        uses: srggrs/assign-one-project-github-action@1
+        uses: srggrs/assign-one-project-github-action@v1.3.1 # v1.3.1
         if: contains(github.event.pull_request.labels.*.name, 'bug')
         with:
           project: "13"

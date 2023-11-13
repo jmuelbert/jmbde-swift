@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: Jürgen Mülbert
+#
+# SPDX-License-Identifier: MIT
+
 name: All Source Files
 
 on: # yamllint disable-line rule:truthy
@@ -14,32 +18,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "🧰 Checkout Source Code"
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+        uses: actions/checkout@v3.5.2 # v3.5.2
 
       - name: Get commit message
         id: get_message
-        run: |
-          echo "message=$(git log --format=%B -n 1 ${{ github.event.after }})" >> $GITHUB_OUTPUT
+        run: echo "message=$(git log --format=%B -n 1 ${{ github.event.after }})" >> $GITHUB_OUTPUT
   linux:
     needs: check_commit_msg
     name: All Source Files
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install git
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y git
-
       - name: Get the version
         id: get_version
         shell: bash
-        run:
-          echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
-          echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3)"
+        run: echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3)" >> $GITHUB_OUTPUT
 
       - name: "🧰 Check out code"
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+        uses: actions/checkout@v3.5.2 # v3.5.2
 
       - name: Create 7z Release
         uses: DuckSoft/create-7z-action@v1.0

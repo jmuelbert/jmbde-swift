@@ -89,8 +89,6 @@ Compile the source code with [Xcode][Xcode-url]
 
 ## Resources
 
--   [Jazzy][jazzy-url]
-
 ## License
 
 EUPL-1.2 © [Jürgen Mülbert][license-url]

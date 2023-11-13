@@ -46,6 +46,8 @@ words:
   - automerge
   - Bazel
   - Bitstream
+  - blinkmacsystemfont
+  - buildscript
   - Codecov
   - Codacy
   - CODEOWNERS

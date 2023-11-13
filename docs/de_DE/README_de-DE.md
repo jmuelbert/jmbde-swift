@@ -1,36 +1,51 @@
+<!--
+SPDX-FileCopyrightText: 2021-2023 Jürgen Mülbert <juergen.muelbert@ioutlook.de>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
 # jmbde Application
-
----
-
-[![Gitpod Ready Code][gitpod-shield]][gitpod-url]
-[![Codacy Badge][codacy-shield]][codacy-url]
-[![CocoaPods compatible][cocoapods-shield]][cocoapods-url]
-[![Carthage compatible][carthage-shield]][carthage-url]
-[![Swift version 4.2][swift4_2-shield]][swift-url]
-[![Swift version 5.0][swift5_0-shield]][swift-url]
-[![Swift version 5.1][swift5_1-shield]][swift-url]
-[![GitHub All Releases][downloads_all-shield]][downloads_all-url]
-[![Issues][issues-shield]][issues-url]
-[![Help wanted issues][help-issues-shield]][help-issues-url]
-[![Pull Requests][pr-shield]][pr-url] [![pre-commit][pre-commit-shield]][pre-commit-url]
-[![Codecov][codecov-shield]][codecov-url]
-[![Misspell fixer][misspell_fixer-shield]][misspell_fixer-url]
-[![Documentation][documentation-shield]][documentation-url]
-[![License][license-shield]][license-url]
-
-[Features](https://github.com/jmuelbert/jmbde-macos) | [Documentation](https://jmuelbert.github.io/jmbde-macos/) | [Changelog](CHANGELOG.md) | [Contributing](CONTRIBUTING.md) | [FAQ](https://github.com/jmuelbert/jmbde-macos/wiki/FAQ) | [deutsch](README_de-DE.md)
 
 jmbde ist ein Programm zum Sammeln von Daten für die IT. Die Datenbank enthält Mitarbeiter, Abteilungen, Funktionen, Telefone, Handys, Computer, Drucker, Faxgeräte und Konten.
 
-jmbde ist freie Software; Sie können ir unter den folgenden Bedingungen weiterverbreiten und/oder modifizieren
-der [Europäischen öffentlichen Lizenz Version 1.2](https://joinup.ec.europa.eu/page/eupl-text-11-12).
-Bitte lesen Sie die [LIZENZ](https://github.com/jmuelbert/jmbde-macos/blob/master/LICENSE) für weitere Informationen.
+---
 
-|  type  |                             branch                             |                                                                                                           build                                                                                                            |                                                                        downloads                                                                         |
-| :----: | :------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| alpha  | [master](https://github.com/jmuelbert/jmbde-macos/tree/master) | [![GitHub Workflow Status](https://github.com/jmuelbert/jmbde-macos/workflows/CI:%20Build%20Test/badge.svg?branch=master&event=push)](https://github.com/jmuelbert/jmbde-macos/actions?query=event%3Apush+branch%3Amaster) |                                                                            -                                                                             |
-|  beta  |   [v0.1](https://github.com/jmuelbert/jmbde-macos/tree/v0.1)   |  [![GitHub Workflow Status](https://github.com/jmuelbert/jmbde-macos/workflows/CI:%20Build%20Test/badge.svg?branch=v0.5.2&event=push)](https://github.com/jmuelbert/jmbde-macos/actions?query=event%3Apush+branch%3Av0.1)  |   [![Downloads](https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/v0.1/total)](https://github.com/jmuelbert/jmbde-macos/releases/tag/v0.1)   |
-| stable | [v0.1.0](https://github.com/jmuelbert/jmbde-macos/tree/v0.1.0) | [![GitHub Workflow Status](https://github.com/jmuelbert/jmbde-macos/workflows/CI:%20Build%20Test/badge.svg?branch=v0.5.0&event=push)](https://github.com/jmuelbert/jmbde-macos/actions?query=event%3Apush+branch%3v0.1.0)  | [![Downloads](https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/v0.1.0/total)](https://github.com/jmuelbert/jmbde-macos/releases/tag/v0.1.0) |
+[![CI][ci-badge]][ci-url]
+[![Platform]][platform]
+[![Swift version 5.9][swift5_9-shield]][swift-url]
+[![Documentation][documentation-shield]][documentation-url]
+[![Codacy Security Analysis][codacy-shield]][codacy-url]
+
+### Analysis
+
+[![CodeQL][codeql-shield]][codeql-url]
+[![DevSkim][devskim-shield]][devskim-url]
+[![Hound][hound-shield]][hound-url]
+[![ShiftLeft][shiftleft-shield]][shiftleft-url]
+[![Codecov][codecov-shield]][codecov-url]
+[![MegaLinter][megalinter-shield]][megalinter-url]
+[![REUSE Compliance Check][reuse-check-shield]][reuse-check-url]
+
+### Github
+
+[![Issues][issues-shield]][issues-url]
+[![Help wanted issues][help-issues-shield]][help-issues-url]
+[![Pull Requests][pr-shield]][pr-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+
+### Text
+
+[![Spell checking][spell-check-badge]][spell-check-url]
+[![Misspell fixer][misspell_fixer-shield]][misspell_fixer-url]
+
+### License
+
+[![License][license-shield]][license-url]
+
+
+jmbde ist freie Software; Sie können ir unter den folgenden Bedingungen weiterverbreiten und/oder modifizieren
+der [Europäischen öffentlichen Lizenz Version 1.2][license-url].
+Bitte lesen Sie die [LIZENZ][license-project] für weitere Informationen.
 
 ## Einrichtung
 
@@ -38,7 +53,7 @@ Dieses Programm läuft nur auf Makros. Ist gänzlich in swift geschrieben und mi
 
 ## Unterstützte Plattform
 
--   macOS ab 10.14
+-   macOS from 13.0
 
 ## Ausführen
 
@@ -46,75 +61,99 @@ Starten Sie die Anwendung mit einem Klick auf das Symbol.
 
 ## Anforderungen und Fehlerberichte
 
--   [GitHub issues (preferred)](https://github.com/jmuelbert/jmbde-macos/issues)
+-   [GitHub issues (bevorzugt)][issues-url]
 
 ## Fragen oder Kommentare
 
 ## Wiki
 
--   [Main Page](https://github.com/jmuelbert/jmbde-macos/wiki)
+-   [Main Page][project-wiki]
 
--   [User Manual](https://jmuelbert.github.io/jmbde-macos/)
+-   [User Manual][documentation-url]
 
 ## Code-Quellen
 
 Der Hauptzweig stellt den neuesten Vorabcode dar.
 
--   [Releases](https://github.com/jmuelbert/jmbde-macos/releases)
+-   [Releases][releases_url]
 
--   [Milestones](https://github.com/jmuelbert/jmbde-macos/milestones)
+-   [Milestones][milestones]
 
 ## Programm erstellen
 
-Kompilieren Sie den Quellcode mit [Xcode](https://itunes.apple.com/de/app/xcode/id497799835?mt=12)
+Kompilieren Sie den Quellcode mit Xcode][Xcode-url]
 
 ## Resources
 
--   [Jazzy](https://github.com/realm/jazzy)
-
 ## License
 
-EUPL-1.2 © [Jürgen Mülbert](https:/github.com/jmuelbert/jmbde-macos)
+EUPL-1.2 © [Jürgen Mülbert][license-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
+<!-- GitHub -->
+
+[milestones]: https://github.com/jmuelbert/jmbde-macos/milestones
+[repo-url]: https://github.com/jmuelbert/jmbde-macos
+[project-wiki]: https://github.com/jmuelbert/jmbde-macos/wiki
+[project-url]: https://github.com/users/jmuelbert/projects/13
 [contributors-shield]: https://img.shields.io/github/contributors/jmuelbert/jmbde-macos
 [contributors-url]: https://github.com/jmuelbert/jmbde-macos/graphs/contributors
+[pr-shield]: https://img.shields.io/github/issues-pr-raw/jmuelbert/jmbde-macos.svg
+[pr-url]: https://github.com/jmuelbert/jmbde-macos/pulls
 [forks-shield]: https://img.shields.io/github/forks/jmuelbert/jmbde-macos
 [forks-url]: https://github.com/jmuelbert/jmbde-macos/network/members
 [issues-shield]: https://img.shields.io/github/issues-raw/jmuelbert/jmbde-macos
 [issues-url]: https://github.com//jmuelbert/jmbde-macos/issues
-[license-shield]: https://img.shields.io/badge/license-EUPL-blue.svg
-[license-url]: https://github.com/jmuelbert/jmbde-macos/blob/master/LICENSE
-[product-screenshot]: images/doc/images/Logo_template.png
-[build-shield]: https://img.shields.io/github/workflow/status/jmuelbert/jmbde-macos/Build/release
-[build-url]: https://github.com/jmuelbert/jmbde-macos/workflows/Build
-[gitpod-shield]: https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod
-[gitpod-url]: https://gitpod.io/#https://github.com/jmuelbert/jmbde-macos
-[codacy-shield]: https://api.codacy.com/project/badge/Grade/933a7b8c63ca443fbed403fab2abd2d0
-[codacy-url]: https://app.codacy.com/gh/jmuelbert/jmbde-macos?utm_source=github.com&utm_medium=referral&utm_content=jmuelbert/jmbde-macos&utm_campaign=Badge_Grade
-[downloads_all-shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
-[downloads_all-url]: https://github.com/jmuelbert/jmbde-macos/releases
-[pre-commit-shield]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
-[pre-commit-url]: https://github.com/pre-commit/pre-commit
-[misspell_fixer-shield]: https://github.com/jmuelbert/jmbde-macos/workflows/Misspell%20fixer/badge.svg
-[misspell_fixer-url]: https://github.com/marketplace/actions/misspell-fixer-action
 [help-issues-shield]: https://img.shields.io/github/issues/jmuelbert/jmbde-macos/help%20wanted
 [help-issues-url]: https://github.com/jmuelbert/jmbde-macos/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
+[releases_shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
+[releases_url]: https://github.com/jmuelbert/jmbde-macos/releases
 [documentation-shield]: https://img.shields.io/badge/Documentation-latest-blue.svg
 [documentation-url]: https://jmuelbert.github.io/jmbde-macos
-[cdash-shield]: https://img.shields.io/badge/CDash-Access-blue.svg
-[cdash-url]: http://my.cdash.org/index.php?project=jmbde-macos
-[pr-shield]: https://img.shields.io/github/issues-pr-raw/jmuelbert/jmbde-macos.svg
-[pr-url]: https://github.com/jmuelbert/jmbde-macos/pulls
-[codecov-shield]: https://codecov.io/gh/jmuelbert/jmbde-macos/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/jmuelbert/jmbde-macos
-[cocoapods-shield]: https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat
-[cocoapods-url]: https://cocoapods.org
-[carthage-shield]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
-[carthage-url]: https://github.com/Carthage/Carthage
-[swift4_2-shield]: https://img.shields.io/badge/swift-4.2-orange.svg
-[swift5_0-shield]: https://img.shields.io/badge/swift-5.0-orange.svg
-[swift5_1-shield]: https://img.shields.io/badge/swift-5.1-orange.svg
+[downloads_all-shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
+[downloads_all-url]: https://github.com/jmuelbert/jmbde-macos/releases
+
+<!-- Build -->
+
+[ci-badge]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/ci.yml
+
+<!-- Platform and Languages -->
+
+[swift5_9-shield]: https://img.shields.io/badge/swift-5.9-orange.svg
 [swift-url]: https://swift.org
+[platform]: https://img.shields.io/badge/platforms-macOS%2013.0-F28D00.svg
+[Xcode-url]: https://itunes.apple.com/de/app/xcode/id497799835?mt=12
+[jazzy-url]: <!-- Analysis -->
+[codacy-shield]: https://app.codacy.com/project/badge/Grade/a5c6114861fd41028dff6cb0494cfa5f
+[codacy-url]: https://app.codacy.com/gh/jmuelbert/jmbde-macos/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
+[codeql-shield]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/codeql-analysis.yml/badge.svg
+[codeql-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/codeql-analysis.yml
+[devskim-shield]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/devskim-analysis.yml/badge.svg
+[devskim-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/devskim-analysis.yml
+[hound-shield]: https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg
+[hound-url]: https://houndci.com
+[shiftleft-shield]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/shiftleft-analysis.yml/badge.svg
+[shiftleft-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/shiftleft-analysis.yml
+[codecov-url]: https://codecov.io/gh/jmuelbert/jmbde-macos
+[codecov-shield]: https://codecov.io/gh/jmuelbert/jmbde-macos/branch/master/graph/badge.svg
+[megalinter-shield]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/mega-linter.yml/badge.svg
+[megalinter-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/mega-linter.yml
+[reuse-check-shield]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/reuse-check.yml/badge.svg
+[reuse-check-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/reuse-check.yml
+
+<!-- Text/Spell checkers -->
+
+[spell-check-badge]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/spelling2.yml/badge.svg
+[spell-check-url]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/spelling2.yml
+[misspell_fixer-shield]: https://github.com/jmuelbert/jmbde-macos/workflows/Misspell%20fixer/badge.svg
+[misspell_fixer-url]: https://github.com/marketplace/actions/misspell-fixer-action
+
+<!-- Licenses -->
+
+[license-shield]: https://img.shields.io/badge/license-EUPL-blue.svg
+[license-url]: https://github.com/jmuelbert/jmbde-macos/blob/master/LICENSE
+[license-eupl12]: https://joinup.ec.europa.eu/page/eupl-text-11-12
+[license-project]: https://github.com/jmuelbert/jmbde-macos/blob/main/LICENSE

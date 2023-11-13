@@ -67,3 +67,6 @@
 - name: wontfix
   description: This will not be worked on
   color: ffffff
+- name: bump-pr
+  description: Bump pull requests
+  color: ff1122
