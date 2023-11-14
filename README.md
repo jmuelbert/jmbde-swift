@@ -33,6 +33,7 @@ jmbde is a program to collect data for the IT. The database contains employees, 
 [![Pull Requests][pr-shield]][pr-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
+[![Downloads][downloads_all-shield]][downloads_all-url]
 
 ### Text
 
@@ -65,10 +66,6 @@ Start the app with a click on the icon.
 
 ## Questions or Comments
 
-## Project
-
--   [Project][project-url]
-
 ## Wiki
 
 -   [Main Page][project-wiki]
@@ -77,7 +74,7 @@ Start the app with a click on the icon.
 
 ## Code Sources
 
-The master branch represents the latest pre-release code.
+The main branch represents the latest pre-release code.
 
 -   [Releases][releases_url]
 
@@ -99,9 +96,7 @@ EUPL-1.2 © [Jürgen Mülbert][license-url]
 <!-- GitHub -->
 
 [milestones]: https://github.com/jmuelbert/jmbde-macos/milestones
-[repo-url]: https://github.com/jmuelbert/jmbde-macos
 [project-wiki]: https://github.com/jmuelbert/jmbde-macos/wiki
-[project-url]: https://github.com/users/jmuelbert/projects/13
 [contributors-shield]: https://img.shields.io/github/contributors/jmuelbert/jmbde-macos
 [contributors-url]: https://github.com/jmuelbert/jmbde-macos/graphs/contributors
 [pr-shield]: https://img.shields.io/github/issues-pr-raw/jmuelbert/jmbde-macos.svg
@@ -112,8 +107,6 @@ EUPL-1.2 © [Jürgen Mülbert][license-url]
 [issues-url]: https://github.com//jmuelbert/jmbde-macos/issues
 [help-issues-shield]: https://img.shields.io/github/issues/jmuelbert/jmbde-macos/help%20wanted
 [help-issues-url]: https://github.com/jmuelbert/jmbde-macos/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
-[releases_shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
-[releases_url]: https://github.com/jmuelbert/jmbde-macos/releases
 [documentation-shield]: https://img.shields.io/badge/Documentation-latest-blue.svg
 [documentation-url]: https://jmuelbert.github.io/jmbde-macos
 [downloads_all-shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
@@ -130,7 +123,6 @@ EUPL-1.2 © [Jürgen Mülbert][license-url]
 [swift-url]: https://swift.org
 [platform]: https://img.shields.io/badge/platforms-macOS%2013.0-F28D00.svg
 [Xcode-url]: https://itunes.apple.com/de/app/xcode/id497799835?mt=12
-[jazzy-url]: <!-- Analysis -->
 [codacy-shield]: https://app.codacy.com/project/badge/Grade/a5c6114861fd41028dff6cb0494cfa5f
 [codacy-url]: https://app.codacy.com/gh/jmuelbert/jmbde-macos/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 [codeql-shield]: https://github.com/jmuelbert/jmbde-macos/actions/workflows/codeql-analysis.yml/badge.svg
