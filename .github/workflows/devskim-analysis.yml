@@ -12,9 +12,7 @@ name: DevSkim
 
 on: # yamllint disable-line rule:truthy
   push:
-    branches:
-      - main
-      - develop
+    branches: ["main", "develop", "release"]
 
   pull_request:
     types: [opened, synchronize, reopened]
@@ -46,6 +44,6 @@ jobs:
 
       # Upload the results to GitHub's code scanning dashboard.
       - name: "Upload to code-scanning"
-        uses: github/codeql-action/upload-sarif@17573ee1cc1b9d061760f3a006fc4aac
+        uses: github/codeql-action/upload-sarif@17573ee1cc1b9d061760f3a006fc4aac # v2.2.4
         with:
           sarif_file: devskim-results.sarif

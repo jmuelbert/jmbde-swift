@@ -3,6 +3,7 @@ SPDX-FileCopyrightText: 2021-2023 Jürgen Mülbert <juergen.muelbert@ioutlook.de
 
 SPDX-License-Identifier: CC-BY-4.0
 -->
+
 # jmbde Application
 
 jmbde ist ein Programm zum Sammeln von Daten für die IT. Die Datenbank enthält Mitarbeiter, Abteilungen, Funktionen, Telefone, Handys, Computer, Drucker, Faxgeräte und Konten.
@@ -41,7 +42,6 @@ jmbde ist ein Programm zum Sammeln von Daten für die IT. Die Datenbank enthält
 ### License
 
 [![License][license-shield]][license-url]
-
 
 jmbde ist freie Software; Sie können ir unter den folgenden Bedingungen weiterverbreiten und/oder modifizieren
 der [Europäischen öffentlichen Lizenz Version 1.2][license-url].

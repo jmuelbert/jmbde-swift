@@ -13,8 +13,11 @@ on:
     - cron: "12 4 * * 2"
 
   push:
-    branches:
-      - main
+    branches: ["main", "develop", "release"]
+
+  pull_request:
+    # The branches below must be a subset of the branches above
+    types: [opened, synchronize, reopened]
 
 # Declare default permissions as read only.
 permissions: read-all

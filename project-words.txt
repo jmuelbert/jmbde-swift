@@ -2,7 +2,10 @@ jmbde
 assetcatalog
 APPICON
 ASSETCATALOG
+Autocreate
 AUTORELEASING
+Buildable
+Buildables
 cfbundle
 colour
 dsym
@@ -22,6 +25,7 @@ NONNULL
 nslocalizedstring
 objc
 Onone
+parallelizable
 rubocop
 RUNPATH
 SANDBOXING
@@ -31,6 +35,7 @@ sourcecode
 svenstaro
 swiftlint
 syncable
+Testables
 wholemodule
 xcassets
 xcdatamodel

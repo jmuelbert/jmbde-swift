@@ -9,8 +9,7 @@ name: Release Drafter
 on: # yamllint disable-line rule:truthy
   push:
     # branches to consider in the event; optional, defaults to all
-    branches:
-      - main
+    branches: [ "main", "release" ]
 
   # pull_request event is required only for autolabeler
   pull_request:

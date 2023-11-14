@@ -14,7 +14,7 @@ name: "CodeQL Analysis"
 
 on: # yamllint disable-line rule:truthy
   push:
-    branches: [main, develop, protected]
+    branches: [ "main", "develop", "release" ]
     paths-ignore:
       - "**/*.md"
       - "**/*.txt"
