@@ -103,7 +103,7 @@ jobs:
                   ls -aL build/Build/Products/Release
 
             - name: Upload Artifact
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: jmbde-macOS
                   path: build/Build/Products/Release/jmbde*
@@ -228,7 +228,7 @@ jobs:
             sphinx-build docs docs/_build
 
         - name: "Upload documentation"
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
             name: gh-docs
             path: docs/_build
