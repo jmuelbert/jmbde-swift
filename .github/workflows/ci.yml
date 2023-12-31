@@ -125,8 +125,8 @@ jobs:
       - name: Download builded app (Artifact)
         uses: actions/download-artifact@f44cd7b40bfd40b6aa1cc1b9b5b7bf03d3c67110 # v4.1.1
         with:
-        name: jmbde-macOS
-        path: build/
+          name: jmbde-macOS
+          path: build/
 
   deploy:
     name: deploy the Release
