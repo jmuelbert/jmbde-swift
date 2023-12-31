@@ -9,6 +9,7 @@
 /.mypy_cache/
 /build/
 .clang-tidy
+docs/.gitpod.yml
 
 # ignore stylesheets for now as this clashes with our linter
 *.css

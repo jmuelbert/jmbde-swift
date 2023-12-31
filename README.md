@@ -54,7 +54,7 @@ This Program run only on macos. Is fully swift with gui.
 
 ## Supported platform
 
--   macOS from 13.0
+- macOS from 13.0
 
 ## Execute
 
@@ -62,23 +62,23 @@ Start the app with a click on the icon.
 
 ## Requirements and bug reports
 
--   [GitHub issues (preferred)][issues-url]
+- [GitHub issues (preferred)][issues-url]
 
 ## Questions or Comments
 
 ## Wiki
 
--   [Main Page][project-wiki]
+- [Main Page][project-wiki]
 
--   [User Manual][documentation-url]
+- [User Manual][documentation-url]
 
 ## Code Sources
 
 The main branch represents the latest pre-release code.
 
--   [Releases][releases_url]
+- [Releases][releases_url]
 
--   [Milestones][milestones]
+- [Milestones][milestones]
 
 ## Create program
 

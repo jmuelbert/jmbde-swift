@@ -1,8 +1,11 @@
 {
     "printWidth": 100,
+    "semi": true,
     "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": true,
     "arrowParens": "always",
-    "trailingComma": "all",
     "bracketSpacing": false,
     "overrides": [
         {
@@ -15,6 +18,18 @@
             "files": ["*.html", "legacy/**/*.js"],
             "options": {
                 "tabWidth": 4
+            }
+        },
+        {
+            "files": [".*", "*.json", "*.md", "*.toml", "*.yml"],
+            "options": {
+                "useTabs": false
+            }
+        },
+        {
+            "files": ["*.md", "*.mdx"],
+            "options": {
+                "printWidth": 80
             }
         }
     ]

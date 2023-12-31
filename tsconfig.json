@@ -1,14 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "declaration": true,
     "module": "ESNext",
+    "target": "ESNext",
     "lib": ["ESNext"],
     "moduleResolution": "node",
     "rootDir": "./",
     "strict": true,
+    "sourceMap": true,
     "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "esModuleInterop": true,
     "allowJs": true,
-    "noEmit": true
-  }
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  },
+  "include": ["docs/**/*.ts", "docs/**/*.js", "test/**/*.ts", "scripts/**/*.ts"]
 }

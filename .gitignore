@@ -126,6 +126,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Astro
+#
 # build output
 dist/
 # generated types
