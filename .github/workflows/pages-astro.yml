@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: Jürgen Mülbert
+#
+# SPDX-License-Identifier: MIT
+#
 # Sample workflow for building and deploying an Astro site to GitHub Pages
 #
 # To get started with Astro see: https://docs.astro.build/en/getting-started/
@@ -33,11 +37,11 @@ jobs:
     if: (github.actor != 'dependabot[bot]')
 
     steps:
-      - name: "🧰 Check out code"
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+      - name: "🧰 Checkout Source Code"
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Build and Upload Site
-        uses: withastro/action@v1
+        uses: withastro/action@f122c0232093b3504e4c841a46c2eebd07c47392 # v1.0.3
         with:
           path:
             ./docs

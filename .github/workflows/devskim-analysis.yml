@@ -36,11 +36,11 @@ jobs:
       contents: read
       security-events: write
     steps:
-      - name: "🧰 Check out code"
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+      - name: "🧰 Checkout Source Code"
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Run DevSkim scanner
-        uses: microsoft/DevSkim-Action@v1
+        uses: microsoft/DevSkim-Action@b41921d947434b27f90b8949f8bfbe056e706bf6 # v1.0.11
 
       # Upload the results to GitHub's code scanning dashboard.
       - name: "Upload to code-scanning"

@@ -1,118 +1,47 @@
----
-lang/core:
-  - src/abseil-cpp/**
-  - src/boringssl/**
-  - src/c-ares/**
-  - src/core/**
-  - src/proto/**
-  - src/re2/**
-  - src/upb/**
-  - src/zlib/**
-  - include/grpc/**
-  - test/core/**
-  - tools/codegen/core/**
+# Add 'root' label to any root file changes
+# Quotation marks are required for the leading asterisk
+root:
+- changed-files:
+  - any-glob-to-any-file: '*'
 
-lang/c++:
-  - examples/cpp/**
-  - src/cpp/**
-  - include/grpc++/**
-  - include/grpcpp/**
-  - test/cpp/**
+# Add 'AnyChange' label to any changes within the entire repository
+AnyChange:
+- changed-files:
+  - any-glob-to-any-file: '**'
 
-area/infra:
-  - .github/**
+# Add 'Documentation' label to any changes within 'docs' folder or any subfolders
+Documentation:
+- changed-files:
+  - any-glob-to-any-file: docs/**
 
-lang/node:
-  - examples/node/**
-  - src/compiler/node*
+# Add 'Documentation' label to any file changes within 'docs' folder
+Documentation:
+- changed-files:
+  - any-glob-to-any-file: docs/*
 
-lang/ObjC:
-  - examples/objective-c/**
-  - src/compiler/objective_c*
-  - src/objective-c/**
+# Add 'Documentation' label to any change to .md files within the entire repository
+Documentation:
+- changed-files:
+  - any-glob-to-any-file: '**/*.md'
+  - any-glob-to-any-file: '**/*.mdx'
 
-lang/php:
-  - examples/php/**
-  - src/compiler/php*
-  - src/php/**
+# Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
+source:
+- all:
+  - changed-files:
+    - any-glob-to-any-file: 'src/**/*'
+     any-glob-to-any-file: 'src/**/*.swift'
+    - all-globs-to-all-files: '!src/docs/*'
 
-lang/python:
-  - bazel/python_rules.bzl
-  - examples/python/**
-  - requirements.bazel.txt
-  - src/compiler/python*
-  - src/python/**
+# Add 'feature' label to any PR where the head branch name starts with `feature` or has a `feature` section in the name
+feature:
+ - head-branch: ['^feature', 'feature']
 
-lang/ruby:
-  - examples/ruby/**
-  - src/compiler/ruby*
-  - src/ruby/**
-  - Formular/**
+GithubActions:
+- all:
+  - changed-files:
+    - any-glob-to-any-file: '.github/workflows/**'
 
-"lang/C#":
-  - src/compiler/csharp*
-  - src/csharp/**
-
-pr/dependencies:
-  - vendor/**/*
-  - go.*
-theme/acls:
-  - acl/**/*
-theme/agent-cache:
-  - agent/cache/**/*
-theme/api:
-  - api/**/*
-theme/catalog:
-  - agent/catalog/**/*
-theme/certificates:
-  - tlsutil/**/*
-theme/cli:
-  - command/**/*
-theme/config:
-  - agent/config/**/*
-theme/connect:
-  - connect/**/*
-  - agent/connect/**/*
-# theme/consul-nomad:
-theme/consul-terraform-sync:
-  - website/content/docs/nia/**/*
-  - website/content/docs/integrate/nia*
-# theme/consul-vault:
-theme/contributing:
-  - .github/**/*
-theme/dns:
-  - dns/**/*
-theme/envoy/xds:
-  - agent/xds/**/*
-# theme/federation-usability:
-theme/health-checks:
-  - agent/health*
-  - api/health*
-# theme/ingress-gw:
-# theme/internal-cleanup:
-theme/internals:
-  - lib/**/*
-  - types/**/*
-# theme/kubernetes:
-# theme/mesh-gw:
-# theme/operator-usability:
-# theme/performance:
-# theme/service-metadata:
-# theme/streaming:
-theme/telemetry:
-  - logging/**/*
-# theme/terminating-gw:
-theme/testing:
-  - ./*test*/**/*
-theme/tls:
-  - tlsutil/**/*
-theme/ui:
-  - ui/**/*
-# theme/windows:
-# thinking:
-# type/bug:
-type/ci:
-  - .circleci/*
-# type/crash:
-type/docs:
-  - website/**/*
+ # Add 'release' label to any PR that is opened against the `main` branch
+release:
+ - base-branch: 'main'

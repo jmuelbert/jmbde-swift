@@ -2,21 +2,19 @@
 # MegaLinter GitHub Action configuration file
 # More info at https://megalinter.io
 
-name: MegaLinter
-
 # Trigger mega-linter at every push. Action will also be visible from
-# Pull Requests to main
+name: MegaLinter
 
 on: # yamllint disable-line rule:truthy
   # Comment this line to trigger action only on pull-requests
   # (not recommended if you don't pay for GH Actions)
   push:
-    branches: [ "main", "develop", "release", "improve_workflows" ]
+    branches: ["main", "develop", "release", "improve_workflows"]
 
   pull_request:
     types: [opened, labeled]
 
-# Comment env block if you do not want to apply fixes
+# Uncomment env block if you do not want to apply fixes
 env:
   # Apply linter fixes configuration
   #
@@ -32,9 +30,11 @@ env:
   # or posted in a PR (pull_request)
   APPLY_FIXES_MODE: commit
 
+# Set permissions for contents
 permissions:
   contents: read
 
+# Set concurrency options
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
@@ -56,8 +56,8 @@ jobs:
 
     steps:
       # Git Checkout
-      - name: Checkout Code
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+      - name: "🧰 Checkout Source Code"
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -70,7 +70,7 @@ jobs:
 
         # You can override MegaLinter flavor used to have faster performances
         # More info at https://megalinter.io/flavors/
-        uses: oxsecurity/megalinter@v7
+        uses: oxsecurity/megalinter@7e042c726c68415475b05a65a686c612120a1232 # v7.7.0
 
         id: ml
 
@@ -98,7 +98,7 @@ jobs:
 
       # Upload MegaLinter artifacts
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@c7d193f32edcb7bfad88892161225aeda64e9392 # v4.0.0
         if: success() || failure()
         with:
           name: MegaLinter reports
@@ -109,7 +109,7 @@ jobs:
       # Create pull request if applicable
       # (for now works only on PR from same repository, not from forks)
       - name: Create Pull Request with applied fixes
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # v5.0.2
         id: cpr
         if: >-
           steps.ml.outputs.has_updated_sources == 1 &&
@@ -165,7 +165,7 @@ jobs:
         run: sudo chown -Rc $UID .git/
 
       - name: Commit and push applied linter fixes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d # v5.0.0
         if: >-
           steps.ml.outputs.has_updated_sources == 1 &&
           (

@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "🧰 Checkout Source Code"
-        uses: actions/checkout@v3.5.2 # v3.5.2
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Get commit message
         id: get_message
@@ -34,23 +34,23 @@ jobs:
         shell: bash
         run: echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3)" >> $GITHUB_OUTPUT
 
-      - name: "🧰 Check out code"
-        uses: actions/checkout@v3.5.2 # v3.5.2
+      - name: "🧰 Checkout Source Code"
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Create 7z Release
-        uses: DuckSoft/create-7z-action@v1.0
+        uses: DuckSoft/create-7z-action@30aebf13e5197fee28c0aa2c65c2956041a524ab # v1.0
         with:
           pathSource: ./
           pathTarget: ./jmbde-macos-${{ steps.get_version.outputs.VERSION }}-source-all.7z
 
       - name: "Upload artifact"
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce
+        uses: actions/upload-artifact@c7d193f32edcb7bfad88892161225aeda64e9392 # v4.0.0
         with:
           name: jmbde-macos-${{ steps.get_version.outputs.VERSION }}-source-all.7z
           path: jmbde-macos-${{ steps.get_version.outputs.VERSION }}-source-all.7z
 
       - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@2.7.0
+        uses: svenstaro/upload-release-action@1beeb572c19a9242f4361f4cee78f8e0d9aec5df # v2.7.0
         if: github.event_name == 'release'
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
