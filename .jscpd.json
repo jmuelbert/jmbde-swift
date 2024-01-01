@@ -11,8 +11,13 @@
     "**/*.svg",
     "**/wwwroot/**",
     "**/*.txt",
-    "docs/de_DE/**"
+    "docs/src/content/de/**",
+    "docs/src/content/es/**",
+    "docs/src/content/it/**"
   ],
-  "reporters": ["html", "markdown"],
+  "reporters": [
+    "html",
+    "markdown"
+  ],
   "threshold": 0
 }

@@ -36,8 +36,9 @@ indent_size = 2
 indent_size = 2
 
 # Indentation override for all JS under lib directory
-[*.{js,cjs,json,vue,scss,rb,haml,yml,yaml,toml}]
+[*.{js,cjs,mjs,json,vue,scss,rb,haml,yml,yaml,toml}]
 indent_size = 2
+tab_width = 2
 
 # The indent size used in the `package.json` file cannot be changed
 # https://github.com/npm/npm/pull/3180#issuecomment-16336516
