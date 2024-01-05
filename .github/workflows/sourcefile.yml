@@ -10,6 +10,10 @@ on: # yamllint disable-line rule:truthy
   release:
     types: [published, edited]
 
+# Set permissions for contents
+permissions:
+  contents: read
+
 jobs:
   check_commit_msg:
     outputs:
