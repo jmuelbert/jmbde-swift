@@ -45,8 +45,8 @@ wholemodule
 xcassets
 xccurrentversion
 xcdatamodel
-xcdatamodelds
-xcodebuild
+xcdatamodeld
+xodebuild
 xcodeproj
 xcpretty
 xcschemes

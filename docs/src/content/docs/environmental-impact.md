@@ -16,7 +16,7 @@ In April 2023, the median web page required a user to download more than 2,000 K
 
 Starlight builds pages that are as lightweight as possible.
 For example, on a first visit, a user will download less than 50 KB of compressed data — just 2.5% of the HTTP archive median.
-With a good caching strategy, subsequent navigations can download as little as 10 KB.
+With a good caching strategy, subsequent navigation's can download as little as 10 KB.
 
 ### Images
 

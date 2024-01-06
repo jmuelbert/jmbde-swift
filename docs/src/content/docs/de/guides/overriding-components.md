@@ -5,7 +5,7 @@ sidebar:
   badge: New
 ---
 
-Starlight's Standard-UI und Konfigurationsoptionen sind so gestaltet, dass sie flexibel sind und für eine Reihe von Inhalten funktionieren. Ein Großteil des Standardaussehens von Starlight kann mit [CSS](/de/guides/css-and-tailwind/) und [Konfigurationsoptionen](/de/guides/customization/) angepasst werden.
+Starlight's Standard-UI und Konfigurationsoptionen sind so gestaltet, dass sie flexibel sind und für eine Reihe von Inhalten funktionieren. Ein Großteil des Standardaussehens von Starlight kann mit [CSS](../de/guides/css-and-tailwind/) und [Konfigurationsoptionen](/de/guides/customization/) angepasst werden.
 
 Wenn du mehr brauchst als das, was von Haus aus möglich ist, unterstützt Starlight die Erstellung eigener Komponenten, um die Standardkomponenten zu erweitern oder zu ersetzen.
 
@@ -13,16 +13,16 @@ Wenn du mehr brauchst als das, was von Haus aus möglich ist, unterstützt Starl
 
 Die Standardkomponenten von Starlight zu überschreiben kann nützlich sein, wenn:
 
-- Du das Aussehen eines Teils der Starlight-Benutzeroberfläche auf eine Weise ändern möchest, was mit [eigenem CSS](/de/guides/css-and-tailwind/) nicht möglich ist.
+- Du das Aussehen eines Teils der Starlight-Benutzeroberfläche auf eine Weise ändern möchest, was mit [eigenem CSS](../de/guides/css-and-tailwind/) nicht möglich ist.
 - Du das Verhalten eines Teils der Starlight-Benutzeroberfläche ändern möchtest.
 - Du zusätzliche UI neben Starlights bestehender UI hinzufügen willst.
 
 ## Wie kann man das ersetzen
 
 1. Wähle die Starlight-Komponente, die du überschreiben möchtest.
-   Du kannst eine vollständige Liste der Komponenten in der [Komponenten-Ersetzung Referenz](/de/reference/overrides/) finden.
+   Du kannst eine vollständige Liste der Komponenten in der [Komponenten-Ersetzung Referenz](../de/reference/overrides/) finden.
 
-   In diesem Beispiel wird die Starlight-Komponente [`SocialIcons`](/de/reference/overrides/#socialicons) in der Navigationsleiste der Seite außer Kraft gesetzt.
+   In diesem Beispiel wird die Starlight-Komponente [`SocialIcons`](../de/reference/overrides/#socialicons) in der Navigationsleiste der Seite außer Kraft gesetzt.
 
 2. Erstelle eine Astro-Komponente, mit der du die Starlight-Komponente ersetzt.
    Dieses Beispiel rendert einen Kontakt-Link.
@@ -36,7 +36,7 @@ Die Standardkomponenten von Starlight zu überschreiben kann nützlich sein, wen
    <a href="mailto:houston@example.com">Schreib mir</a>
    ```
 
-3. Sage Starlight, dass deine benutzerdefinierte Komponente in der Konfigurationsoption [`components`](/de/reference/configuration/#components) in `astro.config.mjs` verwendet werden soll:
+3. Sage Starlight, dass deine benutzerdefinierte Komponente in der Konfigurationsoption [`components`](../de/reference/configuration/#components) in `astro.config.mjs` verwendet werden soll:
 
    ```js {9-12}
    // astro.config.mjs
@@ -102,13 +102,13 @@ const { title } = Astro.props.entry.data;
 </style>
 ```
 
-Erfahre mehr über alle verfügbaren Requisiten in der [Komponenten-Ersetzung Referenz](/de/reference/overrides/#komponenteneigenschaften-props).
+Erfahre mehr über alle verfügbaren Requisiten in der [Komponenten-Ersetzung Referenz](../de/reference/overrides/#komponenteneigenschaften-props).
 
 ### Nur auf bestimmten Seiten überschreiben
 
 Komponentenüberschreibungen gelten für alle Seiten. Du kannst jedoch bedingt mit Werten aus `Astro.props` rendern, um zu bestimmen, wann deine benutzerdefinierte Benutzeroberfläche, wann die Standardbenutzeroberfläche von Starlight oder sogar etwas völlig anderes angezeigt werden soll.
 
-Im folgenden Beispiel zeigt eine Komponente, die Starlights [`Footer`](/de/reference/overrides/#fußzeile) überschreibt, nur auf der Startseite „Verwendet Starlight 🌟“ an und zeigt ansonsten auf allen anderen Seiten die Standardfußzeile an:
+Im folgenden Beispiel zeigt eine Komponente, die Starlights [`Footer`](../de/reference/overrides/#fußzeile) überschreibt, nur auf der Startseite „Verwendet Starlight 🌟“ an und zeigt ansonsten auf allen anderen Seiten die Standardfußzeile an:
 
 ```astro
 ---

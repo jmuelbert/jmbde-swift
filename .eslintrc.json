@@ -1,14 +1,9 @@
 {
   "root": true,
-  "extends": [
-    "eslint:recommnded",
-    "plugin:@typescript-eslint/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
-  "parserOptions": { "project": ["./docs/tsconfig.json"]},
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "parserOptions": {"project": ["./docs/tsconfig.json"]},
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": [
       2,
@@ -18,8 +13,5 @@
       }
     ]
   },
-  "ignorePatterns":  [
-    "src/**/*.test.ts",
-    "docs/**/*.test.ts"
-  ]
+  "ignorePatterns": ["src/**/*.test.ts", "docs/**/*.test.ts"]
 }

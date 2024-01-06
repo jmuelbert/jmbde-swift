@@ -36,6 +36,9 @@ words:
   - jmuelbert
   - Aglolia
   - Akka
+  - adoc
+  - ambientale
+  - Anleitungens
   - aqui
   - Astro
   - astrodotbuild
@@ -44,6 +47,7 @@ words:
   - autolabeler
   - automerge
   - Bazel
+  - Beginne
   - Bitstream
   - blinkmacsystemfont
   - buildscript
@@ -51,17 +55,31 @@ words:
   - Codacy
   - CODEOWNERS
   - Colab
+  - Comienza
   - commitlint
   - COMMIT_EDITMSG
   - Cuda
   - codeql
+  - culori
+  - Configuración
   - consts
   - dessant
   - devskim
+  - Deutsch
   - devcontainer
   - devcontainers
+  - Diátaxis
   - docsearch
+  - docsify
+  - Documentación
+  - Docus
   - DUPS
+  - Ecograder
+  - ecológica
+  - Ecoping
+  - Einrichtung
+  - Empezando
+  - Erste
   - FOUC
   - frontmatter
   - fsfe
@@ -70,24 +88,41 @@ words:
   - gittools
   - goodcheck
   - gsoc
+  - Guías
+  - hastscript
+  - hier
+  - Impatto
+  - Inizia
+  - Iniziamo
+  - Italiano
   - labelledby
   - lengthframeencoder
+  - Manuelle
+  - Markdoc
   - matthiashermsen
   - MSDO
   - mshick
+  - Nextra
+  - nocheck
   - OSSAR
   - ossf
   - outreachy
+  - Poulain
   - preact
   - Preacts
   - rarr
   - recvbuffer
   - refact
+  - Referencias
+  - Referenz
+  - rehype
   - resx
   - returntocorp
+  - Riferimenti
   - rubocop
   - ruleset
   - Sarif
+  - Schritte
   - Screenreader
   - searchbox
   - Semgrep
@@ -101,6 +136,7 @@ words:
   - stylelintignore
   - tomwhross
   - tsconfigs
+  - Umweltbelastung
   - Unported
   - wagoid
   - WCAG

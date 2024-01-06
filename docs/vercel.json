@@ -8,10 +8,6 @@
       },
       "continue": true
     },
-    // {
-    //   "src": "/(ph$|ph/)(.*)",
-    //   "dest": "https://astro-houston-ph.pages.dev/ph/$2"
-    // },
     {
       "src": "(.*)/([^./]+)$",
       "dest": "$1/$2/",

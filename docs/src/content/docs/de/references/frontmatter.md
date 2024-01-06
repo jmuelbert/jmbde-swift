@@ -32,11 +32,11 @@ Die Seitenbeschreibung wird für die Metadaten der Seite verwendet und wird von 
 
 **type:** `string | boolean`
 
-Überschreibt die [globale `editLink`-Konfiguration](/de/reference/configuration/#editlink). Setze die Konfiguration auf `false`, um den Link `Seite bearbeiten` für eine bestimmte Seite zu deaktivieren oder gibt eine alternative URL an, unter der der Inhalt dieser Seite bearbeitet werden kann.
+Überschreibt die [globale `editLink`-Konfiguration](../de/reference/configuration/#editlink). Setze die Konfiguration auf `false`, um den Link `Seite bearbeiten` für eine bestimmte Seite zu deaktivieren oder gibt eine alternative URL an, unter der der Inhalt dieser Seite bearbeitet werden kann.
 
 ### `head`
 
-**type:** [`HeadConfig[]`](/de/reference/configuration/#headconfig)
+**type:** [`HeadConfig[]`](../de/reference/configuration/#headconfig)
 
 Du kannst zusätzliche Tags zum `<head>` deiner Seite hinzufügen, indem du das Feld `head` Frontmatter verwendest. Dies bedeutet, dass du benutzerdefinierte Stile, Metadaten oder andere Tags zu einer einzelnen Seite hinzufügen kannst. Ähnlich wie bei der [globalen `head` Option](/de/reference/configuration/#head).
 
@@ -54,7 +54,7 @@ head:
 
 **type:** `false | { minHeadingLevel?: number; maxHeadingLevel?: number; }`
 
-Überschreibt die [globale `tableOfContents`-Konfiguration](/de/reference/configuration/#tableofcontents).
+Überschreibt die [globale `tableOfContents`-Konfiguration](../de/reference/configuration/#tableofcontents).
 Passe die einzuschließenden Überschriftsebenen an oder setze sie auf `false`, um das Inhaltsverzeichnis auf dieser Seite auszublenden.
 
 ```md

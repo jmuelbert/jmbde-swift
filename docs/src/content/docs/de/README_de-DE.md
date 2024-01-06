@@ -90,26 +90,26 @@ EUPL-1.2 © [Jürgen Mülbert][license-url]
 
 <!-- GitHub -->
 
-[milestones]: https://github.com/jmuelbert/jmbde-macos/milestones
-[repo-url]: https://github.com/jmuelbert/jmbde-macos
-[project-wiki]: https://github.com/jmuelbert/jmbde-macos/wiki
+[milestones]: https://github.com/jmuelbert/jmbde-swift/milestones
+[repo-url]: https://github.com/jmuelbert/jmbde-swift
+[project-wiki]: https://github.com/jmuelbert/jmbde-swift/wiki
 [project-url]: https://github.com/users/jmuelbert/projects/13
-[contributors-shield]: https://img.shields.io/github/contributors/jmuelbert/jmbde-macos
-[contributors-url]: https://github.com/jmuelbert/jmbde-macos/graphs/contributors
-[pr-shield]: https://img.shields.io/github/issues-pr-raw/jmuelbert/jmbde-macos.svg
-[pr-url]: https://github.com/jmuelbert/jmbde-macos/pulls
-[forks-shield]: https://img.shields.io/github/forks/jmuelbert/jmbde-macos
-[forks-url]: https://github.com/jmuelbert/jmbde-macos/network/members
-[issues-shield]: https://img.shields.io/github/issues-raw/jmuelbert/jmbde-macos
-[issues-url]: https://github.com//jmuelbert/jmbde-macos/issues
-[help-issues-shield]: https://img.shields.io/github/issues/jmuelbert/jmbde-macos/help%20wanted
-[help-issues-url]: https://github.com/jmuelbert/jmbde-macos/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
-[releases_shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
-[releases_url]: https://github.com/jmuelbert/jmbde-macos/releases
+[contributors-shield]: https://img.shields.io/github/contributors/jmuelbert/jmbde-swift
+[contributors-url]: https://github.com/jmuelbert/jmbde-swift/graphs/contributors
+[pr-shield]: https://img.shields.io/github/issues-pr-raw/jmuelbert/jmbde-swift.svg
+[pr-url]: https://github.com/jmuelbert/jmbde-swift/pulls
+[forks-shield]: https://img.shields.io/github/forks/jmuelbert/jmbde-swift
+[forks-url]: https://github.com/jmuelbert/jmbde-swift/network/members
+[issues-shield]: https://img.shields.io/github/issues-raw/jmuelbert/jmbde-swift
+[issues-url]: https://github.com//jmuelbert/jmbde-swift/issues
+[help-issues-shield]: https://img.shields.io/github/issues/jmuelbert/jmbde-swift/help%20wanted
+[help-issues-url]: https://github.com/jmuelbert/jmbde-swift/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
+[releases_shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-swift/total?label=downloads%40all
+[releases_url]: https://github.com/jmuelbert/jmbde-swift/releases
 [documentation-shield]: https://img.shields.io/badge/Documentation-latest-blue.svg
-[documentation-url]: https://jmuelbert.github.io/jmbde-macos
-[downloads_all-shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-macos/total?label=downloads%40all
-[downloads_all-url]: https://github.com/jmuelbert/jmbde-macos/releases
+[documentation-url]: https://jmuelbert.github.io/jmbde-swift
+[downloads_all-shield]: https://img.shields.io/github/downloads/jmuelbert/jmbde-swift/total?label=downloads%40all
+[downloads_all-url]: https://github.com/jmuelbert/jmbde-swift/releases
 
 <!-- Build -->
 

@@ -8,7 +8,7 @@ tableOfContents:
 Du kannst Starlight's eingebaute Komponenten überschreiben, indem du Pfade zu Ersatzkomponenten in Starlight's [`components`](/de/reference/configuration#components)-Konfigurationsoption angibst.
 Diese Seite listet alle Komponenten auf, die überschrieben werden können, und verweist auf ihre Standardimplementierungen auf GitHub.
 
-Erfahre mehr in der [Anleitung zum Überschreiben von Komponenten](/de/guides/overriding-components/).
+Erfahre mehr in der [Anleitung zum Überschreiben von Komponenten](../de/guides/overriding-components/).
 
 ## Komponenteneigenschaften (Props)
 
