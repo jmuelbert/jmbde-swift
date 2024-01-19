@@ -12,7 +12,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "size": "size-limit",
-    "upd-version": " pnpm changeset version && pnpm install --no-frozen-lockfile",
+    "upd-version": " pnpm changeset version && pnpm i --no-frozen-lockfile",
     "format": "prettier -w --cache --plugin prettier-plugin-astro ."
   },
   "dependencies": {
