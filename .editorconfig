@@ -62,8 +62,9 @@ tab_width = 2
 ident_size = 2
 tab_width = 2
 
-[*.{adoc,md,markdown}]
+[*.{adoc,md,mdx,markdown}]
 ident_size = 2
+indent_style = space
 trim_trailing_whitespace = false
 
 [*.{sh,msx}]

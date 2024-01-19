@@ -17,7 +17,7 @@ permissions:
 
 on: # yamllint disable-line rule:truthy
   push:
-    branches: ["main", "release"]
+    branches: ["main", "release", "improve_workflows"]
 
   pull_request:
     branches:
@@ -41,7 +41,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Build and Upload Site
-        uses: withastro/action@f122c0232093b3504e4c841a46c2eebd07c47392 # v1.0.3
+        uses: withastro/action@9a7959a16949e620a22e74f81c10cb7ce3b76924 # v1.0.6
         with:
           path:
             ./docs

@@ -1,5 +1,5 @@
 version: '0.2'
-language: en
+language: en,de-DE,it,es-ES
 ignorePaths:
   - '**/node_modules/**'
   - '**/vscode_extension/**'
@@ -8,14 +8,14 @@ ignorePaths:
   - '**/pnpm-lock.yaml'
   - '**/yarn.lock'
   - .vscode
-  - 'package-lock.json'
-  - 'megalinter-reports'
-  - '.devcontainer/.dockerignore'
+  - package-lock.json
+  - megalinter-reports
+  - .devcontainer/.dockerignore
   - .gitattributes
   - .gitignore
-  - '.github/actions/spelling/**'
-  - '.github/labels.yml'
-  - '.github/pr-labeler.yml'
+  - .github/actions/spelling/**
+  - .github/labels.yml
+  - .github/pr-labeler.yml
   - .prettierignore
   - .tfignore
   - CHANGELOG.md
@@ -31,15 +31,13 @@ files:
   - jmbdeTests/**
   - jmbdeUITests/**
 words:
-  - Jürgen
-  - Mülbert
-  - jmuelbert
+  - adoc
   - Aglolia
   - Akka
-  - adoc
   - ambientale
   - Anleitungens
   - aqui
+  - astro
   - Astro
   - astrodotbuild
   - astrojs
@@ -51,23 +49,23 @@ words:
   - Bitstream
   - blinkmacsystemfont
   - buildscript
-  - Codecov
   - Codacy
+  - Codecov
   - CODEOWNERS
+  - codeql
   - Colab
   - Comienza
-  - commitlint
   - COMMIT_EDITMSG
-  - Cuda
-  - codeql
-  - culori
+  - commitlint
   - Configuración
   - consts
+  - Cuda
+  - culori
   - dessant
-  - devskim
   - Deutsch
   - devcontainer
   - devcontainers
+  - devskim
   - Diátaxis
   - docsearch
   - docsify
@@ -80,10 +78,10 @@ words:
   - Einrichtung
   - Empezando
   - Erste
+  - focusable
   - FOUC
   - frontmatter
   - fsfe
-  - focusable
   - ghaction
   - gittools
   - goodcheck
@@ -95,6 +93,8 @@ words:
   - Inizia
   - Iniziamo
   - Italiano
+  - jmuelbert
+  - Jürgen
   - labelledby
   - lengthframeencoder
   - Manuelle
@@ -102,6 +102,7 @@ words:
   - matthiashermsen
   - MSDO
   - mshick
+  - Mülbert
   - Nextra
   - nocheck
   - OSSAR
@@ -156,7 +157,7 @@ overrides:
     language: ru,en
   - filename: '**/sv/**'
     language: en,sv
-  - filename: 'package.json'
+  - filename: package.json
     ignoreWords:
       - colour
       - canot

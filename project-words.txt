@@ -46,7 +46,7 @@ xcassets
 xccurrentversion
 xcdatamodel
 xcdatamodeld
-xodebuild
+xcodebuild
 xcodeproj
 xcpretty
 xcschemes

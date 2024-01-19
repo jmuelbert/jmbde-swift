@@ -12,14 +12,14 @@
     "preview": "astro preview",
     "astro": "astro",
     "size": "size-limit",
-    "version": "yarn changeset version && yarn install --no-frozen-lockfile",
+    "upd-version": " pnpm changeset version && pnpm install --no-frozen-lockfile",
     "format": "prettier -w --cache --plugin prettier-plugin-astro ."
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
-    "@astrojs/starlight": "^0.15.3",
-    "astro": "^4.0.1",
-    "sharp": "^0.32.5",
+    "@astrojs/starlight": "^0.15.4",
+    "astro": "^4.2.1",
+    "sharp": "^0.32.6",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
@@ -34,7 +34,9 @@
     "organize-imports-cli": "^0.10.0",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.12.3",
-    "size-limit": "^11.0.2"
+    "rehype": "^13.0.1",
+    "size-limit": "^11.0.2",
+    "unist-util-visit": "^5.0.0"
   },
   "size-limit": [
     {

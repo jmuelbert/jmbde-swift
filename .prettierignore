@@ -1,5 +1,5 @@
 /app/assets/javascripts/locale/**/app.js
-/docs/themes/
+
 /fixtures/lib/gitlab/graphql/
 /node_modules/
 /public/
@@ -9,12 +9,15 @@
 /.mypy_cache/
 /build/
 .clang-tidy
+pnpm-lock.yaml
+yarn.lock
 docs/.gitpod.yml
-
-# ignore stylesheets for now as this clashes with our linter
-*.css
-*.scss
-*.ts
+docs/node_modules
+docs/.changeset
+docs/pnpm-lock.yaml
+docs/yarn.lock
+*.md
+*.mdx
 
 out
 image

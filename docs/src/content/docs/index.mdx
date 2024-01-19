@@ -1,44 +1,36 @@
 ---
-title: Starlight 🌟 Build documentation sites with Astro
-head:
-  - tag: title
-    content: Starlight 🌟 Build documentation sites with Astro
-description: Starlight helps you build beautiful, high-performance documentation websites with Astro.
+title: Welcome to Starlight
+description: Get started building your docs site with Starlight.
 template: splash
-editUrl: false
-lastUpdated: false
 hero:
-  title: Make your docs shine with Starlight
-  tagline: Everything you need to build a stellar documentation website. Fast, accessible, and easy-to-use.
+  tagline: Congrats on setting up a new Starlight project!
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Get started
+    - text: Example Guide
+      link: /guides/example/
       icon: right-arrow
       variant: primary
-      link: /getting-started/
-    - text: View on GitHub
+    - text: Read the Starlight docs
+      link: https://starlight.astro.build
       icon: external
-      link: https://github.com/jmuelbert/jmbde-swift
 ---
 
-import {CardGrid, Card} from '@astrojs/starlight/components';
+import {Card, CardGrid} from '@astrojs/starlight/components';
+
+## Next steps
 
 <CardGrid stagger>
-	<Card title="Documentation that delights" icon="open-book">
-		Includes: Site navigation, search, internationalization, SEO, easy-to-read
-		typography, code highlighting, dark mode and more.
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
 	</Card>
-	<Card title="Powered by Astro" icon="rocket">
-		Leverage the full power and performance of Astro. Extend Starlight with your
-		favorite Astro integrations and libraries.
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
 	</Card>
-	<Card title="Markdown, Markdoc, and MDX" icon="document">
-		Bring your favorite markup language. Starlight gives you built-in
-		frontmatter validation with TypeScript type-safety.
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
 	</Card>
-	<Card title="Bring your own UI components" icon="puzzle">
-		Starlight ships as a framework-agnostic, complete docs solution. Extend with
-		React, Vue, Svelte, Solid, and more.
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
 	</Card>
 </CardGrid>
