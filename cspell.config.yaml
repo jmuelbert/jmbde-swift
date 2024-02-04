@@ -1,12 +1,12 @@
-version: '0.2'
+version: "0.2"
 language: en,de-DE,it,es-ES
 ignorePaths:
-  - '**/node_modules/**'
-  - '**/vscode_extension/**'
-  - '**/.git/**'
-  - '**/.pnpm-lock.json'
-  - '**/pnpm-lock.yaml'
-  - '**/yarn.lock'
+  - "**/node_modules/**"
+  - "**/vscode_extension/**"
+  - "**/.git/**"
+  - "**/.pnpm-lock.json"
+  - "**/pnpm-lock.yaml"
+  - "**/yarn.lock"
   - .vscode
   - package-lock.json
   - megalinter-reports
@@ -83,12 +83,14 @@ words:
   - frontmatter
   - fsfe
   - ghaction
+  - gitlab
   - gittools
   - goodcheck
   - gsoc
   - Guías
   - hastscript
   - hier
+  - houston
   - Impatto
   - Inizia
   - Iniziamo
@@ -97,6 +99,7 @@ words:
   - Jürgen
   - labelledby
   - lengthframeencoder
+  - linkedin
   - Manuelle
   - Markdoc
   - matthiashermsen
@@ -142,6 +145,7 @@ words:
   - wagoid
   - WCAG
   - webfont
+  - webp
   - withastro
 flagWords:
   - hte
@@ -149,13 +153,13 @@ maxNumberOfProblems: 1000
 import: []
 useGitignore: true
 overrides:
-  - filename: '**/de_DE/**'
+  - filename: "**/de_DE/**"
     language: en,de
-  - filename: '**/nl_NL/**'
+  - filename: "**/nl_NL/**"
     language: en,nl
-  - filename: '**/ru_RU/samples/**'
+  - filename: "**/ru_RU/samples/**"
     language: ru,en
-  - filename: '**/sv/**'
+  - filename: "**/sv/**"
     language: en,sv
   - filename: package.json
     ignoreWords:

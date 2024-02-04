@@ -1,17 +1,16 @@
-jmbde
-assetcatalog
-appiconset
 APPICON
+appiconset
+assetcatalog
 ASSETCATALOG
 Autocreate
 AUTORELEASING
 Buildable
 Buildables
 cfbundle
-comitlint
 cocoadocs
 colorset
 colour
+comitlint
 dsym
 esx
 flatmap
@@ -23,7 +22,9 @@ INFOPLIST
 iphoneos
 IPHONEOS
 iphonesimulator
+jmbde
 locproj
+lunariajs
 MSGSEND
 nativeproj
 NONNULL
@@ -31,6 +32,7 @@ nslocalizedstring
 objc
 Onone
 parallelizable
+Português
 rubocop
 RUNPATH
 SANDBOXING
@@ -52,5 +54,6 @@ xcpretty
 xcschemes
 xcshareddata
 xctest
-xcworkspace
 XCUI
+xcworkspace
+youtube

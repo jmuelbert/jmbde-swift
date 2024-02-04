@@ -1,0 +1,41 @@
+{
+  "$schema": "./node_modules/@lunariajs/core/config.schema.json",
+  "repository": {
+    "name": "jmuelbert/jmbde-swift",
+    "hosting": "github"
+  },
+  "files": [
+    {
+      "location": "src/content/docs/**/*.{mdx,md}",
+      "pattern": "src/content/docs/@lang/@path",
+      "type": "universal"
+    }
+  ],
+  "defaultLocale": {
+    "label": "English",
+    "lang": "en"
+  },
+  "locales": [
+    {
+      "label": "Deutsch",
+      "lang": "de"
+    },
+    {
+      "label": "Español",
+      "lang": "es"
+    },
+    {
+      "label": "Français",
+      "lang": "fr"
+    },
+    {
+      "label": "Italiano",
+      "lang": "it"
+    }
+  ],
+  "ignoreKeywords": ["i18nIgnore", "en-only"],
+  "dashboard": {
+    "title": "jmbde-swift localization",
+    "description": ""
+  }
+}

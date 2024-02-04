@@ -7,71 +7,26 @@ root = true
 # All files
 [*]
 # Change these settings to your own preference
-indent_style = space
-indent_size = 4
-tab_width = 4
 max_line_width = 100
 
 # We recommend you to keep these unchanged
 end_of_line = lf
 charset = utf-8
-trim_trailing_whitespace = true
+trim_trailing_whitespace = false
 insert_final_newline = true
-
-# Xml project files
-[*.{csproj,vcxproj,vcxproj.filters,proj,nativeproj,locproj}]
-indent_size = 2
-
-# Microsoft Solution
-[*.sln]
-ident_size = 2
-insert_final_newline = true
-
-# Xml build files
-[*.builds]
-indent_size = 2
-
-# Xml files
-[*.{xml,stylecop,resx,ruleset}]
-indent_size = 2
-
-# Indentation override for all JS under lib directory
-[*.{js,cjs,mjs,json,vue,scss,rb,haml,yml,yaml,toml}]
-indent_size = 2
-tab_width = 2
-
-# The indent size used in the `package.json` file cannot be changed
-# https://github.com/npm/npm/pull/3180#issuecomment-16336516
-[{*.yml,*.yaml,package.json}]
-indent_size = 2
+indent_size = 2 
+indent_style = tab
 
 # Makefile
 [Makefile, *.mk]
-indent_style = tab
 trim_trailing_whitespace = false
 
 [{CMakeLists.txt,*.cmake}]
 tab_width = 4
 
 # Source code files
-[*.{c,cxx,cpp,h,hxx,hpp,java,m,mm,py,xsl,astro}]
-indent_size = 2
-tab_width = 2
-
-[*.{swift}]
-ident_size = 2
-tab_width = 2
-
 [*.{adoc,md,mdx,markdown}]
-ident_size = 2
 indent_style = space
-trim_trailing_whitespace = false
-
-[*.{sh,msx}]
-indent_size = 2
-
-[*.{css}]
-indent_size = 2
 
 [LICENSE]
 insert_final_newline = false
