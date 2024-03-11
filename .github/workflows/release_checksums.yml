@@ -35,7 +35,7 @@ jobs:
                   dn full-source.tar.gz
                   shasum -a 256 *.* > jmbde-${{ steps.get_version.outputs.VERSION }}-sha256-checksums.txt
             - name: Upload checksums
-              uses: softprops/action-gh-release@v1
+              uses: softprops/action-gh-release@v2
               with:
                   prerelease: ${{ steps.get_version.outputs.ISBETA }}
                   name: jmbde-macos ${{ steps.get_version.outputs.VERSION }}
