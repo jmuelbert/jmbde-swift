@@ -21,6 +21,11 @@ on: # yamllint disable-line rule:truthy
   pull_request:
     types: [opened, synchronize, reopened]
 
+  release:
+    types: [published]
+
+  workflow_dispatch:
+
 permissions:
   contents: read
 
@@ -40,60 +45,25 @@ env:
   EXPANDED_CODE_SIGN_IDENTITY_NAME: "-"
 
 jobs:
-  build:
-    name: "Build macos for ${{ matrix.destination}}"
-    runs-on: macos-13
-    needs: tests
-
-    strategy:
-      matrix:
-        destination: ["'platform=macOS'"]
-      fail-fast: false
-
-    steps:
-      - name: "🧰 Checkout Source Code"
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-
-      - name: "⚙️ Set XCode Version"
-        run: sudo xcode-select -s /Applications/Xcode_15.0.1.app
-
-      - name: "🚧 Compile and build 📦 application"
-        run: |
-          set -o pipefail && xcodebuild  \
-            -project ${{ env.PROJECT_NAME }} \
-            -scheme ${{ env.TARGET_NAME }} \
-            -destination ${{ matrix.destination }} \
-            -configuration "Release" \
-            -derivedDataPath build/ \
-            clean build | xcpretty
-            ls -aL build/Build/Products/Release
-
-      - name: "Upload artifact"
-        uses: actions/upload-artifact@c7d193f32edcb7bfad88892161225aeda64e9392 # v4.0.0
-        with:
-          name: jmbde-macOS
-          path: build/Build/Products/Release/jmbde*
-
   tests:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }} || (github.actor != 'dependabot[bot]')
     name: "Tests on macos-latest"
     runs-on: macos-13
 
     strategy:
       fail-fast: false
       matrix:
-        xcode: ["15.0.1"]
+        xcode_version: ["15.0.1"]
         destination: ["'platform=macOS'"]
 
     steps:
       - name: "🧰 Checkout Source Code"
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
-      - name: "⚙️ Select Xcode"
+      - name: "🍎 ⚙️ Select Xcode version"
+        shell: bash
         run: |
-          xcodebuild -version
-          ls -nt /Applications/ | grep "Xcode*"
-          sudo xcode-select -switch /Applications/Xcode_${{ matrix.xcode }}.app
-          xcodebuild -version
+          sudo xcode-select -s /Applications/Xcode_${{ matrix.xcode_version }}.app && /usr/bin/xcodebuild -version
 
       - name: "🚧 build and test 📦 application"
         run: |
@@ -109,6 +79,43 @@ jobs:
             clean test | xcpretty
 
             bash <(curl -s https://codecov.io/bash)
+
+  build:
+    name: "Build macos for ${{ matrix.destination}}"
+    runs-on: macos-13
+    needs: tests
+
+    strategy:
+      matrix:
+        xcode_version: ["15.0.1"]
+        destination: ["'platform=macOS'"]
+      fail-fast: false
+
+    steps:
+      - name: "🧰 Checkout Source Code"
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - name: "🍎 ⚙️ Select Xcode version"
+        shell: bash
+        run: |
+          sudo xcode-select -s /Applications/Xcode_${{ matrix.xcode_version }}.app && /usr/bin/xcodebuild -version
+
+      - name: "🚧 Compile and build 📦 application"
+        run: |
+          set -o pipefail && xcodebuild  \
+            -project ${{ env.PROJECT_NAME }} \
+            -scheme ${{ env.TARGET_NAME }} \
+            -destination ${{ matrix.destination }} \
+            -configuration "Release" \
+            -derivedDataPath build/ \
+            clean build | xcpretty
+            ls -aL build/Build/Products/Release
+
+      - name: "📤 Upload artifact"
+        uses: actions/upload-artifact@c7d193f32edcb7bfad88892161225aeda64e9392 # v4.0.0
+        with:
+          name: jmbde-macOS
+          path: build/Build/Products/Release/jmbde*
 
   deployPrereleases:
     name: Deploy Pre-Release
