@@ -4,8 +4,8 @@ contact_links:
     url: https://github.com/jmuelbert/jmbde-swift/discussions/new?category=feature-requests
     about: Suggest an improvement you’d like to see added to jmbde-swift
   - name: FAQ
-    url: https://github.com/jmuelbert/jmbde-macos/wiki/FAQ
+    url: https://github.com/jmuelbert/jmbde-swift/wiki/FAQ
     about: You may find your question and the answer to it here.
   - name: Documentation
-    url: https://jmuelbert.github.io/jmbde-macos/
+    url: https://jmuelbert.github.io/jmbde-swift/
     about: The documentation tells you how to use jmbde.
