@@ -29,12 +29,11 @@ concurrency:
 
 jobs:
   OSSAR-Scan:
+    # Skip any PR created by dependabot to avoid permission issues:
+    if: (github.actor != 'dependabot[bot]')  
     # OSSAR runs on windows-latest.
     # ubuntu-latest and macos-latest support coming soon
     runs-on: windows-latest
-
-    # Skip any PR created by dependabot to avoid permission issues:
-    if: (github.actor != 'dependabot[bot]')
 
     steps:
       - name: "🧰 Checkout Source Code"
