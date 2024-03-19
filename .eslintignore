@@ -1,5 +1,5 @@
-dist
 node_modules
-.github
-.changeset
-
+docs/node_modules
+coverage
+app/templates
+**/templates
